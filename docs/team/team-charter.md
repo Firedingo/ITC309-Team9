@@ -85,7 +85,28 @@ Each member has the following skills and strengths which relate to the “Clyde 
 
 ### Benjamin Cummings
 
-TODO.
+* Skills
+    * Full Stack Web Development
+        * Back End (i.e. Server Side)
+            * AWS API Gateway
+            * NodeJS
+                * ExpressJS
+            * Python
+                * Django
+                * Flask
+        * Front End (i.e. Client Side)
+            * CSS
+                * LESS
+                * SASS
+                * SCSS
+            * HTML
+            * JavaScript
+                * jQuery
+* Strengths
+    * Design
+    * Development
+    * Testing
+    * Build and Deployment
 
 ### Christopher Clark
 
@@ -176,7 +197,7 @@ I declare that I have participated in the development of this charter and agree 
 
 | Name              | Signature   | Date and Time    |
 |-------------------|-------------|------------------|
-| Benjamin Cummings |             |                  |
+| Benjamin Cummings | BC          | 2021-04-08 22:00 |
 | Christopher Clark |             |                  |
 | Naomi Thompson    |             |                  |
 | Samuel Johnson    |             |                  |

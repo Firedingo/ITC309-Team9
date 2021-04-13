@@ -110,7 +110,17 @@ Each member has the following skills and strengths which relate to the “Clyde 
 
 ### Christopher Clark
 
-TODO.
+* Skills
+    * Web application development
+        * PHP [Basic, self-taught]
+        * VueJS [Intermediate]
+        * Flask [Basic]
+    * Java [Advanced]
+    * Python [Intermediate]
+    * C/C++ [Intermediate]
+* Strengths
+    * Software Development
+    * Systems Administration
 
 ### Naomi Thompson
 
@@ -198,6 +208,6 @@ I declare that I have participated in the development of this charter and agree 
 | Name              | Signature   | Date and Time    |
 |-------------------|-------------|------------------|
 | Benjamin Cummings | BC          | 2021-04-08 22:00 |
-| Christopher Clark |             |                  |
+| Christopher Clark | cjclark     | 2021-04-13 21:34 |
 | Naomi Thompson    |             |                  |
 | Samuel Johnson    |             |                  |

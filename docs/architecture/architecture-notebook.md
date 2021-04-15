@@ -87,3 +87,29 @@ The key goal of the Clyde River Dashboard project is to process device and senso
 **Decision #4:** The dashboard theme will comply with colour, typography, and style guidelines provided by the NSW Government and the Department of Primary Industries.
 
 **Justification #4:** This will improve the user experience by creating consistency between the dashboard and other Department of Primary Industries applications and products.
+
+## Architectural Mechanisms
+
+### Auditing
+
+Auditing will be facilitated through AWS CloudWatch, which allows logs to be created, collated, analysed, and acted upon (either automatically or manually) for other AWS services such as API Gateway, Lambda, and S3. Additionally, alarms will be created to detect anomalous behaviour (such as unsuccessful responses from the upstream APIs). Finally, profiling will be facilitated through AWS X-Ray, which assists with identifying causes of poor performance and opportunities for optimisation within applications using a micro-service architecture.
+
+### Authentication
+
+Authentication is not required for the end-user due to the telemetry data being within the public domain. However, authentication (via OAuth 2.0 client credentials and associated bearer access token) will be required for requests made to the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/) by the dashboard SPA.
+
+### Communication
+
+Communication between the dashboard SPA and the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/) (and, possibly, third-party APIs) will be facilitated via HTTPS. The requests/responses will be performed and handled asynchronously (i.e. non-blocking) with the `content-type` header set to `application/json` and the body (if any) containing "stringified" JSON.
+
+### Error Handling
+
+Errors and exceptions (such as unsuccessful responses from the upstream APIs) will be appropriately handled to maintain a functional and predictable application state. Additionally, visual feedback will be provided to the end-user when errors and exceptions that adversely influence the user experience are encountered.
+
+### Persistence
+
+Persistence of previously requested/retrieved telemetry data will be facilitated through local caching (via service workers) to account for the upstream APIs being unreachable. The local cache will persist until the next successful request/retrieval has been completed, in which case the stale telemetry data will be replaced.
+
+### Security
+
+Security credentials (OAuth 2.0 client credentials and associated bearer access token) used for authorising requests to the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/) will be inaccessible to the client (i.e. end-user) to prevent potential misuse.

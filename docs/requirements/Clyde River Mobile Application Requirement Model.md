@@ -88,6 +88,40 @@ This project aims to give the oyster industry better access to the data develope
 
 ![Model](./DomainModel.png)
 
+### Location
+
+Locations are estuaries where commercial oyster production occurs. Within each location there are a number of harvest areas. 
+
+The FarmDecisionTech API defines a similar object called a 'Site'.
+
+### Zone
+
+A zone is an area within a location (estuary). Most zones will correspond with a harvest area, but there may be other areas of the estuary that contain sensors that aren't in a harvest area. 
+
+This is defined by the  FarmDecisionTech API as a 'Zone'.
+
+### Harvest Area
+
+A harvest area is where oyster farmers have leases for producing oysters. Harvest areas have a management plan that dictates the rainfall, salinity, and temperature triggers that cause the harvest area to close or open for oyster production. Harvest areas may also be closed for other reasons, such as a sewerage spill.
+
+### Sensor
+
+A sensor is a unit that provides measurements of current conditions. Sensors can provide historical data.
+
+Sensors map to 'Devices' in the  FarmDecisionTech API.
+
+### Water Sensor
+
+A water quality sensor usually provides salinity, temperature, and total disolved salts measurements. There may be different types of water sensor that vary in the information they provide.
+
+### Weather Sensor
+
+A weather station sensor provides weather information. There are different types of sensors that may be combined to present a complete picture.
+
+### Rainfall Trigger
+
+There are defined rainfall triggers for closing an estuary (location) for oyster production. Currently there is a 24 hour and seven day trigger.
+
 
 
 ## Use Cases

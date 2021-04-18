@@ -113,3 +113,23 @@ Persistence of previously requested/retrieved telemetry data will be facilitated
 ### Security
 
 Security credentials (OAuth 2.0 client credentials and associated bearer access token) used for authorising requests to the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/) will be inaccessible to the client (i.e. end-user) to prevent potential misuse.
+
+## Architectural Layers
+
+The dashboard SPA will utilise a typical "n-tier" architecture consisting of three loosely coupled layers (presentation, business, and data access).
+
+### Presentation
+
+The presentation layer will be responsible for handling user interaction, managing state, and rendering components. It will be developed using React Native.
+
+### Business (Domain)
+
+The business layer will be responsible for processing and passing data between the presentation and data access layers, as well as managing the local cache. It will be developed using JavaScript.
+
+### Data Access
+
+The data access layer will be responsible for interacting with the third-party APIs (such as the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/)). It will be developed using JavaScript and deployed via AWS services (API Gateway and Lambda).
+
+### Diagram
+
+![Architectural Layers](./images/architectural-layers.png)

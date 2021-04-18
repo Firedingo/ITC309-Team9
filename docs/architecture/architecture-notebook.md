@@ -133,3 +133,17 @@ The data access layer will be responsible for interacting with the third-party A
 ### Diagram
 
 ![Architectural Layers](./images/architectural-layers.png)
+
+## Architectural Views
+
+### Deployment Diagram for Native Application
+
+![Deployment Diagram for Native Application](./images/deployment-diagram-native.png)
+
+### Deployment Diagram for Web Application
+
+![Deployment Diagram for Web Application](./images/deployment-diagram-web.png)
+
+### System Sequence Diagram for Requesting Telemetry Data
+
+![System Sequence Diagram for Requesting Telemetry Data](./images/sequence-diagram-request.png)

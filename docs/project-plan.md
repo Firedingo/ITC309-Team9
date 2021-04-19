@@ -2,23 +2,39 @@
 ## Project Plan
 
 ## 1. Introduction
-`[Briefly describe the content of the project plan.]`
+This document will outline the plan for completion of the Clyde River app project. We have been commissioned by the NSW Department of Primary Industries to develop a mobile application to display publicly available data from IoT sensors.
 
 ## 2. Project Organisation
-`[Introduce the project team, team members, and roles that they play during this project. If applicable, introduce work areas, domains, or technical work packages that are assigned to team members. Introduce neighboring projects, relationships, and communication channels. If the project is introduced somewhere else, reference that location with a link.]`
+This project will be completed by students of the ITC303/309 Software Development subjects. The members of "Team 2" are;
+- Chris Clark cclark55@postoffice.csu.edu.au
+- Benjamin Cummings bsk888@postoffice.csu.edu.au
+- Sam Johnson sjohns85@postoffice.csu.edu.au
+- Naomi Thompson nthomp10@postoffice.csu.edu.au 
 
-This project will be undertaken by **Team 2** consisting of Benjamin Cummings, Christopher Clark, Naomi Thompson, and Samuel Johnson. We will be working with Department of Primary Industry to provide a mobile application.
+We will meet a minimum of once per week at a scheduled time, with the possibility of additional meetings on an ad-hoc basis as required. In addition, we will have a fortnightly progress and update meeting the our project supervisor. Communication with the stakeholder will occur on an *as needed* basis with the possibility of scheduled recurring meetings if desired or required. 
+
+The team will maintain contact through the Discord application for community communication. Supervisor meetings will occur using the CSU instance of Zoom videoconferencing, and our stakeholder meetings will occur through Microsoft Teams.
 
 ## 3. Project practices and measurements 
-`[Describe or reference which management and technical practices will be used in the project, such as iterative development, continuous integration, independent testing and list any changes or particular configuration to the project. Specify how you will track progress in each practice. As an example, for iterative development the team may decide to use iteration assessments and iteration burndown reports and collect metrics such as velocity (completed work item points/ iteration).`
+This project will follow the Unified Process development methodology. This methodology sits between waterfall and agile, and is defined by four phases. Inception, Elaboration, Construction, and Transition.
+
+* Inception: creating the concept of what the project will achieve, and demonstrating the team has the competency to achieve it.
+* Elaboration: creating and validating an architecture and design to support implementation.
+* Construction: developing and testing the majority of project software.
+* Transition: demonstrating that the product is fit-for purpose and handing the product over for use and maintenance in a production environment.
+
+We intend to operate an Agile method within the Unified Process and will conduct iterations (sprints) of two weeks each. In addition to this Project Plan, we will develop an Iteration Plan for each sprint, and will conduct an assessment at the end of each iteration. We will manage and report each iteration using the *Jira Issue and Project Tracking* software. We will manage our source code repository with *BitBucket* which has integration with *Jira*.
+
+The timeline for this project is dictated by the university semester, and the project must be completed prior to the end of Semester 2 around 11th October 2021. 
 
 ## 4. Deployment
 `[Outline the strategy for deploying the software (and its updates) into the production environment.]`
 
+
 ## 5. Project milestones and objectives
 `[Define and describe the high-level objectives for the iterations and define milestones. For example, use the following table to lay out the schedule. Generic goals are provided as a guide. You should expand/replace these with your own project specific goals.] `
 
-# Project-Plan.md
+
 | Subject    | Phase        | Iteration | Dates         | Primary Objectives                                                                                                                                                                                                                                                                                                                                         |
 |------------|--------------|-----------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | ITC303     | Inception    | I-1       | 13/03 - 26/03 | Establish Vision. Establish Initial Use Case Model. Complete Preliminary Non-functional Requirement Analysis. Identify/Document Candidate Architectures. Establish Version Control.                                                                                                                                                                        |

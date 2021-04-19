@@ -50,20 +50,20 @@ This application is required to integrate with the FarmDecisionTECH API.
 ---------------------------------|-----------|--------------------------------------------------------------------------|----------------
 Users can access on any mobile device | High | Support for iOS, Android, and Web browser.                               | 16-09-2021 
 Public access                    | High      | Ability to view sensor data without needing to login                     | 16-09-2021
-|                                |           | Choose a region/estuary                                                  |
-|                                | Low       | Display sensor locations on map                                          | 
+.                                |           | Choose a region/estuary                                                  |
+.                                | Low       | Display sensor locations on map                                          | 
 Display Sensor data              | High      | Individual sensors and aggregated data                                   | 16-09-2021
-|                                |           | Current salinity, and temperature for each sensor                        | 
-|                                |           | Current salinity, and temperature for all sensors (combined)             | 
-|                                |           | View historical salinity, and temperature for a given time period.       | 
+.                                |           | Current salinity, and temperature for each sensor                        | 
+.                                |           | Current salinity, and temperature for all sensors (combined)             | 
+.                                |           | View historical salinity, and temperature for a given time period.       | 
 Display climate information      | High      | Show current conditions (temperature, humidity, wind, rain, lightning)   | 16-09-2021
-|                                |           | View precipitation for specified time period.                            | 
-|                                |           | View wind speed, and wind gusts for specified time period.               | 
-|                                |           | View air temperature and relative humidity for specified time period.    | 
-|                                |           | View amount of sunshune and diffused light for specified time period.    | 
-|                                |           | View atmospheric pressure for specified time period.                     | 
+.                                |           | View precipitation for specified time period.                            | 
+.                                |           | View wind speed, and wind gusts for specified time period.               | 
+.                                |           | View air temperature and relative humidity for specified time period.    | 
+.                                |           | View amount of sunshune and diffused light for specified time period.    | 
+.                                |           | View atmospheric pressure for specified time period.                     | 
 Check threshold values           | High      | Check if salinity has exceeded or fallen below definied limit            | 16-09-2021
-|                                |           | Check if rainfall has exceed the 24h or 7day limits                      | 
+.                                |           | Check if rainfall has exceed the 24h or 7day limits                      | 
 
 ## 5. Other Product Requirements
 

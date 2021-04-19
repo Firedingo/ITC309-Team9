@@ -29,7 +29,14 @@ The timeline for this project is dictated by the university semester, and the pr
 
 ## 4. Deployment
 `[Outline the strategy for deploying the software (and its updates) into the production environment.]`
+Source code will be held in an Atlassian BitBucket version control repository, and Amazon Web Services (AWS) CodePipeline will be used as the CI/CD pipeline, which will automate the build, test, and deployment processes.
 
+The application will be deployed to AWS and will utilise a number of their services to ensure reliable, secure, and efficient operation.
+Amazon Web Services (AWS) will be utilised as the IaaS/PaaS provider. Route 53 will be used to register the custom domain name (to be determined) and create a domain name system (DNS) alias record to associate the CloudFront distribution. CloudFront will be used as the content delivery network (CDN), 
+S3 will be used as the CloudFront origin and storage medium for the dashboard SPA, which is configured with redundancy that is automatically repaired when degradation of data integrity is detected and is able to accommodate at minimum 5,500 fetch requests per second (and more with performance optimisation techniques). API Gateway will be used to create an intermediary REST API which is utilised by the dashboard SPA. 
+Lambda functions will be used for business logic and data operations and attached to the API Gateway endpoints. CloudFormation and the associated Cloud Development Kit (CDK) will be used to automate the provisioning of resources via infrastructure as code, which eliminates the manual process of doing so through the AWS console or command line interface.
+
+Further investiation will be required to determine how updates will be deployed to native apps.
 
 ## 5. Project milestones and objectives
 `[Define and describe the high-level objectives for the iterations and define milestones. For example, use the following table to lay out the schedule. Generic goals are provided as a guide. You should expand/replace these with your own project specific goals.] `

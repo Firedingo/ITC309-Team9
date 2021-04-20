@@ -130,6 +130,18 @@ TODO.
 
 TODO.
 
+* Skills
+    * Project Management
+    * Java
+    * Lotusscript
+    * Javascript
+    * HTML
+    * CSS
+* Strengths
+    * Documentation
+    * Testing
+    * Design
+
 ## Responsibilities and Roles
 
 To facilitate each team member gaining experience in all areas of the software development process, the roles will be assigned based on individual strengths and preferences, and rotated as needed.
@@ -205,9 +217,9 @@ TODO.
 
 I declare that I have participated in the development of this charter and agree to the stated terms.
 
-| Name              | Signature   | Date and Time    |
-|-------------------|-------------|------------------|
-| Benjamin Cummings | BC          | 2021-04-08 22:00 |
-| Christopher Clark | cjclark     | 2021-04-13 21:34 |
-| Naomi Thompson    |             |                  |
-| Samuel Johnson    |             |                  |
+| Name              | Signature | Date and Time    |
+| ----------------- | --------- | ---------------- |
+| Benjamin Cummings | BC        | 2021-04-08 22:00 |
+| Christopher Clark | cjclark   | 2021-04-13 21:34 |
+| Naomi Thompson    |           |                  |
+| Samuel Johnson    | SJ        | 2021-04-21 00:17 |

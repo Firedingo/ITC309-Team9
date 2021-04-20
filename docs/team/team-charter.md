@@ -124,7 +124,21 @@ Each member has the following skills and strengths which relate to the “Clyde 
 
 ### Naomi Thompson
 
-TODO.
+* Skills
+    * Programming
+        * Java [Intermediate]
+        * C# [Basic]
+        * HTML/CSS [Intermediate]
+        * Javascript [Basic]
+        * GML [Intermediate]
+    * Communication Skills
+    * Organizational
+    * Risk Management
+
+* Strengths
+    * Detail Oriented Planning
+    * Risk Management
+    * Communication Skills
 
 ### Samuel Johnson
 
@@ -219,5 +233,5 @@ I declare that I have participated in the development of this charter and agree 
 | ----------------- | --------- | ---------------- |
 | Benjamin Cummings | BC        | 2021-04-08 22:00 |
 | Christopher Clark | cjclark   | 2021-04-13 21:34 |
-| Naomi Thompson    |           |                  |
+| Naomi Thompson    | nthompson | 2021-04-21 00:21 |
 | Samuel Johnson    | SJ        | 2021-04-21 00:17 |

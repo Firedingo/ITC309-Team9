@@ -15,73 +15,65 @@
 
 ## Executive summary
 
-| **Project objective**  <Summarize  the goal the project is intended to achieve.> |
+|                                                              |
 | ------------------------------------------------------------ |
-| **Test approach**  <Briefly  outline the test levels to be used> |
-| **Test objectives**  <Itemize the major risks addressed by testing  and the outcomes to be achieved> |
+| **Project objective:**  Create a mobile application that can display data from sensors on the Clyde River and surrounding area. |
+| **Test approach:**  Primarily Unit Testing on the code, some Integration and System testing will be necessary to be through and a decent number of User Acceptance Tests also. |
+| **Test objectives:**  Risks: Application Crashes, Application Fails To Work, Water Quality Data is (Not Up To Date/Inaccurate/Displayed Incorrectly/Not Displayed At All), Location Setting Doesn't Work, Notifications Don't Work, Sensors aren't visible, Sensors aren't on a map. |
+| Outcomes: <Itemize the major risks addressed by testing  and the outcomes to be achieved> |
 
  
 
 ## Table of Contents
 
-1. Introduction
-   1.1    Project and project objective
-   1.2    Objective of the master test  plan
-2. Documentation
-   2.1    Basis for the master test  plan
-   2.2    Test basis
-3. Test strategy
-   3.1    Risk analyses
-       3.1.1   Product Risk Analysis
-       3.1.2   Technical Risk Analysis
-   3.2    Test strategy
-4. Test Levels
-   4.1    The <name test level>
-       4.1.1   Entrance and Exit Criteria
-       4.1.2   Test Environment
-       4.1.3   Test Objectives
+[toc]
 
-# 1        Introduction
+# 1	Introduction
 
-## 1.1         Project and project objective
+## 1.1	Project and project objective
 
-<Outline the objective of the overall project>
+A mobile application that takes data already being returned from sensors on the Clyde River and surrounding area and display it in a format that's much easier and nicer to understand. The application will interface with a pre-existing API supplied by the sponsor in order to access this data. The main aim is to take what already exists and just make it better, ie more accessible, user friendly and easier to understand and interpret. Also more practical for farmers in the field to use.
 
-## 1.2         Objective of the master test plan
+## 1.2	Objective of the master test plan
 
 The objective of the Master Test Plan (MTP) is to inform all who are involved in the test process about the approach, the activities, including the mutual relations and dependencies, and the (end) products to be delivered.
 
 The master test plan describes the test approach, the activities and (end) products.
 
-# 2        Documentation
+# 2	Documentation
 
 This chapter describes the documentation used in relation with the master test plan. The described documentation concerns a first inventory and will be elaborated, actualized and detailed at a later stage, during the separate test levels.
 
-## 2.1         Basis for the master test plan
+## 2.1	Basis for the master test plan
 
 <Consider the Project Vision, requirements analyses, specific project or test planning, an implementation plan or other documents of importance.>
 
 The following documents are used as basis for this master test plan.
 
-| **Document  name**          | **Version** | **Date** | **Author** |
-| --------------------------- | ----------- | -------- | ---------- |
-| **BRLS Vision 201960.docx** | 1.0         | 23.11.19 | Jim        |
-|                             |             |          |            |
+| **Document  name**                                  | **Version** | **Date** | **Author**     |
+| --------------------------------------------------- | ----------- | -------- | -------------- |
+| risk-list.md                                        | 0.2         | 19-4-21  | Naomi Thompson |
+| architecture-notebook.md                            | 1.0         | 19-4-21  | Ben Cummings   |
+| project-plan.md                                     | 1.0         | 20-4-21  | Chris Clark    |
+| project-vision.md                                   | 1.0         | 19-4-21  | Chris Clark    |
+| Clyde River Mobile Application Requirement Model.md | 0.1         | 15-4-21  | Sam Johnson    |
 
-## 2.2         Test basis
+## 2.2	Test basis
 
 The test basis contains the documentation that serves as basis for the tests that have to be executed. The overview below describes the documentation that is the starting point for testing. 
 
 <Consider requirements analysis documents, technical designs, data models, system architecture, user manuals, ‘old’ testware and AO-procedures >.
 
-| **Document  name**                                           | **Version** | **Date** | **Author** |
-| ------------------------------------------------------------ | ----------- | -------- | ---------- |
-| **BRLS - Borrow Book - Full Use Case  Description**          | 1.0         | 23.11.19 | Jim        |
-| **BRLS - Borrow Book - Control and UI Class Software Specification** | 1.0         | 23.11.19 | Jim        |
+| **Document  name**                                  | **Version** | **Date** | **Author**  |
+| --------------------------------------------------- | ----------- | -------- | ----------- |
+| Clyde River Mobile Application Requirement Model.md | 0.1         | 15-4-21  | Sam Johnson |
+|                                                     |             |          |             |
 
 <If it’s already definite that the test basis is (partly) missing or is of poor quality, also mention here the measures taken in this area, for example interviews to get the necessary information on the table. It is also possible to mention the document type if the document is not yet available at the time of writing this document.>
 
-# 3        Test strategy
+There may be additional documentation yet to be defined and created that is relevant for this section.
+
+# 3	Test strategy
 
 The time available for testing is limited; not everything can be tested with equal thoroughness. This means that choices have to be made regarding the depth of testing. Also, it is strived to divide test capacity as effective and efficient as possible over the total test project. This principle is the basis of the test strategy.
 
@@ -91,9 +83,9 @@ The first step in determining the test strategy is the execution of a product ri
 
 The test strategy is subsequently based on the results of the risk analyses. The test strategy lays down what, how and when (in which test level) is being tested and is focused in finding the most important defects as early as possible for the lowest costs. This can be summarized as testing with an optimal use of the available capacity and time. The test strategy is described in §3.3.
 
-## 3.1         Risk analyses
+## 3.1	Risk analyses
 
-### 3.1.1       Product Risk Analysis
+### 3.1.1	Product Risk Analysis
 
 The product risks are determined in cooperation with the client and the other parties involved. Product risks are those risks associated with the final product failing to meet functional requirements and required system quality characteristics (NFRs) This product risk analyses (PRA) is comprised of two steps:
 
@@ -113,7 +105,7 @@ The extent of the risk (the risk class) is dependent on the chance of failure (h
 
  
 
-### 3.1.2       Technical Risk Analysis
+### 3.1.2	Technical Risk Analysis
 
 Technical risks are determined in cooperation with the analyst/designers and programmers involved. Technical risks are development risks associated with failing to create a system that behaves according to specifications derived from requirements. (I.E. those aspects of development that pose particular challenges.) This technical risk analyses (TRA) is comprised of two steps:
 
@@ -130,7 +122,7 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 
   
 
-## 3.2         Test strategy
+## 3.2	Test strategy
 
 For each risk from the product and technical risk analysis the risk class determines the thoroughness of the test. Risk class A is the highest risk class and C the lowest. The test strategy is subsequently focused on covering the risks with the highest risk class as early as possible in the test project.
 
@@ -167,7 +159,7 @@ Legend for the table above:
 
  
 
-# 4        Test Levels
+# 4	Test Levels
 
 For this MTP the following test levels are acknowledged:
 
@@ -182,23 +174,23 @@ For this MTP the following test levels are acknowledged:
 
 <Now iterate through each test level describing the goals, entry and exit criteria, and test environment for each test level. Then Include a table detailing what aspects of what risks will be addressed for each test level, what outcome will be tested for, and when this aspect of testing will be scheduled within the overall project plan>
 
-## 4.1         The <name test level> 
+## 4.1	The < name test level > 
 
 The primary goal of <specify test level> is to <specify goal of this test level>. 
 
-### 4.1.1       Entrance and Exit Criteria
+### 4.1.1	Entrance and Exit Criteria
 
 
 
 <Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
 
-### 4.1.2       Test Environment
+### 4.1.2	Test Environment
 
 <Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
 
 
 
-### Test Objectives
+### 4.1.3	Test Objectives
 
 <Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
 

@@ -170,7 +170,7 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 
 ## 3.2	Test strategy
 
-For each risk from the product and technical risk analysis the risk class determines the thoroughness of the test. Risk class A is the highest risk class and C the lowest. The test strategy is subsequently focused on covering the risks with the highest risk class as early as possible in the test project.
+For each risk from the product and technical risk analysis the risk class determines the thoroughness of the test. Risk class A is the highest risk class and E the lowest. The test strategy is subsequently focused on covering the risks with the highest risk class as early as possible in the test project.
 
 <Note: the content of the table below is only an example! Risk class A has to have in at least one test level a high thoroughness of the dynamic test (OOO), risk class B has to have in at least one test level a medium thoroughness of the dynamic test (OO) and risk class C has to have in minimal one test level a limited thoroughness of the dynamic test (O)>
 
@@ -190,18 +190,20 @@ For each risk from the product and technical risk analysis the risk class determ
 
 Legend for the table above:
 
-| RC          | Risk class (from product and technical  risk analysis, where A=high risk, B=average risk, C=low risk) |
+| RC          | Risk class (from product and technical  risk analysis, where A=high risk, B=Medium-High risk, C=medium risk, D=Medium-Low risk, E=Low risk) |
 | ----------- | ------------------------------------------------------------ |
 | SR          | Static Review of the various  intermediary products (requirements, functional design, technical design). Checking and examining artefacts without executing the  software |
 | Unit        | Unit test and Unit integration test                          |
-| Integration | Integration tests (low level (L), high  level(H))            |
-| FAT         | Functional acceptance test (alpha  stage UAT)                |
+| Integration | Integration tests (low level (L), high level(H))             |
+| FAT         | Functional acceptance test (alpha stage UAT)                 |
 | UAT         | User acceptance test (Beta stage UAT)                        |
-| ST          | System test (functional scenario  testing (F), system quality scenario testing (S)) |
-| O           | Limited thoroughness of  the test                            |
-| OO          | Medium thoroughness of the  test                             |
-| OOO         | High thoroughness of the  test                               |
-| <blank>     | If a cell is blank, it  means that the relevant test or evaluation level does not have to be  concerned with the characteristic |
+| ST          | System test (functional scenario testing (F), system quality scenario testing (S)) |
+| O           | Limited thoroughness of the test                             |
+| OO          | Low-Medium thoroughness of the test                          |
+| OOO         | Medium thoroughness of the test                              |
+| OOOO        | Medium-High thoroughness of the test                         |
+| OOOOO       | High thoroughness of the test                                |
+| <blank>     | If a cell is blank, it  means that the relevant test or evaluation level does not have to be concerned with the characteristic |
 
  
 

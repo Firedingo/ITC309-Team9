@@ -93,15 +93,38 @@ The product risks are determined in cooperation with the client and the other pa
 
  
 
-| **Product Risk** | **Characteristic** | **Description**                                   | **Risk  Class** |
-| ---------------- | ------------------ | ------------------------------------------------- | --------------- |
-| 1                | Usability          | Too  difficult to use                             | A               |
-| 3                | Persistence        | Lose track of outstanding loans or patron  status | A               |
-| 3                | Security           | Unauthorised access to patrons’ personal  details | B               |
-
- 
+| **Product Risk** | **Characteristic** | **Description**                                              | Probability | Impact | **Risk  Class** |
+| ---------------- | ------------------ | ------------------------------------------------------------ | --------------- | --------------- | --------------- |
+| 1                | Usability               | The interface does not filter erroneous and outlier data points | Low            | Medium         | D              |
+| 2               | Usability               | The interface does not display graph information within 10 seconds | Medium         | Low            | D              |
+| 3                | Usability               | The interface does not indicate when data is being retrieved | Medium       | Medium         | C              |
+| 4               | Usability | Farmers unable to see if rainfall has exceeded the defined 24 hour limit | Medium | High | B |
+| 5               | Usability | Farmers have to authenticate to see public sensors. | Low | Low | E |
+| 6               | Usability | Farmers cannot access the application on Android devices | Low | Medium | D |
+| 7               | Maintainability | The application does not comply with and utilise Android design conventions and styles on Android devices | Low | Low | E |
+| 8               | Accessibility | Farmers cannot access the application on iOS devices | Low | Medium | D |
+| 9               | Maintainability | The application does not comply with and utilise iOS design conventions and styles on iOS devices | Low | Low | E |
+| 10               | Accessibility | The application cannot be used on phones and tablets | Low | Medium | D |
+| 11               | Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Medium      | Medium | C               |
+| 12               | Maintainability    | The application is not highly available, durable, scalable, and cost effective | Low         | High   | C               |
+| 13               |                    |                                                              |             |        |                 |
+| 14 |                    |                                                              |             |        |                 |
+| 15 |                    |                                                              |             |        |                 |
+| 16 |                         |                                                              |                 |                 |                 |
+| 17 |                         |                                                              |                 |                 |                 |
+| 18 |                         |                                                              |                 |                 |                 |
+| 19 |                    |                                                              |                 |                 |                 |
+| 20 |                    |                                                              |                 |                 |                 |
 
 The extent of the risk (the risk class) is dependent on the chance of failure (how big the chance is that it goes wrong?) and it depends on the damage for the organization if it actually occurs.
+
+Key:
+
+- A = HH (High, High)
+- B = HM (High, Medium), MH (Medium, High)
+- C = MM (Medium, Medium), LH (Low, High), HL (High, Low)
+- D = LM (Low, Medium), ML (Medium, Low)
+- E = LL (Low, Low)
 
  
 
@@ -113,14 +136,37 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 
  
 
-| **Technical risk** | **Risk  Area**  | **Description**                      | **Risk  Class** |      |
-| ------------------ | --------------- | ------------------------------------ | --------------- | ---- |
-| 1                  | Borrowing       | Swipe  card reader integration       | A               |      |
-| 2                  | Returning items | Loans and patron records not updated | B               |      |
-| 3                  | Paying fines    | Interaction with payment gateway     | C               |      |
-|                    |                 |                                      |                 |      |
+| **Technical risk** | **Risk  Area**          | **Description**                                              | Probability | Impact | **Risk  Class** |
+| ------------------ | ----------------------- | ------------------------------------------------------------ | ----------- | ------ | --------------- |
+| 1                  | Usability               | Farmers unable to select a location/estuary                  | Medium      | Medium | C               |
+| 2                  | Usability               | Farmers unable to view the current salinity level recorded by a water quality sensor | Medium      | High   | B               |
+| 3                  | Usability               | Farmers unable to view the current temperature recorded by a water quality sensor | Medium      | High   | B               |
+| 4                  | Usability               | Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | Medium      | High   | B               |
+| 5                  | Usability               | Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | Medium      | High   | B               |
+| 6                  | Usability               | Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | Medium      | High   | B               |
+| 7                  | Usability               | Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | Medium      | High   | B               |
+| 8                  | Usability               | Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | Low         | Low    | E               |
+| 9                  | Usability               | Farmers unable to view the precipitation for a specified time period as recorded for a location | Low         | Medium | D               |
+| 10                 | Usability               | Farmers unable to see sensor locations on a map              | Low         | Low    | E               |
+| 11                 | Usability               | Farmers unable to see if salinity has fallen below or exceed defined limits | Medium      | High   | B               |
+| 12                 | Usability               | Farmers unable to see if rainfall has exceeded the defined 7 day limit | Medium      | High   | B               |
+| 13                 | Security                | The application does not obfuscate the credentials used for authorising requests to APIs | Low         | High   | C               |
+| 14                 | Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | Low         | High   | C               |
+| 15                 | Accessibility Usability | The application does not adjust the interface to suit the device size and orientation | Low         | Low    | E               |
+| 16                 |                         |                                                              |             |        |                 |
+| 17                 |                         |                                                              |             |        |                 |
+| 18                 |                         |                                                              |             |        |                 |
+| 19                 |                         |                                                              |             |        |                 |
 
-  
+  Key:
+
+- A = HH (High, High)
+- B = HM (High, Medium), MH (Medium, High)
+- C = MM (Medium, Medium), LH (Low, High), HL (High, Low)
+- D = LM (Low, Medium), ML (Medium, Low)
+- E = LL (Low, Low)
+
+
 
 ## 3.2	Test strategy
 

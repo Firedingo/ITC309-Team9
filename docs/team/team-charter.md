@@ -128,8 +128,6 @@ TODO.
 
 ### Samuel Johnson
 
-TODO.
-
 * Skills
     * Project Management
     * Java

@@ -52,6 +52,7 @@ The key goal of the Clyde River Dashboard project is to process device and senso
 ## Decisions, Constraints, and Justifications
 
 **Decision #1:** Amazon Web Services (AWS) will be utilised as the IaaS/PaaS provider, who offers the following benefits and services:
+
 * On-demand (i.e. pay as you go) pricing with no upfront costs and free fetch requests between AWS resources, which improves cost effectiveness.
 * Micro-service architecture that is loosely coupled, which improves maintainability.
 * Route 53 will be used to register the custom domain name (to be determined) and create a domain name system (DNS) alias record to associate the CloudFront distribution.
@@ -66,6 +67,7 @@ The key goal of the Clyde River Dashboard project is to process device and senso
 **Justification #1:** As an alternative to AWS, a virtual private server (VPS) provider could have been opted for. However, doing so would incur upfront costs and require careful analysis of the projected usage (with regards to storage capacity and network traffic) for the application, which could be detrimental to cost effectiveness, availability, and scalability if the analysis is inaccurate. Additionally, the provisioning and management of resources would be more time consuming, shifting the focus away from the development efforts (which are paramount).
 
 **Decision #2:** Atlassian BitBucket will be utilised for the version control repository, which offers the following benefits:
+
 * Free private repositories.
 * Integration with Atlassian Jira for project management and issue tracking.
 * Compatibility with AWS CodePipeline as part of the CI/CD pipeline.
@@ -73,6 +75,7 @@ The key goal of the Clyde River Dashboard project is to process device and senso
 **Justification #2:** As an alternative to Atlassian BitBucket, AWS CodeCommit or GitHub could have been opted for. However, the Atlassian product suite is tightly integrated and is familiar to the project team.
 
 **Decision #3:** React Native will be utilised as the framework for the dashboard SPA, which offers the following benefits:
+
 * Ability to compile an application for mobile platforms (i.e. Android and iOS, both with native components) and web.
     * The [React Native Web](https://github.com/necolas/react-native-web) library is required to build the web application.
     * The [React Native Charts Wrapper](https://github.com/wuxudong/react-native-charts-wrapper) library will be used for charts and graphs.

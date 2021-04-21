@@ -5,16 +5,16 @@
 ### 1.1 Do we know what we are trying to achieve?
 The aim of the project is to develop a mobile application to provide quick and easy access to graphically represented climate data from IoT sensors. This is embodied in the completed Vision Document.
 We understand the main functional requirements of the project which are:
-  * View Estuary Water Quality 
-  * View Environmental Conditions (CCRD) 
-  * View Sensor 
-  * View Sensor History 
-  * View Environmental History 
-  * View Rainfall Triggers 
-  *  Set Current Location 
-  * Add Favourite Location 
-  * View Map of Locations 
-  * View Map of Sensors
+  - View Estuary Water Quality 
+  - View Environmental Conditions (CCRD) 
+  - View Sensor 
+  - View Sensor History 
+  - View Environmental History 
+  - View Rainfall Triggers 
+  - Set Current Location 
+  - Add Favourite Location 
+  - View Map of Locations 
+  - View Map of Sensors
 
 This is shown in the completed Functional Requirement model embodied in `<insert list of artefacts documenting Functional Requirements here>`
 We understand the main Non-Functional requirements of the project which are:
@@ -31,19 +31,19 @@ We have a good understanding of how we are going to check that our application d
 This is shown in the completed Master Test Plan
 We have a good understanding of the dependencies and likely completion times for different parts of the project. Target completion dates for key aspects of the project are as follows:
   
-  6/6 | Life Cycle Architecture Milestone (LCAM) and completion of Elaboration Phase 
-  3/9 | Initial Operation Capability Milestone (IOCM) and completion of Construction Phase 
-  13/10 | Product Release Milestone (PRM) and completion of Transition Phase / Project End 
+  - **6th June** Life Cycle Architecture Milestone (LCAM) and completion of Elaboration Phase 
+  - **3rd September**  Initial Operation Capability Milestone (IOCM) and completion of Construction Phase 
+  - **13th October** Product Release Milestone (PRM) and completion of Transition Phase / Project End 
 
 This is shown in the Initial Project Plan.
 
 ### 1.3 Skills required
 Our project requires skills using the following key tools and technologies:
-  * React Native application 
-  * Amazon Web Services (AWS) 
-  * FarmDecisionTech REST API. 
-  * BitBucket Source Code Repository 
-  * Jira Project Management Software 
+  - React Native application 
+  - Amazon Web Services (AWS) 
+  - FarmDecisionTech REST API. 
+  - BitBucket Source Code Repository 
+  - Jira Project Management Software 
 
 We have demonstrated that we have the skills to use these technologies through the implementation of a technology competency demonstrator.
 

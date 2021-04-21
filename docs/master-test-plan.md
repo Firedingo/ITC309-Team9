@@ -189,10 +189,6 @@ NOTE:
 | Risk             | Description                                       | Risk Cat |      |      | Test Levels |      |      |      |
 | ---------------- | ------------------------------------------------- | -------- | ---- | ---- | :---------- | ---- | ---- | ---- |
 |                  |                                                   |          | SR   | Unit | Int         | FAT  | UAT  | ST   |
-| Usability        | Too difficult to use                              | A        | **   |      |             | **   | ***  |      |
-| Persistence      | Lose  track of outstanding loans or patron status | B        | **   |      | **          | **   |      | **   |
-| Borrowing        | Swipe  card reader integration                    | A        | *    | **   | ***         | **   | **   |      |
-| Returning  items | Loans  and patron records not updated             | B        |      | *    | **          | **   | *    |      |
 | Usability               | The interface does not filter erroneous and outlier data points | D              |*|**||*|||
 | Usability               | The interface does not display graph information within 10 seconds | D              ||*|**|||**|
 | Usability               | The interface does not indicate when data is being retrieved | C              |*|***||**|||
@@ -247,22 +243,33 @@ For this MTP the following test levels are acknowledged:
 
 | **Test level**        | **Goal**                                                     |
 | --------------------- | ------------------------------------------------------------ |
-| Unit testing:         | The aim is to  test each part of the software by separating it. It checks that component are  fulfilling functionalities or not |
-| Integration  testing: | In this testing  phase, different software modules are combined and tested as a group to make  sure that integrated system is ready for system testing. Integrating testing  checks the data flow from one module to other modules. |
-| System testing:       | System testing is  performed on a complete, integrated system. It allows checking system's  compliance as per the requirements. It tests the overall interaction of components.  It involves load, performance, reliability and security testing. |
-| Acceptance  testing:  | Acceptance  testing is a test conducted to find if the requirements of a specification or  contract are met as per its delivery. |
+| Unit testing:         | The aim is to test each part of the software by separating it. It checks that component are fulfilling functionalities or not |
+| Integration  testing: | In this testing  phase, different software modules are combined and tested as a group to make sure that integrated system is ready for system testing. Integrating testing checks the data flow from one module to other modules. |
+| System testing:       | System testing is  performed on a complete, integrated system. It allows checking system's  compliance as per the requirements. It tests the overall interaction of components. It involves load, performance, reliability and security testing. |
+| Acceptance  testing:  | Acceptance testing is a test conducted to find if the requirements of a specification or contract are met as per its delivery. |
 
  
 
 <Now iterate through each test level describing the goals, entry and exit criteria, and test environment for each test level. Then Include a table detailing what aspects of what risks will be addressed for each test level, what outcome will be tested for, and when this aspect of testing will be scheduled within the overall project plan>
 
-## 4.1	The < name test level > 
+## 4.1	The Unit Testing Level 
 
-The primary goal of <specify test level> is to <specify goal of this test level>. 
+The primary goal of unit testing is to identify any issues if they exist and to otherwise give confidence in the quality and reliability of individual units of the application.
 
 ### 4.1.1	Entrance and Exit Criteria
 
+Entry:
 
+- Fleshed out, thorough, complete unit tests
+- Set-up & Functioning Test Environment
+- Sufficient Test Data Whether Real Or Fake
+
+Exit:
+
+- Tests provide sufficient coverage of the code
+- All tests pass
+- No identified critical bugs remain outstanding
+- No defects remain unaddressed and open
 
 <Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
 
@@ -270,9 +277,71 @@ The primary goal of <specify test level> is to <specify goal of this test level>
 
 <Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
 
-
+A testing framework likely coupled with a mocking framework so that system components can be mocked.
 
 ### 4.1.3	Test Objectives
+
+<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
+
+| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
+| Borrowing:  swipe card integration                           | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
+| Returning  items: Loans and patrons records not updated      | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
+| The interface does not filter erroneous and outlier data points |                                                              |                                                              |                                                 |
+| The interface does not display graph information within 10 seconds |                                                              |                                                              |                                                 |
+| The interface does not indicate when data is being retrieved |                                                              |                                                              |                                                 |
+| Farmers unable to see if rainfall has exceeded the defined 24 hour limit |                                                              |                                                              |                                                 |
+| Farmers have to authenticate to see public sensors.          |                                                              |                                                              |                                                 |
+| Farmers cannot access the application on Android devices     |                                                              |                                                              |                                                 |
+| Farmers cannot access the application on iOS devices         |                                                              |                                                              |                                                 |
+| The application cannot be used on phones and tablets         |                                                              |                                                              |                                                 |
+| The application is not highly available, durable, scalable, and cost effective |                                                              |                                                              |                                                 |
+| Farmers unable to select a location/estuary                  |                                                              |                                                              |                                                 |
+| Farmers unable to view the current salinity level recorded by a water quality sensor |                                                              |                                                              |                                                 |
+| Farmers unable to view the current temperature recorded by a water quality sensor |                                                              |                                                              |                                                 |
+| Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary |                                                              |                                                              |                                                 |
+| Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary |                                                              |                                                              |                                                 |
+| Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor |                                                              |                                                              |                                                 |
+| Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor |                                                              |                                                              |                                                 |
+| Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location |                                                              |                                                              |                                                 |
+| Farmers unable to view the precipitation for a specified time period as recorded for a location |                                                              |                                                              |                                                 |
+| Farmers unable to see sensor locations on a map              |                                                              |                                                              |                                                 |
+| Farmers unable to see if salinity has fallen below or exceed defined limits |                                                              |                                                              |                                                 |
+| Farmers unable to see if rainfall has exceeded the defined 7 day limit |                                                              |                                                              |                                                 |
+| The application does not obfuscate the credentials used for authorising requests to APIs |                                                              |                                                              |                                                 |
+| The application does not adjust the interface to suit the device size and orientation |                                                              |                                                              |                                                 |
+|                                                              |                                                              |                                                              |                                                 |
+
+
+
+## 4.2	The Integration  Testing Level 
+
+The primary goal of Integration testing is to identify any issues if they exist and to otherwise give confidence in the quality and reliability of individual units of the application as they interconnect and work together to form larger blocks of the application.
+
+### 4.2.1	Entrance and Exit Criteria
+
+Entry:
+
+- Successful completion of Unit testing
+- Previous bugs that were identified have been addressed and closed.
+- Test Cases are written.
+
+Exit:
+
+- Tests provide sufficient coverage of the code
+- All tests pass
+- No identified critical bugs remain outstanding
+- No defects remain unaddressed and open
+
+<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
+
+### 4.2.2	Test Environment
+
+<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
+
+A testing framework likely coupled with a mocking framework so that system components can be mocked.
+
+### 4.2.3	Test Objectives
 
 <Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
 
@@ -280,6 +349,131 @@ The primary goal of <specify test level> is to <specify goal of this test level>
 | ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
 | Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
 | Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
+|The interface does not display graph information within 10 seconds | | | |
+|Farmers unable to see if rainfall has exceeded the defined 24 hour limit | | | |
+|Farmers cannot access the application on Android devices | | | |
+|Farmers cannot access the application on iOS devices | | | |
+|The application cannot be used on phones and tablets | | | |
+|The application is not highly available, durable, scalable, and cost effective | | | |
+|Farmers unable to view the current salinity level recorded by a water quality sensor | | | |
+|Farmers unable to view the current temperature recorded by a water quality sensor | | | |
+|Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | | | |
+|Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | | | |
+|Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | | | |
+|Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | | | |
+|Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | | | |
+|Farmers unable to view the precipitation for a specified time period as recorded for a location | | | |
+|Farmers unable to see sensor locations on a map | | | |
+|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
+|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
+|The application does not obfuscate the credentials used for authorising requests to APIs | | | |
+| | | | |
 
- 
 
+## 4.3	The System Testing Level 
+
+The primary goal of System testing is to identify any issues if they exist and to otherwise give confidence in the quality and reliability of the application as a whole.
+
+### 4.3.1	Entrance and Exit Criteria
+
+Entry:
+
+- Successful completion of Integration testing
+- Previous bugs that were identified have been addressed and closed.
+- Test Cases are written.
+
+Exit:
+
+- Application is compatible with hardware and software
+- All tests pass
+- No identified critical bugs remain outstanding
+- No defects remain unaddressed and open
+- Functional and Non-Functional Requirements have been addressed and met.
+
+<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
+
+### 4.3.2	Test Environment
+
+<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
+
+A testing framework likely coupled with a mocking framework so that system components can be mocked.
+
+### 4.3.3	Test Objectives
+
+<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
+
+| **Risk**                                                | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
+| Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
+| Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
+|The interface does not display graph information within 10 seconds | | | |
+|Farmers cannot access the application on Android devices | | | |
+|Farmers cannot access the application on iOS devices | | | |
+|The application cannot be used on phones and tablets | | | |
+|The application technology stack is not maintainable for staff employed at the Department of Primary Industries | | | |
+|The application is not highly available, durable, scalable, and cost effective | | | |
+|Farmers unable to view the current salinity level recorded by a water quality sensor | | | |
+|Farmers unable to view the current temperature recorded by a water quality sensor | | | |
+|Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | | | |
+|Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | | | |
+|Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | | | |
+|Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | | | |
+|Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | | | |
+|Farmers unable to see sensor locations on a map | | | |
+|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
+|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
+|The application does not obfuscate the credentials used for authorising requests to APIs | | | |
+| | | | |
+
+
+## 4.4	The Acceptance  Testing Level
+
+The primary goal of Acceptance testing is to verify and validate that the application meets stakeholder and end user requirements, has the necessary functionality and behaves as the end users expect. 
+
+### 4.4.1	Entrance and Exit Criteria
+
+Entry:
+
+- Successful completion of Unit, Integration & System Tests
+- Previous bugs that were identified have been addressed and closed.
+- Functional and Non-Functional Requirements have been addressed and met.
+- Test Cases are written.
+
+Exit:
+
+- No critical defects remain unaddressed
+- All tests pass
+- Functional and Non-Functional Requirements have been met satisfactorily.
+- Stakeholder/Management Sign-off
+
+<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
+
+### 4.4.2	Test Environment
+
+<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
+
+Primarily conducted through User Acceptance Test & Functional Acceptance Test Documents.
+
+### 4.4.3	Test Objectives
+
+<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
+
+| **Risk**                                                | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
+| Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
+| Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
+|The interface does not filter erroneous and outlier data points | | | |
+|The interface does not indicate when data is being retrieved | | | |
+|Farmers have to authenticate to see public sensors. | | | |
+|Farmers cannot access the application on Android devices | | | |
+|Farmers cannot access the application on iOS devices | | | |
+|The application cannot be used on phones and tablets | | | |
+|The application technology stack is not maintainable for staff employed at the Department of Primary Industries | | | |
+|The application is not highly available, durable, scalable, and cost effective | | | |
+|Farmers unable to select a location/estuary | | | |
+|Farmers unable to see sensor locations on a map | | | |
+|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
+|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
+|The application does not integrate and utilise the FarmDecisionTech REST API | | | |
+|The application does not adjust the interface to suit the device size and orientation | | | |
+| | | | |

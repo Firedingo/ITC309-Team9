@@ -5,16 +5,17 @@
 ### 1.1 Do we know what we are trying to achieve?
 The aim of the project is to develop a mobile application to provide quick and easy access to graphically represented climate data from IoT sensors. This is embodied in the completed Vision Document.
 We understand the main functional requirements of the project which are:
-  - View Estuary Water Quality 
-  - View Environmental Conditions (CCRD) 
-  - View Sensor 
-  - View Sensor History 
-  - View Environmental History 
-  - View Rainfall Triggers 
-  - Set Current Location 
-  - Add Favourite Location 
-  - View Map of Locations 
-  - View Map of Sensors
+
+- View Estuary Water Quality 
+- View Environmental Conditions (CCRD) 
+- View Sensor 
+- View Sensor History 
+- View Environmental History 
+- View Rainfall Triggers 
+- Set Current Location 
+- Add Favourite Location 
+- View Map of Locations 
+- View Map of Sensors
 
 This is shown in the completed Functional Requirement model embodied in `<insert list of artefacts documenting Functional Requirements here>`
 We understand the main Non-Functional requirements of the project which are:
@@ -39,11 +40,12 @@ This is shown in the Initial Project Plan.
 
 ### 1.3 Skills required
 Our project requires skills using the following key tools and technologies:
-  - React Native application 
-  - Amazon Web Services (AWS) 
-  - FarmDecisionTech REST API. 
-  - BitBucket Source Code Repository 
-  - Jira Project Management Software 
+
+- React Native application 
+- Amazon Web Services (AWS) 
+- FarmDecisionTech REST API. 
+- BitBucket Source Code Repository 
+- Jira Project Management Software 
 
 We have demonstrated that we have the skills to use these technologies through the implementation of a technology competency demonstrator.
 

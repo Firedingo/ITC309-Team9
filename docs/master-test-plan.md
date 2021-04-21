@@ -8,7 +8,7 @@
 
 | **Version** | **Date** | **Remarks**                    | **Author**     |
 | ----------- | -------- | ------------------------------ | -------------- |
-| 0.1         | 20-4-21  | Document Creation & Conversion | Naomi Thompson |
+| 0.1         | 21-04-20 | Document Creation & Conversion | Naomi Thompson |
 |             |          |                                |                |
 
  
@@ -176,17 +176,51 @@ For each risk from the product and technical risk analysis the risk class determ
 
 < **Attention**: There are some test levels mentioned in this table, but this is only done as an example. It can be possible that in your project there are more/less and/or other than the in this table mentioned test levels >
 
- 
+NOTE: 
 
-| Risk             | Description                                       | Risk Cat | Test Level |      |      |      |      |      |
-| ---------------- | ------------------------------------------------- | -------- | ---------- | ---- | ---- | ---- | ---- | ---- |
-| SR               | Unit                                              | Int      | FAT        | UAT  | ST   |      |      |      |
-| Usability        | Too difficult to use                              | A        | **         |      |      | **   | ***  |      |
-| Persistence      | Lose  track of outstanding loans or patron status | B        | **         |      | **   | **   |      | **   |
-| Borrowing        | Swipe  card reader integration                    | A        | *          | **   | ***  | **   | **   |      |
-| Returning  items | Loans  and patron records not updated             | B        |            | *    | **   | **   | *    |      |
+- A = At least 1 OOOOO
+- B = At least 1 OOOO
+- C = At least 1 OOO
+- D = At least 1 OO
+- E = At least 1 O
 
  
+
+| Risk             | Description                                       | Risk Cat |      |      | Test Levels |      |      |      |
+| ---------------- | ------------------------------------------------- | -------- | ---- | ---- | :---------- | ---- | ---- | ---- |
+|                  |                                                   |          | SR   | Unit | Int         | FAT  | UAT  | ST   |
+| Usability        | Too difficult to use                              | A        | **   |      |             | **   | ***  |      |
+| Persistence      | Lose  track of outstanding loans or patron status | B        | **   |      | **          | **   |      | **   |
+| Borrowing        | Swipe  card reader integration                    | A        | *    | **   | ***         | **   | **   |      |
+| Returning  items | Loans  and patron records not updated             | B        |      | *    | **          | **   | *    |      |
+| Usability               | The interface does not filter erroneous and outlier data points | D              |*|**||*|||
+| Usability               | The interface does not display graph information within 10 seconds | D              ||*|**|||**|
+| Usability               | The interface does not indicate when data is being retrieved | C              |*|***||**|||
+| Usability | Farmers unable to see if rainfall has exceeded the defined 24 hour limit | B ||****|**||||
+| Usability | Farmers have to authenticate to see public sensors. | E ||*|||*||
+| Usability | Farmers cannot access the application on Android devices | D |*|*|*||**|*|
+| Maintainability | The application does not comply with and utilise Android design conventions and styles on Android devices | E |**||||||
+| Accessibility | Farmers cannot access the application on iOS devices | D |*|*|*||**|*|
+| Maintainability | The application does not comply with and utilise iOS design conventions and styles on iOS devices | E |**||||||
+| Accessibility | The application cannot be used on phones and tablets | D |*|*|*||**|*|
+| Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | C               |***|||**||*|
+| Maintainability    | The application is not highly available, durable, scalable, and cost effective | C               |***|*|*||*|*|
+| Usability               | Farmers unable to select a location/estuary                  | C               | ** | *** |                    | * | * |      |
+| Usability               | Farmers unable to view the current salinity level recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
+| Usability               | Farmers unable to view the current temperature recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
+| Usability               | Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | B               | * | *** | ** |      |      | **** |
+| Usability               | Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | B               | * | *** | ** |      |      | **** |
+| Usability               | Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
+| Usability               | Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
+| Usability               | Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | E               |             | * | * |      |      | * |
+| Usability               | Farmers unable to view the precipitation for a specified time period as recorded for a location | D               | * | ** | * |      |      |      |
+| Usability               | Farmers unable to see sensor locations on a map              | E               | * | * | * | * | * | * |
+| Usability               | Farmers unable to see if salinity has fallen below or exceed defined limits | B               | * | **** | *** |      | * | * |
+| Usability               | Farmers unable to see if rainfall has exceeded the defined 7 day limit | B               | * | **** | *** |      | * | * |
+| Security                | The application does not obfuscate the credentials used for authorising requests to APIs | C               | * | *** | ** |      |      | * |
+| Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | C               | *** |        |                    | * | *** |      |
+| Accessibility Usability | The application does not adjust the interface to suit the device size and orientation | E               | * | * |                    | * | * |      |
+
 
 Legend for the table above:
 

@@ -1,15 +1,15 @@
-# Clyde River Mobile Application: Requirement Model
+# Clyde River Dashboard Application: Requirement Model
 
 
 
 
 ## Document Control
 
-| Version | Changes                                 | Author      | Date       |
-| ------- | --------------------------------------- | ----------- | ---------- |
-| 0.1     | Document format conversion from MS Word | Sam Johnson | 2021-04-03 |
-|         |                                         |             |            |
-|         |                                         |             |            |
+| Version | Changes                                           | Author      | Date       |
+| ------- | ------------------------------------------------- | ----------- | ---------- |
+| 0.1     | Document format conversion from MS Word           | Sam Johnson | 2021-04-03 |
+| 1.0     | Updated requirements, use cases, and domain model | Sam Johnson | 2021-04-22 |
+|         |                                                   |             |            |
 
 
 
@@ -36,53 +36,99 @@ The sensors distributed throughout the Clyde River estuary by the Climate Smart 
 
 This project aims to give the oyster industry better access to the data developed for the Clyde River Dashboard. The current dashboard has several aspects that make it not user friendly. The Climate Smart Projects branch would like to see a mobile application or a web application that is accessible on mobile devices that can present the current sensor data in a user friendly way.
 
-
-
-### Description
-
 ## Functional Requirements
 
-- Farmers may be able to select a location/estuary
-- Farmers may be able to set a favourite location
-- Farmers may be able to view the current favourite location.
-- Farmers must be able to view the current salinity level recorded by a water quality sensor
-- Farmers must be able to view the current temperature recorded by a water quality sensor
-- Farmers may be able to view the current salinity levels recorded by all water quality sensors in the estuary
-- Farmers may be able to view the current temperature levels recorded by all water quality sensors in the estuary
-- Farmers must be able to view the salinity levels for a specified time period as recorded by a water quality sensor
-- Farmers must be able to view the temperatures for a specified time period as recorded by a water quality sensor
-- Farmers must be able to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light, lightning strikes) for a location
-- Farmers  must be able to view the precipitation for a specified time period as recorded for a location
-- Farmers should be able to view the wind speed and wind gusts for a specified time period as recorded for a location
-- Farmers should be able to view the air temperature and relative humidity for a specified time period as recorded for a location
-- Farmers  should be able to view the amount of sunshine and diffused light for a specified time period as recorded for a location
-- Farmers should be able to view the atmospheric pressure for a specified time period as recorded for a location
-- Farmers must be able to see sensor locations on a map
-- Farmers may be able to see if salinity has fallen below or exceed defined limits
-- Farmers should be able to see if rainfall has exceeded the defined 7 day limit
-- Farmers should be able to see if rainfall has exceeded the defined 24 hour limit
-- List all water quality sensors for an estuary
+### High Priority
 
+- The system shall allow farmers to view the current salinity level recorded by a water quality sensor.
+- The system shall allow farmers to view the current temperature recorded by a water quality sensor.
+- The system shall allow farmers to view the salinity levels for a specified time period as recorded by a water quality sensor.
+- The system shall allow farmers to view the temperatures for a specified time period as recorded by a water quality sensor.
+- The system shall allow farmers to view the current conditions for a location. This will include information on the temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light, and lightning strikes subject to the availability of weather sensors.
+- The system shall allow farmers to view the precipitation for a specified time period as recorded for a location.
+- The system shall allow farmers to see sensor locations on a map.
 
+### Medium Priority
+
+- The system shall allow farmers to view the current salinity levels recorded by all water quality sensors in the estuary.  Salinity levels from upstream and downstream of a farmers lease.
+- The system shall allow farmers to view the current temperature levels recorded by all water quality sensors in the estuary. 
+- The system shall allow farmers to view the wind speed and wind gusts for a specified time period as recorded for a location.
+- The system shall allow farmers to view the air temperature and relative humidity for a specified time period as recorded for a location.
+- The system shall allow farmers to view the amount of sunshine and diffused light for a specified time period as recorded for a location.
+- The system shall allow farmers to view the atmospheric pressure for a specified time period as recorded for a location.
+- The system shall allow farmers to see if salinity has fallen below or exceed defined limits. Farmers will use this information to understand why a harvest area may be closed or open.
+- The system shall allow farmers to see if rainfall has exceeded the defined 7 day limit. Farmers will use this information to understand why a harvest area may be closed.
+- The system shall allow farmers to see if rainfall has exceeded the defined 24 hour limit. Farmers will use this information to understand why a harvest area may be closed.
+- The system shall allow farmers to see a list all water quality sensors for an estuary. This will allow the farmer to select an individual sensor.
+
+### Low Priority
+
+- The system shall allow farmers to select a location. The system would use the selection to display sensor information from that location.
+- The system shall allow farmers to set a favourite location. This favourite setting will be stored and used when the application is opened to set the default location
+- The system shall allow farmers to view the current favourite location setting.
 
 ## Non Functional Requirements
 
-- Application will be publicly accessible. Farmers should not have to authenticate to see public sensors.
-- Farmers should be able to access the application on Android devices
-- The application should comply with and utilise Android design conventions and styles on Android devices
-- Farmers should be able to access the application on iOS devices
-- The application should comply with and utilise iOS design conventions and styles on iOS devices
-- The application should be usable on phones and tablets
-- The application should adjust the interface to suit the device size and orientation
-- Farmers may be able to access the application using a web browser
-- The application will integrate and utilise the FarmDecisionTech REST API
-- The interface should indicate when data is being retrieved
-- The interface should display graph information within 10 seconds
-- The interface will filter erroneous and outlier data points
+### High Priority
+
+
+#### Availability
+
+- The system will be publicly accessible. 
+- The system shall allow farmers to access the application on Android devices.
+- The system shall allow farmers to access the application on iOS devices.
+- The application will be highly available, durable, scalable, and cost effective.
+
+#### Usability
+
+- The system should comply with and utilise Android design conventions and styles on Android devices.
+- The system should comply with and utilise iOS design conventions and styles on iOS devices.
+- The system should be usable on modern phones.
+- The system should be usable on modern tablets.
+- The application should adjust the interface to suit the device size and orientation.
+
+#### Security
+
+- Farmers should not have to authenticate to see public sensors.
 - The application will obfuscate the credentials used for authorising requests to APIs
-- The application will be highly available, durable, scalable, and cost effective
+
+#### Supportability
+
 - The application build and deployment processes will be automated
 - The application technology stack will be maintainable for staff employed at the Department of Primary Industries
+
+#### Interfaces
+
+- The application will integrate and utilise the FarmDecisionTech REST API
+
+
+### Medium Priority
+
+
+#### Availability
+
+- Farmers may be able to access the application using a web browser
+
+#### Usability
+
+- The interface should indicate when data is being retrieved
+
+#### Performance
+
+- The interface should display graph information within 10 seconds
+
+#### Supportability
+
+- The application build and deployment processes will be automated
+
+
+### Low Priority
+
+#### Interfaces
+
+- The interface will filter erroneous and outlier data points
+
+
 
 ## Model
 
@@ -90,39 +136,45 @@ This project aims to give the oyster industry better access to the data develope
 
 ### Location
 
-Locations are estuaries where commercial oyster production occurs. Within each location there are a number of harvest areas. 
+Locations are estuaries where commercial oyster production occurs. Within each location there are a number of zones. 
 
 The FarmDecisionTech API defines a similar object called a 'Site'.
 
 ### Zone
 
-A zone is an area within a location (estuary). Most zones will correspond with a harvest area, but there may be other areas of the estuary that contain sensors that aren't in a harvest area. 
+A zone is an area within a location (estuary). Most zones are harvest areas, but there may be other areas of the estuary that contain sensors that aren't in a harvest area. 
 
 This is defined by the  FarmDecisionTech API as a 'Zone'.
 
 ### Harvest Area
 
-A harvest area is where oyster farmers have leases for producing oysters. Harvest areas have a management plan that dictates the rainfall, salinity, and temperature triggers that cause the harvest area to close or open for oyster production. Harvest areas may also be closed for other reasons, such as a sewerage spill.
+A harvest area is where oyster farmers have leases for producing oysters. Within the system a harvest area is a type of zone. Harvest areas have a management plan that dictates the rainfall, salinity, and temperature triggers that cause the harvest area to close or open for oyster production. Harvest areas may also be closed for other reasons, such as a sewerage spill.
 
 ### Sensor
 
-A sensor is a unit that provides measurements of current conditions. Sensors can provide historical data.
+A sensor is a unit that provides measurements of current conditions. Sensors can provide historical data. Each sensor belongs to a zone.
 
 Sensors map to 'Devices' in the  FarmDecisionTech API.
 
 ### Water Sensor
 
-A water quality sensor usually provides salinity, temperature, and total disolved salts measurements. There may be different types of water sensor that vary in the information they provide.
+A water quality sensor usually provides salinity, temperature, and total dissolved salts measurements. There may be different types of water sensor that vary in the information they provide.
 
 ### Weather Sensor
 
-A weather station sensor provides weather information. There are different types of sensors that may be combined to present a complete picture.
+A weather station sensor provides weather information. Different weather sensors have different combinations of sensors that collect readings. One or more weather sensors may be combined to present a complete picture of a location's environmental conditions.
 
 ### Rainfall Trigger
 
 There are defined rainfall triggers for closing an estuary (location) for oyster production. Currently there is a 24 hour and seven day trigger.
 
+### Farmer
 
+A farmer is a person involved in commercial oyster production. Farmers are users of the system who have preferences regarding the information displayed.
+
+### Lease
+
+Leases are areas within a harvest area which a farmer stores stock (oysters). Farmers can install water sensors on the oyster beds in their lease to track water quality. These sensors will not be included in the application scope. Leases indicate the farmer's relationship with a harvest area and through that a location. They are included in this domain model to describe the relationship but may not be directly implemented in the resulting system.
 
 ## Use Cases
 
@@ -433,6 +485,7 @@ A location has not been set or the farmer wants to change the current location.
 | ----------------------------------- | ------------------------------------------------------------ |
 | 1. Opens application                | 2. Name of the current location (estuary) is displayed on the screen |
 | 3. Clicks/Taps the current location | 4. <begin Select Location use case>                          |
+|                                     | 5. Sets selected location as the favourite location          |
 
 **Alternative Flows**
 If at Step 2, no current location is defined, the user is prompted to select a location. Flow resumes at Step 4.
@@ -516,21 +569,23 @@ A location has not been set or the farmer wants to change the current location.
 | ------------------------------------------ | --------------------------------------------------------- |
 |                                            | 1. Displays list of estuary locations with active sensors |
 | 2. Clicks or taps a location from the list |                                                           |
-|                                            |                                                           |
 
 **Alternative Flows**
-<alternate flow 1>
+If at Step 2, the user would prefer to select from a map, the user selects the map. Flow ends the use case.
 
-**Subflows**
-<subflow 1>
+| Farmer                                 | System |
+| -------------------------------------- | ------ |
+| <begin View Map of Locations use case> |        |
+|                                        |        |
+
+
 **Key Scenarios**
 <scenario 1>
 **Post-conditions**
-<post-condition 1>
+A location has been selected.
 **Extension Points**
 Select Location From Map: View Map of Locations
-**Special Requirements**
-<supplementary requirement 1>
+
 **Additional Information**
 
 
@@ -540,7 +595,7 @@ Select Location From Map: View Map of Locations
 
 **Brief Description**
 
-A location has not been set or the farmer wants to change the current location.
+The farmer is selecting a location and wants to view a map of locations.
 
 **Actor Brief Descriptions**
 
@@ -548,32 +603,28 @@ A location has not been set or the farmer wants to change the current location.
 
 **Preconditions**
 
-- None
+- Farmer is selecting a location
 
 **Basic Flow of Events**
 
-| Farmer               | System      |
-| -------------------- | ----------- |
-| 1. Opens application | 2. Displays |
-|                      |             |
-|                      |             |
+| Farmer                                                  | System                                                       |
+| ------------------------------------------------------- | ------------------------------------------------------------ |
+| 1. Selects the Map option                               | 2. Displays a map view centered on the user's current location.<br />Available locations are indicated with an icon and a name. |
+| 3. User manipulates the map to display desired location |                                                              |
+| 4. User selects a location                              |                                                              |
 
 **Alternative Flows**
 <alternate flow 1>
 
 **Subflows**
-<subflow 1>
+
 **Key Scenarios**
 <scenario 1>
 **Post-conditions**
-<post-condition 1>
-**Extension Points**
-<extension point 1>
-**Special Requirements**
-<supplementary requirement 1>
+
+- A location has been selected
+
 **Additional Information**
-
-
 
 
 
@@ -582,7 +633,7 @@ A location has not been set or the farmer wants to change the current location.
 
 **Brief Description**
 
-A location has not been set or the farmer wants to change the current location.
+The farmer wants to view a map showing the locations of sensors including basic information about readings.
 
 **Actor Brief Descriptions**
 
@@ -590,18 +641,19 @@ A location has not been set or the farmer wants to change the current location.
 
 **Preconditions**
 
-- None
+- Application is open
+- A location has been set
+- Location overview is displayed
 
 **Basic Flow of Events**
 
-| Farmer               | System      |
-| -------------------- | ----------- |
-| 1. Opens application | 2. Displays |
-|                      |             |
-|                      |             |
+| Farmer         | System                                                       |
+| -------------- | ------------------------------------------------------------ |
+| 1. Selects Map | 2. Displays map centered on the current location             |
+|                | 3. Displays water quality sensor locations with salinity and temperature information |
+|                | 4. Displays weather sensor location with current temperature |
 
 **Alternative Flows**
-<alternate flow 1>
 
 **Subflows**
 <subflow 1>

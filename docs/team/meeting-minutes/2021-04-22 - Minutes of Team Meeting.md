@@ -25,6 +25,10 @@ Meeting opened at 18:05 AEDT.
 * We need to improve our communication. If you are behind, say something. The team needs to know, and may be able to assist.
 * Mostafa is aware of our delays, and has granted a futher extension to 25th April
 * Discussed completion of Assessment 2 (MTP and Status Assessment) by **23nd April**
+* Inception Phase Project Status Assessment
+  * Naomi Thompson to complete sections 1.2 (project specific risks. Test strategies), 2.4, 2.5, 4.x
+  * Ben to complete sections 1.2 (summary of architecture), 2.3, 2.7
+  * Sam Johnson to complete 1.1 (prioritised NFRs), 2.2
 * Discussed updating the Iteration Plan Assessments
 * Raised need to create Iteration Plan for Elaboration Phase Iteration 1. Further discussion required once SJ is back on deck.
 * Discussion of highest risks moving forward. 

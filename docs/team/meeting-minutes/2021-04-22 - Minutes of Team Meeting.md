@@ -2,11 +2,13 @@
 
 ## Meeting Minutes
 
+|                     |                                                                      |
+| ------------------- | -------------------------------------------------------------------- |
 | **Attendees**       | Christopher Clark (CC); Benjamin Cummings (BC); Naomi Thompson (NC); |
-| **Date and Time**   | 22nd of April 2021 at 18:00 AEDT                             |
-| **Method/Location** | Team Discord (voice channel)                                 |
-| **Minutes by**      | Christopher Clark                                            |
-| **Apologies**       | Sam Johnson (hospital?)                                      |
+| **Date and Time**   | 22nd of April 2021 at 18:00 AEDT                                     |
+| **Method/Location** | Team Discord (Voice Channel)                                         |
+| **Minutes By**      | Christopher Clark                                                    |
+| **Apologies**       | Sam Johnson (Hospital)                                               |
 
 Meeting opened at 18:05 AEDT.
 

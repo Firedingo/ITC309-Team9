@@ -3,7 +3,6 @@
 ## Meeting Minutes
 
 | **Attendees**       | Christopher Clark (CC); Benjamin Cummings (BC); Naomi Thompson (NC); |
-| ------------------- | ------------------------------------------------------------ |
 | **Date and Time**   | 22nd of April 2021 at 18:00 AEDT                             |
 | **Method/Location** | Team Discord (voice channel)                                 |
 | **Minutes by**      | Christopher Clark                                            |
@@ -35,7 +34,7 @@ Meeting opened at 18:05 AEDT.
     * Team upskilling
     * Charts and telemetry
     * App Deployment
-* Discussed preferred roles for next phase. Eg. Front-end, DevOps, Back-end (API work), etc.
+* Discussed preferred roles for next phase. Eg. documentation, front-end, DevOps, back-end (API work), etc.
 * Confirmed current AWS account owned (and funded) by BC. He is happy with this situation for now.
 
 ### Wrap Up

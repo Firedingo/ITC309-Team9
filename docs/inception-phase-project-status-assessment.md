@@ -66,7 +66,14 @@ The project vision proved challenging due to a large level of variation between 
 
 
 ### 2.3 Proposed Architecture
-The stakeholders originally requested a mobile app, however during our meeting with them it became clear we needed a web application. The proposed architecure included an analysis of options and reasoning for our choice to proceed with React Native.
+
+Whilst there were no major issues encountered whilst defining the architecture, it became evident after the initial sponsor meeting that the proposed project (i.e. mobile application to display telemetry data from the FarmDecisionTech REST API) was not the entire scope. Whilst the mobile application was a cornerstone of the project, the sponsor indicated the desire for it to be cross-platform compatible, and deployed and distributed as a native application for major mobile platforms (i.e. Android and iOS) and as a progressive web application for non-mobile platforms (i.e. Linux, MacOS, and Windows).
+
+There were three suitable candidates for the cross-platform framework: Flutter, Ionic, and React Native. When looking solely at simplifying the development, deployment, and distribution processes, Ionic would have been the preference. However, due to the nature of the application (i.e. frequently updated telemetry data with associated computation of the document object model and rendering of the user interface), the performance benefits of React Native (in comparison to Ionic) were too advantageous to overlook, and the development paradigm and technologies maintained a familiarity that was lacking with Flutter.
+
+Obfuscating the OAuth 2.0 client credentials used to authenticate requests to the FarmDecisionTech REST API created the requirement of implementing an intermediary API within the architecture. Whilst this increases the total complexity of the project, it also improves flexibility and security. Additionally, utilising AWS micro-services (which are inherently loosely-coupled) offers considerable benefits with regards to availability, scalability, and maintainability.
+
+Overall, the chosen architecture is appropriate for the project and well within the technical capabilities of our team.
 
 ### 2.4 Risk List
 Delayed.

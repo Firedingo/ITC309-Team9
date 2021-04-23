@@ -25,7 +25,7 @@ This is shown in the completed Non-Functional Requirement model embodied in `<in
 ### 1.2 Do we know how we are going to achieve it?
 We have a good idea of how we are going to achieve our aims.
 
-The architecture will consist of a React Native client (i.e. front-end) application that will be deployed natively to major mobile platforms (i.e. Android and iOS) and as a web single page application (SPA) for non-mobile platforms. Additionally, a server (i.e. back-end) application will act as an intermediary API between the client and FarmDecisionTech REST API to address security concerns. AWS resources (i.e. micro-services) will be heavily utilised throughout. The architecture is comprehensively covered within the architecture notebook document, and technical competency and feasibility has been demonstrated through a proof of concept.
+The architecture will consist of a React Native client (i.e. front-end) application that will be deployed natively to major mobile platforms (i.e. Android and iOS) and as a web single page application (SPA) for non-mobile platforms. Additionally, a server (i.e. back-end) application will act as an intermediary API between the client and FarmDecisionTech REST API (and other third-party APIs, if required) to address security concerns. AWS resources (i.e. micro-services) will be heavily utilised throughout. The architecture is comprehensively covered within the architecture notebook document, and technical competency and feasibility has been demonstrated through a proof of concept.
 
 We have a good understanding of the project specific risks facing our project and how we are going to deal with them. The risks are:
 `<insert prioritised list of project specific risks here (max 7)>`

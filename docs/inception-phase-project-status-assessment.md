@@ -1,5 +1,9 @@
 # Inception Phase Project Status Assessment
 
+## Table of Contents
+
+[TOC]
+
 ## 1. Assessment against Objectives of the Inception Phase 
 
 ### 1.1 Do we know what we are trying to achieve?
@@ -17,10 +21,19 @@ We understand the main functional requirements of the project which are:
 - View Map of Locations 
 - View Map of Sensors
 
-This is shown in the completed Functional Requirement model embodied in `<insert list of artefacts documenting Functional Requirements here>`
+This is shown in the completed Functional Requirement model embodied in the [Clyde River Mobile Application: Requirements Model](https://bitbucket.org/cclark55/itc303/src/develop/docs/requirements/Clyde%20River%20Mobile%20Application%20Requirement%20Model.md) document. 
+
 We understand the main Non-Functional requirements of the project which are:
-`<insert prioritised list of NFRs here (max 7)>`
-This is shown in the completed Non-Functional Requirement model embodied in `<insert list of artefacts documenting Non-Functional Requirements here>`
+
+- The system will be publicly accessible.
+- The system shall allow farmers to access the application on Android devices.
+- The system shall allow farmers to access the application on iOS devices.
+- The system should be usable on modern phones.
+- The system should be usable on modern tablets.
+- Farmers should not have to authenticate to see public sensors.
+- The application will integrate and utilise the FarmDecisionTech REST API
+
+This is shown in the completed Non-Functional Requirement model embodied in the [Clyde River Mobile Application: Requirements Model](https://bitbucket.org/cclark55/itc303/src/develop/docs/requirements/Clyde%20River%20Mobile%20Application%20Requirement%20Model.md) document. 
 
 ### 1.2 Do we know how we are going to achieve it?
 We have a good idea of how we are going to achieve our aims.
@@ -34,7 +47,7 @@ We have a good understanding of how we are going to check that our application d
 `<insert list of areas of concern and test strategies addressing those concerns>`
 This is shown in the completed Master Test Plan
 We have a good understanding of the dependencies and likely completion times for different parts of the project. Target completion dates for key aspects of the project are as follows:
-  
+
   - **6th June** Life Cycle Architecture Milestone (LCAM) and completion of Elaboration Phase 
   - **3rd September**  Initial Operation Capability Milestone (IOCM) and completion of Construction Phase 
   - **13th October** Product Release Milestone (PRM) and completion of Transition Phase / Project End 
@@ -52,7 +65,7 @@ Our project requires skills using the following key tools and technologies:
 
 We have demonstrated that we have the skills to use these technologies through the implementation of a technology competency demonstrator.
 
- 
+
 ## 2. Deliverables
 For each deliverable:
 ### 2.x <insert Document/Artefact name here>. 
@@ -63,6 +76,8 @@ For each deliverable:
 The project vision proved challenging due to a large level of variation between the Assessment Outline, the provided template, and the textbook resource. Following the template guide and attempting a combination of the requirements listed in the subject outline and method provided in the textbook, the Project Vision is a best attempt. The project vision requires further work in the Elaboration phase to ensure the business case is clear.
 
 ### 2.2 Initial Requirement Model
+
+The requirements model was difficult to complete due to a lack of a clearly defined scope. The project sponsor has given the team wide latitude with respect to the actual design of the application and seems interested in how the team decides to display information. As discussed in the following section, the lack of a clear design requirement for either a native mobile application, a web application usable on phones and tablets, or a single source application compiled to both native and web code.
 
 
 ### 2.3 Proposed Architecture
@@ -95,10 +110,10 @@ At this stage, investigation and implementation is still required for the charti
 For each issue
 
 ### 3.1 Team Communication
-Whilst recognising they chaotic and delayed start to semester, and the external pressures (such as work, family, etc.) it remains important to keep the team updated on progress of work items. This is an ongoing issue to be monitored and discussed at team meetings.
+Whilst recognising the chaotic and delayed start to semester, and the external pressures (such as work, family, etc.) it remains important to keep the team updated on progress of work items. This is an ongoing issue to be monitored and discussed at team meetings.
 
 ### 3.2 Requirements
-The stakeholders have given the team a large amount of freedom in determining the best solution. Whilst it is exciting to creatively develop a new product, there is a lot of information gathering necessary to determine the requriements. Unfortunately, due to the relatively short time frame of the Inception phases, this research was not thorough. Our understanding of the requirements has been a best guess effort based on publicly accessible information on the DPI websites, and our meeting with the stakeholder. Further clarification is needed to confirm our understanding of the requirements is correct. This is an ongoing issue to be raised in the team meeting and communicated with the stakeholders.
+The stakeholders have given the team a large amount of freedom in determining the best solution. Whilst it is exciting to creatively develop a new product, there is a lot of information gathering necessary to determine the requirements. Unfortunately, due to the relatively short time frame of the Inception phases, this research was not thorough. Our understanding of the requirements has been a best guess effort based on publicly accessible information on the DPI websites, and our meeting with the stakeholder. Further clarification is needed to confirm our understanding of the requirements is correct. This is an ongoing issue to be raised in the team meeting and communicated with the stakeholders.
 
 ### 3.3 Potential lack of cohesiveness
 Due to the rush to complete this overdue assessment there has potentially been inadequate discussion amongst the team to ensure tasks and documents are aligned. The documents all support each other and rely on the same information, and we have not taken due time to ensure we have a shared understanding of this information. This issue will be monitored as we develop improved versions of these documents during the Elaboration phase.

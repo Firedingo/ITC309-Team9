@@ -20,7 +20,7 @@
 | **Project objective:**  Create a mobile application that can display data from sensors on the Clyde River and surrounding area. |
 | **Test approach:**  Primarily Unit Testing on the code, some Integration and System testing will be necessary to be through and a decent number of User Acceptance Tests also. |
 | **Test objectives:**  Risks: Application Crashes, Application Fails To Work, Water Quality Data is (Not Up To Date/Inaccurate/Displayed Incorrectly/Not Displayed At All), Location Setting Doesn't Work, Notifications Don't Work, Sensors aren't visible, Sensors aren't on a map. |
-| Outcomes: <Itemize the major risks addressed by testing  and the outcomes to be achieved> |
+| Outcomes: The application does not crash, does not fail to work, Has Up to Date/Accurate/Displayed Data, Functions behave as intended, Sensors are visible and accessible & Notifications Are Handled Appropriately. |
 
  
 
@@ -46,8 +46,6 @@ This chapter describes the documentation used in relation with the master test p
 
 ## 2.1	Basis for the master test plan
 
-<Consider the Project Vision, requirements analyses, specific project or test planning, an implementation plan or other documents of importance.>
-
 The following documents are used as basis for this master test plan.
 
 | **Document  name**                                  | **Version** | **Date** | **Author**     |
@@ -62,16 +60,12 @@ The following documents are used as basis for this master test plan.
 
 The test basis contains the documentation that serves as basis for the tests that have to be executed. The overview below describes the documentation that is the starting point for testing. 
 
-<Consider requirements analysis documents, technical designs, data models, system architecture, user manuals, ‘old’ testware and AO-procedures >.
-
 | **Document  name**                                  | **Version** | **Date** | **Author**  |
 | --------------------------------------------------- | ----------- | -------- | ----------- |
 | Clyde River Mobile Application Requirement Model.md | 0.1         | 15-4-21  | Sam Johnson |
 |                                                     |             |          |             |
 
-<If it’s already definite that the test basis is (partly) missing or is of poor quality, also mention here the measures taken in this area, for example interviews to get the necessary information on the table. It is also possible to mention the document type if the document is not yet available at the time of writing this document.>
-
-There may be additional documentation yet to be defined and created that is relevant for this section.
+There may be additional documentation yet to be defined and created that is relevant for this section. Likely further interviews with the stakeholder Department of Primary Industries will be needed to further clarify project requirements which will influence testing procedures going forward.
 
 # 3	Test strategy
 
@@ -88,8 +82,6 @@ The test strategy is subsequently based on the results of the risk analyses. The
 ### 3.1.1	Product Risk Analysis
 
 The product risks are determined in cooperation with the client and the other parties involved. Product risks are those risks associated with the final product failing to meet functional requirements and required system quality characteristics (NFRs) This product risk analyses (PRA) is comprised of two steps:
-
-<Make an inventory of the risks that are of interest and classify the risks.>
 
  
 
@@ -132,8 +124,6 @@ Key:
 
 Technical risks are determined in cooperation with the analyst/designers and programmers involved. Technical risks are development risks associated with failing to create a system that behaves according to specifications derived from requirements. (I.E. those aspects of development that pose particular challenges.) This technical risk analyses (TRA) is comprised of two steps:
 
-<Make an inventory of the risks that are of interest and classify the risks.>
-
  
 
 | **Technical risk** | **Risk  Area**          | **Description**                                              | Probability | Impact | **Risk  Class** |
@@ -171,10 +161,6 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 ## 3.2	Test strategy
 
 For each risk from the product and technical risk analysis the risk class determines the thoroughness of the test. Risk class A is the highest risk class and E the lowest. The test strategy is subsequently focused on covering the risks with the highest risk class as early as possible in the test project.
-
-<Note: the content of the table below is only an example! Risk class A has to have in at least one test level a high thoroughness of the dynamic test (OOO), risk class B has to have in at least one test level a medium thoroughness of the dynamic test (OO) and risk class C has to have in minimal one test level a limited thoroughness of the dynamic test (O)>
-
-< **Attention**: There are some test levels mentioned in this table, but this is only done as an example. It can be possible that in your project there are more/less and/or other than the in this table mentioned test levels >
 
 NOTE: 
 
@@ -250,8 +236,6 @@ For this MTP the following test levels are acknowledged:
 
  
 
-<Now iterate through each test level describing the goals, entry and exit criteria, and test environment for each test level. Then Include a table detailing what aspects of what risks will be addressed for each test level, what outcome will be tested for, and when this aspect of testing will be scheduled within the overall project plan>
-
 ## 4.1	The Unit Testing Level 
 
 The primary goal of unit testing is to identify any issues if they exist and to otherwise give confidence in the quality and reliability of individual units of the application.
@@ -271,46 +255,38 @@ Exit:
 - No identified critical bugs remain outstanding
 - No defects remain unaddressed and open
 
-<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
-
 ### 4.1.2	Test Environment
 
-<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
-
-A testing framework likely coupled with a mocking framework so that system components can be mocked.
+A testing framework likely coupled with a mocking framework so that system components can be mocked. Further details still need to be worked out.
 
 ### 4.1.3	Test Objectives
 
-<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
-
-| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| Borrowing:  swipe card integration                           | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
-| Returning  items: Loans and patrons records not updated      | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
-| The interface does not filter erroneous and outlier data points |                                                              |                                                              |                                                 |
-| The interface does not display graph information within 10 seconds |                                                              |                                                              |                                                 |
-| The interface does not indicate when data is being retrieved |                                                              |                                                              |                                                 |
-| Farmers unable to see if rainfall has exceeded the defined 24 hour limit |                                                              |                                                              |                                                 |
-| Farmers have to authenticate to see public sensors.          |                                                              |                                                              |                                                 |
-| Farmers cannot access the application on Android devices     |                                                              |                                                              |                                                 |
-| Farmers cannot access the application on iOS devices         |                                                              |                                                              |                                                 |
-| The application cannot be used on phones and tablets         |                                                              |                                                              |                                                 |
-| The application is not highly available, durable, scalable, and cost effective |                                                              |                                                              |                                                 |
-| Farmers unable to select a location/estuary                  |                                                              |                                                              |                                                 |
-| Farmers unable to view the current salinity level recorded by a water quality sensor |                                                              |                                                              |                                                 |
-| Farmers unable to view the current temperature recorded by a water quality sensor |                                                              |                                                              |                                                 |
-| Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary |                                                              |                                                              |                                                 |
-| Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary |                                                              |                                                              |                                                 |
-| Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor |                                                              |                                                              |                                                 |
-| Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor |                                                              |                                                              |                                                 |
-| Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location |                                                              |                                                              |                                                 |
-| Farmers unable to view the precipitation for a specified time period as recorded for a location |                                                              |                                                              |                                                 |
-| Farmers unable to see sensor locations on a map              |                                                              |                                                              |                                                 |
-| Farmers unable to see if salinity has fallen below or exceed defined limits |                                                              |                                                              |                                                 |
-| Farmers unable to see if rainfall has exceeded the defined 7 day limit |                                                              |                                                              |                                                 |
-| The application does not obfuscate the credentials used for authorising requests to APIs |                                                              |                                                              |                                                 |
-| The application does not adjust the interface to suit the device size and orientation |                                                              |                                                              |                                                 |
-|                                                              |                                                              |                                                              |                                                 |
+| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| The interface does not filter erroneous and outlier data points | Ensure that the interface only displays accurate and relevant data points | That Appropriate methods are implemented into the application and are called by the interface | During implementation of the interface                       |
+| The interface does not display graph information within 10 seconds | Ensure that the graph information is displayed within a reasonable and timely manner | Interface provides meaningful feedback and uses old data where new data cannot be obtained | During implementation of the interface                       |
+| The interface does not indicate when data is being retrieved | Ensure the interface provides timely and meaningful feedback to the user about what it's doing | appropriate methods to give feedback and that the interface calls them | During implementation of the interface                       |
+| Farmers unable to see if rainfall has exceeded the defined 24 hour limit | Ensure that farmers are able to access accurate and relevant rainfall data for a time period | Appropriate methods to calculate rainfall total and compare to 24 hour limit & that both are called | During implementation of the data management class           |
+| Farmers have to authenticate to see public sensors.          | Ensure that public sensors are publicly accessible           | That the application can display graphs, sensors and maps without requiring a login, that the login method isn't prematurely called. | During implementation of the map/interface                   |
+| Farmers cannot access the application on Android devices     | Ensure that the application is platform compatible           | Check that the appropriate boilerplate code to compile to Android is present and used. | During initial implementation  of boilerplate code           |
+| Farmers cannot access the application on iOS devices         | Ensure that the application is platform compatible           | Check that the appropriate boilerplate code to compile to iOS is present and used. | During initial implementation  of boilerplate code           |
+| The application cannot be used on phones and tablets         | Ensure that the application is device/hardware compatible    | Check that the appropriate boilerplate code to compile to/run on mobile is present and used. That hardware is compatible | During initial implementation  of boilerplate code           |
+| The application is not highly available, durable, scalable, and cost effective | Ensure that the application is durable, scalable and cost effective | Check that the application is accessible on demand as needed, is resilient to demand and has a flexible design and is cost effective at scale | During implementation of all parts                           |
+| Farmers unable to select a location/estuary                  | Ensure farmers are able to select a location to get area specific and relevant data | Check appropriate methods are included and called, check values are stored | During implementation of the interface & location data.      |
+| Farmers unable to view the current salinity level recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. | During implementation of the data management class           |
+| Farmers unable to view the current temperature recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. | During implementation of the data management class           |
+| Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. | During implementation of the data management class           |
+| Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. | During implementation of the data management class           |
+| Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. That a time period can be specified and is stored. That appropriate methods apply the time period to the data. | During implementation of the data management class           |
+| Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. That a time period can be specified and is stored. That appropriate methods apply the time period to the data. | During implementation of the data management class           |
+| Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | Ensure that farmers are able to access accurate and relevant data from a nominated location | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. | During implementation of the data management class           |
+| Farmers unable to view the precipitation for a specified time period as recorded for a location | Ensure that farmers are able to access accurate and relevant data from a nominated location | appropriate methods are included to access the Farm DecisionTech API and update the data, that said methods are called. That methods for displaying the data are present and called. That a time period can be specified and is stored. That appropriate methods apply the time period to the data. | During implementation of the data management class           |
+| Farmers unable to see sensor locations on a map              | Ensure that farmers are able to access sensors by locating them on a map | appropriate methods to access and display stored info on sensors are implemented and called. | During implementation of the map/interface                   |
+| Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | appropriate methods to calculate salinity totals and compare them to limits, that said methods are called. That methods to display all that are included and called. | During implementation of the data management class & interface |
+| Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | appropriate methods to calculate salinity totals and compare them to limits, that said methods are called. That methods to display all that are included and called. | During implementation of the data management class & interface |
+| The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | Check that appropriate methods for obfuscating credentials are implemented and called by the application | During implementation of the data access and request classes |
+| The application does not adjust the interface to suit the device size and orientation | Ensure that the application is broadly compatible with various devices for accessibility reasons | check that appropriate methods are implemented and called that determine device size and orientation and that then adjust the application interface appropriately | During implementation of the interface                       |
+|                                                              |                                                              |                                                              |                                                              |
 
 
 
@@ -333,41 +309,33 @@ Exit:
 - No identified critical bugs remain outstanding
 - No defects remain unaddressed and open
 
-<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
-
 ### 4.2.2	Test Environment
 
-<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
-
-A testing framework likely coupled with a mocking framework so that system components can be mocked.
+A testing framework likely coupled with a mocking framework so that system components can be mocked. Further details still need to be worked out.
 
 ### 4.2.3	Test Objectives
 
-<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
-
-| **Risk**                                                | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
-| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
-| Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
-|The interface does not display graph information within 10 seconds | | | |
-|Farmers unable to see if rainfall has exceeded the defined 24 hour limit | | | |
-|Farmers cannot access the application on Android devices | | | |
-|Farmers cannot access the application on iOS devices | | | |
-|The application cannot be used on phones and tablets | | | |
-|The application is not highly available, durable, scalable, and cost effective | | | |
-|Farmers unable to view the current salinity level recorded by a water quality sensor | | | |
-|Farmers unable to view the current temperature recorded by a water quality sensor | | | |
-|Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | | | |
-|Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | | | |
-|Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | | | |
-|Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | | | |
-|Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | | | |
-|Farmers unable to view the precipitation for a specified time period as recorded for a location | | | |
-|Farmers unable to see sensor locations on a map | | | |
-|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
-|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
-|The application does not obfuscate the credentials used for authorising requests to APIs | | | |
-| | | | |
+| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| The interface does not display graph information within 10 seconds | Ensure that the graph information is displayed within a reasonable and timely manner | check that other components aren't delaying the display of the graph data | During the implementation of the interface                   |
+| Farmers unable to see if rainfall has exceeded the defined 24 hour limit | Ensure that farmers are able to access accurate and relevant rainfall data for a time period | check that other components aren't impacting data update and display as well as total rainfall calculations. | During the implementation of the interface & data management class |
+| Farmers cannot access the application on Android devices     | Ensure that the application is platform compatible           | check that other components aren't breaking the boilerplate code | During the initial implementation of boilerplate code        |
+| Farmers cannot access the application on iOS devices         | Ensure that the application is platform compatible           | check that other components aren't breaking the boilerplate code | During the initial implementation of boilerplate code        |
+| The application cannot be used on phones and tablets         | Ensure that the application is device/hardware compatible    | check that other components aren't breaking the boilerplate code, making hardware compatibility | During the implementation of the interface & application     |
+| The application is not highly available, durable, scalable, and cost effective | Ensure that the application is durable, scalable and cost effective | Check that the various components don't impact on each other's performance nor apply unnecessary restrictions. | Ongoing, Throughout all implementation                       |
+| Farmers unable to view the current salinity level recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | Check that other components aren't interfering or impacting on the methods updating and displaying salinity levels | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the current temperature recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | Check that other components aren't interfering or impacting on the methods updating and displaying water temp levels | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | Check that other components aren't interfering or impacting on the methods updating and displaying salinity levels | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | Check that other components aren't interfering or impacting on the methods updating and displaying water temp levels | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | Check that other components aren't interfering or impacting on the methods updating and displaying water quality data, nor the imputed time period | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | Check that other components aren't interfering or impacting on the methods updating and displaying water temp data, nor the imputed time period | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | Ensure that farmers are able to access accurate and relevant data from a nominated location | Check that other components aren't interfering or impacting on the methods updating and displaying other data points. | During the implementation of the interface & Data Management Classes |
+| Farmers unable to view the precipitation for a specified time period as recorded for a location | Ensure that farmers are able to access accurate and relevant data from a nominated location | Check that other components aren't interfering or impacting on the methods updating and displaying rainfall data, nor the imputed time period | During the implementation of the interface & Data Management Classes |
+| Farmers unable to see sensor locations on a map              | Ensure that farmers are able to access sensors by locating them on a map | Check that other components aren't interfering with methods to access and display sensor details | During the implementation of the interface & Map             |
+| Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | Check that other components aren't interfering with methods to get and compare to defined limits, check that other components aren't interfering with the defined levels | During the implementation of the interface & Data Management Classes |
+| Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that other components aren't interfering with methods to get and compare to defined limit, check that other components aren't interfering with the defined limit | During the implementation of the interface & Data Management Classes |
+| The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | check that components aren't interfering with methods to obfuscate credentials | During the implementation of the login method                |
+|                                                              |                                                              |                                                              |                                                              |
 
 
 ## 4.3	The System Testing Level 
@@ -390,40 +358,34 @@ Exit:
 - No defects remain unaddressed and open
 - Functional and Non-Functional Requirements have been addressed and met.
 
-<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
-
 ### 4.3.2	Test Environment
 
 <Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
 
-A testing framework likely coupled with a mocking framework so that system components can be mocked.
+A testing framework likely coupled with a mocking framework so that system components can be mocked. Further details still need to be worked out.
 
 ### 4.3.3	Test Objectives
 
-<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
-
-| **Risk**                                                | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
-| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
-| Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
-|The interface does not display graph information within 10 seconds | | | |
-|Farmers cannot access the application on Android devices | | | |
-|Farmers cannot access the application on iOS devices | | | |
-|The application cannot be used on phones and tablets | | | |
-|The application technology stack is not maintainable for staff employed at the Department of Primary Industries | | | |
-|The application is not highly available, durable, scalable, and cost effective | | | |
-|Farmers unable to view the current salinity level recorded by a water quality sensor | | | |
-|Farmers unable to view the current temperature recorded by a water quality sensor | | | |
-|Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | | | |
-|Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | | | |
-|Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | | | |
-|Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | | | |
-|Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | | | |
-|Farmers unable to see sensor locations on a map | | | |
-|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
-|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
-|The application does not obfuscate the credentials used for authorising requests to APIs | | | |
-| | | | |
+| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| The interface does not display graph information within 10 seconds | Ensure that the graph information is displayed within a reasonable and timely manner | Check that other parts of the system aren't breaking the interface and graph methods | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers cannot access the application on Android devices     | Ensure that the application is platform compatible           | Check that other parts of the system aren't breaking compatibility with the hardware | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers cannot access the application on iOS devices         | Ensure that the application is platform compatible           | Check that other parts of the system aren't breaking compatibility with the hardware | After Successful Unit & Integration Test, Post-Implementation |
+| The application cannot be used on phones and tablets         | Ensure that the application is device/hardware compatible    | Check that other parts of the system aren't breaking the boilerplate code and interface | After Successful Unit & Integration Test, Post-Implementation |
+| The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Ensure that the application technology stack is maintainable for DPI employed staff in the long run | Ensure that the application technology stack doesn't become unwieldy, resource heavy, poorly documented or otherwise a monstrosity as a result of other parts of the system | After Successful Unit & Integration Test, Post-Implementation |
+| The application is not highly available, durable, scalable, and cost effective | Ensure that the application is durable, scalable and cost effective | Ensure that the application technology stack doesn't become unwieldy, resource heavy, poorly documented or otherwise a monstrosity as a result of other parts of the system | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the current salinity level recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | Check that other parts of the system aren't breaking or interfering with methods to update & display water quality data | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the current temperature recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data from a sensor | Check that other parts of the system aren't breaking or interfering with methods to update & display water quality data | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | Check that other parts of the system aren't breaking or interfering with methods to update & display water quality data | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | Ensure that farmers are able to access accurate and relevant data from all sensors | Check that other parts of the system aren't breaking or interfering with methods to update & display water temperature data | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | Check that other parts of the system aren't breaking or interfering with methods to update & display water quality data, nor with the time period inputed | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | Ensure that farmers are able to access accurate and relevant data for a nominated time period | Check that other parts of the system aren't breaking or interfering with methods to update & display water temperature data, nor with the time period inputed | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | Ensure that farmers are able to access accurate and relevant data from a nominated location | Check that other parts of the system aren't breaking or interfering with methods to update & display other data | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to see sensor locations on a map              | Ensure that farmers are able to access sensors by locating them on a map | Check that other parts of the system aren't breaking or interfering with methods to access & display sensor information on a map. | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | Check that other parts of the system aren't breaking or interfering with methods to update & display salinity data as well as the defined limits | After Successful Unit & Integration Test, Post-Implementation |
+| Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that other parts of the system aren't breaking or interfering with methods to update & display rainfall data and defined limit | After Successful Unit & Integration Test, Post-Implementation |
+| The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | Check that other parts of the system aren't breaking or interfering with methods to obfuscate credentials | After Successful Unit & Integration Test, Post-Implementation |
+|                                                              |                                                              |                                                              |                                                              |
 
 
 ## 4.4	The Acceptance  Testing Level
@@ -446,34 +408,28 @@ Exit:
 - Functional and Non-Functional Requirements have been met satisfactorily.
 - Stakeholder/Management Sign-off
 
-<Entry criteria refer to the desirable conditions in order to start test execution; exit criteria are the desirable conditions that need to be met in order to proceed with the implementation.>
-
 ### 4.4.2	Test Environment
 
-<Describe the test environment that will be used at this level of testing and the procedures used to carry out the testing.>
-
-Primarily conducted through User Acceptance Test & Functional Acceptance Test Documents.
+Primarily conducted through User Acceptance Test & Functional Acceptance Test Documents. Further details still need to be worked out.
 
 ### 4.4.3	Test Objectives
 
-<Describe how the risks identified to be dealt with at this test level are being verified and/or tested in this test level. Include an indication of when this will occur within the overall project schedule>
-
-| **Risk**                                                | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
-| ------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| Borrowing:  swipe card integration                      | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
-| Returning  items: Loans and patrons records not updated | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
-|The interface does not filter erroneous and outlier data points | | | |
-|The interface does not indicate when data is being retrieved | | | |
-|Farmers have to authenticate to see public sensors. | | | |
-|Farmers cannot access the application on Android devices | | | |
-|Farmers cannot access the application on iOS devices | | | |
-|The application cannot be used on phones and tablets | | | |
-|The application technology stack is not maintainable for staff employed at the Department of Primary Industries | | | |
-|The application is not highly available, durable, scalable, and cost effective | | | |
-|Farmers unable to select a location/estuary | | | |
-|Farmers unable to see sensor locations on a map | | | |
-|Farmers unable to see if salinity has fallen below or exceed defined limits | | | |
-|Farmers unable to see if rainfall has exceeded the defined 7 day limit | | | |
-|The application does not integrate and utilise the FarmDecisionTech REST API | | | |
-|The application does not adjust the interface to suit the device size and orientation | | | |
-| | | | |
+| **Risk**                                                     | **Test Goals**                                               | **Risk Verification**                                        | **Schedule**                                    |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
+| Borrowing:  swipe card integration                           | Ensure  card reader interacts correctly with software system | Functionality  a specified in defined interface   intended,  | During  implementation of Borrow Book Use Case  |
+| Returning  items: Loans and patrons records not updated      | Ensure  loan and patron records are updated as appropriate during book return | Appropriate  methods in correct DAOs are getting called by ReturnBook control class | During  implementation of Return Book use case. |
+| The interface does not filter erroneous and outlier data points | Ensure that the interface only displays accurate and relevant data points | Check that required functionality regarding filtering has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| The interface does not indicate when data is being retrieved | Ensure the interface provides timely and meaningful feedback to the user about what it's doing | Check that required functionality regarding feedback has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers have to authenticate to see public sensors.          | Ensure that public sensors are publicly accessible           | Check that required accessibility has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers cannot access the application on Android devices     | Ensure that the application is platform compatible           | Check that required functionality & compatibility has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers cannot access the application on iOS devices         | Ensure that the application is platform compatible           | Check that required functionality & compatibility has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| The application cannot be used on phones and tablets         | Ensure that the application is device/hardware compatible    | Check that required compatibility has been implemented       | Post-Implementation, Before Handover            |
+| The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Ensure that the application technology stack is maintainable for DPI employed staff in the long run | Check that required functionality has been implemented and behaves as intended within acceptable bounds defined by the stakeholder | Post-Implementation, Before Handover            |
+| The application is not highly available, durable, scalable, and cost effective | Ensure that the application is durable, scalable and cost effective | Check that required functionality has been implemented and behaves as intended and does not have spontaneous adversely impacted elements when under load, scaled and cost is reasonable | Post-Implementation, Before Handover            |
+| Farmers unable to select a location/estuary                  | Ensure farmers are able to select a location to get area specific and relevant data | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers unable to see sensor locations on a map              | Ensure that farmers are able to access sensors by locating them on a map | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+| The application does not integrate and utilise the FarmDecisionTech REST API | Ensure that the application makes use of and integrates the existing FarmDecisionTech REST API | Check that required functionality has been implemented, is used and behaves as intended | Post-Implementation, Before Handover            |
+| The application does not adjust the interface to suit the device size and orientation | Ensure that the application is broadly compatible with various devices for accessibility reasons | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
+|                                                              |                                                              |                                                              |                                                 |

@@ -86,7 +86,10 @@ The project plan had to account for delays at the start of semester. As such the
 The plan only covers a high-level overview of project objectives, however
 
 ### 2.7 Technical Competency Demonstrator
-No issues.
+
+The technical competency demonstrator application successfully demonstrates the capabilities of our team with regards to developing a React Native application (and utilising build and packaging tools such as Babel and Webpack), interacting with (and retrieving telemetry data from) the FarmDecisionTech REST API, provisioning AWS resources via infrastructure as code, and automating the build and deployment processes via command line interface (CLI) scripting. Successful implementation of these major components of the proposed architecture is a significant milestone and indicates with high probability that our team will be able to realise the complete architecture.
+
+At this stage, investigation and implementation is still required for the charting and graphing library, native mobile application deployment and distribution processes, intermediary API, and CI/CD pipeline, all of which will be addressed within the elaboration phase.
 
 ## 3. General Issues
 For each issue

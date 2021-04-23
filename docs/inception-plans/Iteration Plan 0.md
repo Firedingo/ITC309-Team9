@@ -1,82 +1,75 @@
-# Clyde River Dashboard
-# Iteration Plan
+# Clyde River Dashboard: Iteration Plan 0
 
-## 1. Key milestones
+## 1. Key Milestones
 
-| **Milestone**                      | **Date** |
-| ---------------------------------- | -------- |
-| Iteration  start                   | 1/3/21   |
-| Week  1 Deliverables (Form A Team) | 23/2/21  |
-| Week  2 Deliverables               | 22/3/21  |
-| Iteration  stop                    | 22/3/21  |
+| **Milestone**       | **Date**   |
+| ------------------- | ---------- |
+| Iteration Start     | 2021-03-01 |
+| Week 1 Deliverables | 2021-02-23 |
+| Week 2 Deliverables | 2021-03-22 |
+| Iteration Stop      | 2021-03-21 |
 
+## 2. High-Level Objectives
 
-## 2. High-level objectives
+1. Communicate and organize to form a team.
+2. Communicate and coordinate together with sponsor to choose a project.
+3. Comprehend and understand assigned DPI project.
 
-1. Communicate and organize to form a team
-2. Communicate and coordinate together with sponsor to choose a project
-3. Comprehend and understand assigned DPI project 
+## 3. Evaluation Criteria
 
+1. All team members agreed to form a team and signed-off on the team charter.
+2. Team members coordinated project preferences.
+3. Preferences were accepted by sponsor and project was assigned by the sponsor.
+4. A meeting between the team and project sponsor was established and held.
+5. All deliverables were completed.
 
-## 3. Evaluation criteria
+## 4. Work Item Assignments
 
-1. All Team Members Agreed To Form a Team & Signed Off On Team Charter
-2. Team Members Coordinated Project preferences
-3. Preferences were accepted by Sponsor & Project Was Assigned by the Sponsor
-4. A meeting between the team and project sponsors was established and held
-5. All deliverables were completed
+The following work items will be addressed within this iteration:
 
-
-## 4. Work Item assignments
-
-The following Work Items will be addressed in this iteration:
-
-| **Work Item ID** | **Name or key words of description** | **Outcome**                                                  | **State**                                                    | **Assigned to (name)**       | **Estimated Hours** | **Hours worked** | **Estimate of hours remaining** |
-| ---------------- | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------- | ------------------- | ---------------- | ------------------------------- |
-| 1.1              | Team  Formation                      | Through  communication A team is formed                      | Complete                                                     | Everyone                     | 1                   | 1                | 0                               |
-| 5.1              | Push  communication established      | Discord  chosen, server setup and invites sent               | Complete                                                     | Chris  Clark                 | 0.5                 | 0.5              | 0                               |
-| 5.2              | Version  Control Setup               | Repository  created, invites sent                            | Complete                                                     | Chris  Clark                 | 0.5                 | 0.5              | 0                               |
-| 5.3              | Team Charter Created                 | Team Charter Created, Uploaded to Version Control            | [Incomplete](https://chris-clark327.atlassian.net/browse/ITC303-1) | Ben  Cummings  & Sam Johnson | 12                  | 10               | 5                               |
-| 5.4              | Project  Proposal Created            | Project  Proposal Created & Uploaded to Version Control      | [Incomplete](https://chris-clark327.atlassian.net/browse/ITC303-2) | Chris  Clark                 | 10                  | 10               | 5                               |
-| 5.5              | Iteration Plan Created               | Iteration plan completed, uploaded to version control, link on wiki | Complete                                                     | Naomi  Thompson              | 5                   | 5                | 0                               |
-| 5.6              | Create & Setup Wiki                  | Create Wiki, add home page content                           | Complete                                                     | Chris  Clark                 | 1.5                 | 1.5              | 0                               |
-| 2.1              | Team Meeting Minutes                 | Record  minutes after each meeting                           | Complete                                                     | Sam  Johnson                 | 5                   | 5                | 0                               |
-| 5.7              | Setup Jira                           | Setup Jira for project management and issue tracking         | Complete                                                     | Chris  Clark                 | 2                   | 2                | 0                               |
-| 3.1              | Make Project Preference              | Discuss and select as a team our preference for a project    | Complete                                                     | Everyone                     | 2                   | 2                | 0                               |
-| 4.1              | Hold Sponsor Meeting                 | Understand  roughly what the project entails and what might be needed and expected | Complete                                                     | Everyone                     | 1                   | 1                | 0                               |
-  
+| **Work Item ID** | **Name, Keywords, or Description** | **Outcome**                                                                                  | **State**                                                          | **Assigned To** | **Estimated Hours** | **Hours Worked** | **Estimated Hours Remaining** |
+| ---------------- | ---------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------- | ------------------- | ---------------- | ----------------------------- |
+| 1.1              | Team Formation                     | Through communication a team is formed.                                                      | Complete                                                           | Everyone        | 1                   | 1                | 0                             |
+| 5.1              | Push Communication Established     | Discord selected, channels established, and invites sent.                                    | Complete                                                           | Chris Clark     | 0.5                 | 0.5              | 0                             |
+| 5.2              | Version Control Repository Created | BitBucket selected, repository created, and invites sent.                                    | Complete                                                           | Chris Clark     | 0.5                 | 0.5              | 0                             |
+| 5.3              | Team Charter Created               | Team charter created and uploaded to the version control repository.                         | [Incomplete](https://chris-clark327.atlassian.net/browse/ITC303-1) | Ben Cummings    | 12                  | 10               | 5                             |
+| 5.4              | Project Proposal Created           | Project proposal created and uploaded to the version control repository.                     | [Incomplete](https://chris-clark327.atlassian.net/browse/ITC303-2) | Chris Clark     | 10                  | 10               | 5                             |
+| 5.5              | Iteration Plan Created             | Iteration plan created, uploaded to the version control repository, and linked via the Wiki. | Complete                                                           | Naomi Thompson  | 5                   | 5                | 0                             |
+| 5.6              | Create and Populate Wiki           | Wiki created and content is added to the "Home" page.                                        | Complete                                                           | Chris Clark     | 1.5                 | 1.5              | 0                             |
+| 2.1              | Team Meeting Minutes               | Minutes are recorded and uploaded to the version control repository.                         | Complete                                                           | Sam Johnson     | 5                   | 5                | 0                             |
+| 5.7              | Issue Tracking Board Created       | Jira selected, board created, and invites sent.                                              | Complete                                                           | Chris Clark     | 2                   | 2                | 0                             |
+| 3.1              | Select Project Preference          | Collectively discuss and select a project preference.                                        | Complete                                                           | Everyone        | 2                   | 2                | 0                             |
+| 4.1              | Hold Sponsor Meeting               | Better understand the project and the associated requirements and expectations.              | Complete                                                           | Everyone        | 1                   | 1                | 0                             |
 
 ## 5. Issues
 
-| **Issue**                                              | **Status** | **Notes**                                                    |
-| ------------------------------------------------------ | ---------- | ------------------------------------------------------------ |
-| Delay In Getting A Project                             | Resolved   | After Some back and forth with the DPI, a project was given 15/03/21 |
-| Additional Items to be added to Team Charter Still     | Unresolved | Team Charter remains incomplete due to items still to be added |
-| Additional Items to be added to Project Proposal Still | Unresolved | Project Proposal remains incomplete due to items still to be added due to late confirmation on project and details to be worked out. |
-
+| **Issue**                    | **Status** | **Notes**                                                                                                    |
+| ---------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------ |
+| Project assignment delayed.  | Resolved   | After some correspondence with DPI, a project was assigned on 2021-03-15.                                    |
+| Team charter incomplete.     | Unresolved | Further content to be added.                                                                                 |
+| Project proposal incomplete. | Unresolved | Further content to be added due to the delayed assignment of the project and the requirements being unclear. |
 
 ## 6. Assessment
 
-| Assessment  target | Team Formation & Project Initiation |
-| ------------------ | ----------------------------------- |
-| Assessment date    | 22/03/21                            |
-| Participants       | Sam,  Naomi, Chris, Ben             |
-| Project status     | Yellow                              |
+|                   |                                       |
+| ----------------- | ------------------------------------- |
+| Assessment Target | Team Formation and Project Initiation |
+| Assessment Date   | 2021-03-22                            |
+| Participants      | Sam, Naomi, Chris, Ben                |
+| Project Status    | Yellow                                |
 
-### Assessment against objectives
+### Objectives Assessment
 
-Yes the objectives were addressed. Not completely but mostly.
+The high-level objectives were achieved.
 
+### Work Items Assessment
 
-### Work Items: Planned compared to actually completed
+All work items were attempted. Due to the delay in being assigned a project, not all work items (team charter and project proposal) were completed.
 
-All work items were attempted. Most items were done in one sitting and completed, though due to the delay in getting a project, not all work items were completed or addressed in a timely manner.
+### Evaluation Criteria Assessment
 
+All evaluation criteria was satisfied with the exception of the collective sign-off of the team charter due to further content additions being required.
 
-### Assessment against Evaluation Criteria Test results
+### Concerns and Deviations
 
-Most evaluation criteria was met with minimal issues, however the sixth criteria was not met. This is primarily sue to the fact that 2 work items while mostly done remain incomplete due to additional information needing to be added to both documents still. This is partially the result of being delayed getting a project and therefore understanding what is involved with it, with a meeting with the project sponsor only being held days before items were initially due. Additional team meetings may have helped to push the items to competition though some contacts at the project sponsor were also unavailable for a period of time and not all questions were satisfactorily answered by the sponsor thus leaving a giant question mark over some aspects of two of the deliverables.
-
-
-### Other concerns and deviations
- 
+None.

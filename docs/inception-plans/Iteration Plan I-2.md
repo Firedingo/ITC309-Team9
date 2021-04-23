@@ -1,82 +1,80 @@
-# Clyde River Dashboard
-# **Iteration Plan**
+# Clyde River Dashboard: Inception Phase Iteration Plan 2
 
-## 1. Key milestones
+## 1. Key Milestones
 
-| **Milestone**   | **Date** |
-| --------------- | -------- |
-| Iteration start | 7/4/21   |
-| Team Meeting    | 8/4/21   |
-|                 |          |
-| Iteration stop  | 14/4/21  |
+| **Milestone**                      | **Date**   |
+| ---------------------------------- | ---------- |
+| Iteration Start                    | 2021-04-07 |
+| Team Meeting                       | 2021-04-08 |
+| Team Meeting                       | 2021-04-15 |
+| Team Meeting                       | 2021-04-22 |
+| Iteration Stop                     | 2021-04-25 |
 
+## 2. High-Level Objectives
 
-## 2. High-level objectives
+1. Complete outstanding work items from the previous iteration.
+2. Evaluate and select from candidate architectures.
+3. Identify critical, core, risky, or difficult (CCRD) use case.
+4. Identify project risks and formulate mitigation strategies.
+5. Establish project plan.
+6. Demonstrate technical competency through demonstration application.
+7. Assess project progress.
 
-1. Evaluate & select an architecture candidate
+## 3. Evaluation Criteria
 
-2. Identify critical core use case
+1. Architecture notebook document is completed and includes the proposed architecture.
+2. Requirement model document is completed and includes the finalised requirements (functional and non-functional) and use cases.
+3. The risk list document is completed and includes prioritised risks and appropriate mitigation strategies.
+4. The master test plan document is completed and includes an appropriate testing strategy.
+5. The project plan document is completed and includes an achievable schedule for satisfying the project outcomes.
+6. The demonstration application is developed, built, and deployed and exemplifies technical competency in all major architectural areas.
+7. The project status assessment document for the inception phase is completed.
+8. An iteration plan for the second iteration of the inception phase is created.
 
-3. Identify project risks & mitigation strategies
+## 4. Work Item Assignments
 
-4. Document an initial project plan
+The following work items will be addressed within this iteration:
 
-5. Demonstrate team competency
-
-6. Assess project progress
-
-
-## 3. Evaluation criteria
-
-1. Completed Architecture Notebook including proposed candidate
-2. Completed Document outlining core NFRs, functional requirements and use cases
-3. A completed risk list & master test plan
-4. A completed initial project plan
-5. A completed technical competency demonstrator
-6. Completed Inception Phase Project Status Assessment
-
-
-## 4. Work Item assignments
-
-The following Work Items will be addressed in this iteration:
-
-| **Work Item ID** | **Name or key words of description**                | **Outcome**                                                  | **State**  | **Assigned to (name)** | **Estimated Hours** | **Hours worked** | **Estimate of hours remaining** |
-| ---------------- | --------------------------------------------------- | ------------------------------------------------------------ | ---------- | ---------------------- | ------------------- | ---------------- | ------------------------------- |
-| 1.0              | Architecture Notebook Completed                     | An Architecture Notebook is delivered documenting  possible candidates and a proposed candidate | Incomplete | Ben Cummings           | 35                  |                  | 35                              |
-| 2.0              | A core use case document?                           | A documenting outlining the core use case                    | Incomplete | Sam Johnson            | 25                  |                  | 25                              |
-| 3.0              | Completed Risk List                                 | A Risk List is delivered                                     | Incomplete | Naomi Thompson         | 10                  |                  | 10                              |
-| 3.1              | Completed Master Test Plan                          | A Master Test Plan is Delivered                              | Incomplete | Naomi Thompson?        | 30                  |                  | 30                              |
-| 4.0              | Completed Initial Project Plan                      | An Initial Project Plan is delivered                         | Incomplete | Chris Clark?           | 10                  |                  | 10                              |
-| 5.0              | Completed Technical Competency Demonstrator         | A Technical Competency Demonstrator for the whole team is delivered | Incomplete | Everyone?              | 15                  |                  | 15                              |
-| 6.0              | Completed Inception Phase Project Status Assessment | A Completed Inception Phase Project Status Assessment is delivered | Incomplete | Everyone               | 10                  |                  | 10                              |
-
+| **Work Item ID**                                                   | **Name, Keywords, or Description**  | **Outcome**                                                                                                                          | **State**  | **Assigned To** | **Estimated Hours** | **Hours Worked** | **Estimated Hours Remaining** |
+| ------------------------------------------------------------------ | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ---------------- -- | ---------------- | ----------------------------- |
+| [ITC303-16](https://chris-clark327.atlassian.net/browse/ITC303-16) | Requirement Model Document          | Requirement model document created, uploaded to the version control repository, and linked via the Wiki.                             | Complete   | Sam Johnson     | 10                  | 10               | 0                             |
+| [ITC303-8](https://chris-clark327.atlassian.net/browse/ITC303-8)   | Architecture Notebook Document      | Architecture notebook document created, uploaded to the version control repository, and linked via the Wiki.                         | Complete   | Ben Cummings    | 10                  | 10               | 0                             |
+| [ITC303-9](https://chris-clark327.atlassian.net/browse/ITC303-9)   | Risk List Document                  | Risk list document created, uploaded to the version control repository, and linked via the Wiki.                                     | Complete   | Naomi Thompson  | 10                  | 10               | 0                             |
+| [ITC303-10](https://chris-clark327.atlassian.net/browse/ITC303-10) | Master Test Plan Document           | Master test plan document created, uploaded to the version control repository, and linked via the Wiki.                              | Complete   | Naomi Thompson  | 30                  | 30               | 0                             |
+| [ITC303-11](https://chris-clark327.atlassian.net/browse/ITC303-11) | Project Plan Document               | Project plan document created, uploaded to the version control repository, and linked via the Wiki.                                  | Complete   | Chris Clark     | 15                  | 25               | 0                             |
+| [ITC303-17](https://chris-clark327.atlassian.net/browse/ITC303-17) | Technical Demonstration Application | Technical demonstration application developed, built, deployed, uploaded to the version control repository, and linked via the Wiki. | Complete   | Ben Cummings    | 30                  | 35               | 0                             |
+| [ITC303-18](https://chris-clark327.atlassian.net/browse/ITC303-18) | Project Status Assessment Document  | Project status assessment document created, uploaded to the version control repository, and linked via the Wiki.                     | Complete   | Chris Clark     | 10                  | 15               | 0                             |
+| [ITC303-14](https://chris-clark327.atlassian.net/browse/ITC303-14) | Iteration Plan Document             | Iteration plan document created, uploaded to the version control repository, and linked via the Wiki.                                | Complete   | Naomi Thompson  | 5                   | 5                | 0                             |
 
 ## 5. Issues
 
-| **Issue**                                | **Status** | **Notes**                                                    |
-| ---------------------------------------- | ---------- | ------------------------------------------------------------ |
-| API throws errors when queried sometimes | Unresolved | API throws errors when queried sometimes, issues with JSON parsing, this will need to be addressed by the DPI early on |
-|                                          |            |                                                              |
-|                                          |            |                                                              |
-
+| **Issue**                                                                                           | **Status** | **Notes**                                                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| FarmDecisionTech API returning invalid responses.                                                   | Unresolved | The endpoint `/tenant/assets` endpoint throws an exception when an optional offset isn't specified. The endpoint `/asset/{assetId}` returns a `200 (OK)` response when an invalid asset ID is specified, where as it should return a `404 (Not Found)` response. |
+| FarmDecisionTech API client credentials blocked.                                                    | Unresolved | A bug in an early build of the application resulted in the FarmDecisionTech API being flooded with access token requests. Due to this, Ben's client credentials were blocked (it's unclear whether this is temporary or permanent).                              |
+| Two team members (Naomi and Sam) experienced health complications towards the end of the iteration. | Unresolved | The health complications resulted in delays to the delivery of the work items.                                                                                                                                                                                   |
 
 ## 6. Assessment
 
-| Assessment  target |      |
-| ------------------ | ---- |
-|                    |      |
-|                    |      |
-|                    |      |
+|                   |                                       |
+| ----------------- | ------------------------------------- |
+| Assessment Target | Life Cycle Objective Milestone (LCOM) |
+| Assessment Date   | 2021-04-25                            |
+| Participants      | Sam, Naomi, Chris, Ben                |
+| Project Status    | Yellow                                |
 
+### Objectives Assessment
 
-### Assessment against objectives
+The high-level objectives were fully achieved.
 
+### Work Items Assessment
 
-### Work Items: Planned compared to actually completed
+All work items were completed. Many of the work items took longer than initially estimated.
 
+### Evaluation Criteria Assessment
 
-### Assessment against Evaluation Criteria Test results
+All evaluation criteria was satisfied.
 
+### Concerns and Deviations
 
-### Other concerns and deviations
-
+Many of the documents will need to be revised and synced. The project continues to be behind schedule.

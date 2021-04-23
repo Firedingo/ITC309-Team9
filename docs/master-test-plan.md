@@ -92,10 +92,6 @@ Table of Contents
 
 4.4.3 Test Objectives
 
- 
-
-[toc]
-
 # 1	Introduction
 
 ## 1.1	Project and project objective

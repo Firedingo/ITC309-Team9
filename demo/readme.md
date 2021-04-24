@@ -148,4 +148,16 @@ The web SPA can be accessed within a browser by navigating to: [http://localhost
 
 To terminate the local HTTP server, use the keyboard shortcut `CTRL+C` within the same CLI instance.
 
+Prior to subsequent rebuilds, it is best practice to remove the staging directories, which can be done by executing the following commands within a CLI instance on Windows:
+
+    rmdir /s /q .expo/
+    rmdir /s /q node_modules/
+    rmdir /s /q web-build/
+
+Or on Linux/MacOS:
+
+    rm -rf .expo/
+    rm -rf node_modules/
+    rm -rf web-build/
+
 At this point, the application has been successfully built, packaged, and tested as a web SPA.

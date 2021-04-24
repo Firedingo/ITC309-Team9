@@ -53,3 +53,26 @@ Once this is done, verify that the installation was successful by executing the 
     v0.12.3
 
 At this point, the development environment has been appropriately configured to build the application.
+
+### Installing Python and Package Dependencies
+
+The package required to provision and manage AWS resources is distributed via the [Python package manager (PIP)](https://pypi.org/). Due to this, the latest version of [Python 3](https://www.python.org/) needs to be downloaded and installed. Once this is done, verify that the installation was successful by executing the following commands within a CLI instance:
+
+    $ python --version
+    python 3.9.4
+
+    $ pip --version
+    pip 21.0.1 ...
+
+The [AWS CLI](https://pypi.org/project/awscli/) package is required. It is installed as follows:
+
+    $ pip install awscli
+
+(Note: it is generally considered best practice to install packages within isolated [virtual environments](https://docs.python.org/3/tutorial/venv.html), rather than globally.)
+
+Once this is done, verify that the installation was successful by executing the following command within a CLI instance:
+
+    $ aws --version
+    aws-cli/1.19.57 ...
+
+At this point, the development environment has been appropriately configured to deploy the application.

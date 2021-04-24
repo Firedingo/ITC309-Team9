@@ -100,3 +100,52 @@ To verify that the configuration and credential files are functioning correctly,
 If successful, "stringified" JSON containing the user ID, account ID, and Amazon resource name (ARN) will be returned. If unsuccessful, an error message (such as `InvalidClientTokenId` or `SignatureDoesNotMatch`) will be returned, indicating an issue with the *access key ID* and *secret access key* values.
 
 At this point, the development environment has been appropriately configured to authenticate with AWS.
+
+## Building the Application
+
+Clone the version control repository for the application by executing the following command within a CLI instance:
+
+    $ git clone https://johndoe@bitbucket.org/cclark55/itc303.git
+
+(Note: replace `johndoe` with your [BitBucket](https://bitbucket.org/) username.)
+
+An `itc303` directory will be created within the present working directory. Navigate to the root directory for the application by executing the following command within a CLI instance:
+
+    $ cd itc303/demo/application
+
+(Note: the directory structure may differ in the final application.)
+
+Install the NPM package dependencies for the application by executing the following command (which references the `package-lock.json` file) within a CLI instance:
+
+    $ npm ci
+
+Open the configuration file for the application (`config.json`) and set values for the `clientId` and `clientSecret` properties. For example:
+
+    $ cat config.json
+
+    {
+        "farmDecisionTech": {
+            "baseUrl": "https://api.farmdecisiontech.net.au",
+            "clientId": "johndoe",
+            "clientSecret": "topsecret",
+            "recordLimit": 50
+        }
+    }
+
+(Note: the client credentials are generated via the [FarmDecisionTech REST API](https://www.farmdecisiontech.net.au/farmdecisiontech-api/).)
+
+Build the application as a web SPA by executing the following command within a CLI instance:
+
+    $ expo build:web
+
+A `web-build` directory will be created containing the bundled/packaged files.
+
+Optionally, the web SPA can be served and tested via a local HTTP server by executing the following command within a CLI instance:
+
+    $ http-server web-build/
+
+The web SPA can be accessed within a browser by navigating to: [http://localhost:8080](http://localhost:8080)
+
+To terminate the local HTTP server, use the keyboard shortcut `CTRL+C` within the same CLI instance.
+
+At this point, the application has been successfully built, packaged, and tested as a web SPA.

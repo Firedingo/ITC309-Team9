@@ -21,3 +21,35 @@ The final application will enhance and expand on the above by:
 ## Accessing the Application
 
 The application has been deployed to: [https://d3or1vfatpya2v.cloudfront.net/](https://d3or1vfatpya2v.cloudfront.net/)
+
+## Configuring the Development Environment
+
+### Installing NodeJS, NPM, and Package Dependencies
+
+The core packages ([react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), [react-native](https://www.npmjs.com/package/react-native), and [react-native-web](https://www.npmjs.com/package/react-native-web)) required to develop React Native applications are distributed via the [NodeJS package manager (NPM)](https://www.npmjs.com/). Due to this, the latest long term support (LTS) version of [NodeJS](https://nodejs.org/) needs to be downloaded and installed. Once this is done, verify that the installation was successful by executing the following commands within a CLI instance (such as Command Prompt for Windows or Bash for Linux/MacOS):
+
+    $ node --version
+    v14.16.1
+
+    $ npm --version
+    6.14.12
+
+Whilst the previously mentioned core packages can be manually installed and managed, an alternate (and more convenient) approach is to utilise [Expo](https://expo.io/), which greatly simplifies the development, build, and deployment processes for cross-platform [React Native](https://reactnative.dev/) applications. It is installed as follows:
+
+    $ npm install --global expo-cli
+
+Once this is done, verify that the installation was successful by executing the following command within a CLI instance:
+
+    $ expo --version
+    4.4.3
+
+Optionally, a local [HTTP server](https://www.npmjs.com/package/http-server) can be used to serve the bundled/packaged web SPA files for testing prior to deployment. It is installed as follows:
+
+    $ npm install --global http-server
+
+Once this is done, verify that the installation was successful by executing the following command within a CLI instance:
+
+    $ http-server --version
+    v0.12.3
+
+At this point, the development environment has been appropriately configured to build the application.

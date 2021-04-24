@@ -161,3 +161,73 @@ Or on Linux/MacOS:
     rm -rf web-build/
 
 At this point, the application has been successfully built, packaged, and tested as a web SPA.
+
+## Deploying the Application
+
+Ensure that the present working directory is the root directory for the application by executing the following command within a CLI instance on Windows:
+
+    $ cd
+    ... \itc303\demo\application\
+
+Or on Linux/MacOS:
+
+    $ pwd
+    ... /itc303/demo/application/
+
+Validate the infrastructure as code (i.e. [AWS CloudFormation](https://aws.amazon.com/cloudformation/) template) by executing the following command within a CLI instance:
+
+    $ aws cloudformation validate-template --template-body file://../infrastructure/templates/aws-cloudformation.yml
+
+If valid, "stringified" JSON containing the template description and parameters will be returned.
+
+Provision the AWS resource stack by executing the following commands within a CLI instance on Windows:
+
+    $ set USER_NAME=johndoe
+    $ set APPLICATION_NAME=clyde-river-%USER_NAME%
+    $ set ENVIRONMENT_NAME=development
+
+    $ aws cloudformation deploy --stack-name %APPLICATION_NAME%-%ENVIRONMENT_NAME%-stack --template-file ../infrastructure/templates/aws-cloudformation.yml --parameter-overrides ApplicationName=%APPLICATION_NAME% EnvironmentName=%ENVIRONMENT_NAME% --no-fail-on-empty-changeset
+
+Or on Linux/MacOS:
+
+    $ export USER_NAME=johndoe
+    $ export APPLICATION_NAME=clyde-river-$USER_NAME
+    $ export ENVIRONMENT_NAME=development
+
+    $ aws cloudformation deploy --stack-name $APPLICATION_NAME-$ENVIRONMENT_NAME-stack --template-file ../infrastructure/templates/aws-cloudformation.yml --parameter-overrides ApplicationName=$APPLICATION_NAME EnvironmentName=$ENVIRONMENT_NAME --no-fail-on-empty-changeset
+
+(Note: replace `johndoe` with a unique username.)
+
+If successful, the following will be returned:
+
+    Waiting for changeset to be created...
+    Waiting for stack create/update to complete...
+    Successfully created/updated stack - clyde-river-johndoe-development-stack
+
+Additionally, the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/home) will list a stack with the name of *clyde-river-johndoe-development-stack* and the status of *CREATE_COMPLETE*.
+
+The bundled/packaged files for the web SPA need to be synced with the AWS S3 bucket. To do this, execute the following command within a CLI instance on Windows:
+
+    $ aws s3 sync web-build/ s3://%APPLICATION_NAME%-%ENVIRONMENT_NAME%-bucket
+
+Or on Linux/MacOS:
+
+    $ aws s3 sync web-build/ s3://$APPLICATION_NAME-$ENVIRONMENT_NAME-bucket
+
+On subsequent deployments, the AWS CloudFront cache will need to be invalidated to prevent a previous version of the application being served to the end-user. To do this, execute the following command within a CLI instance on Windows:
+
+    FOR /F "tokens=* USEBACKQ" %F IN (`aws cloudformation describe-stacks --stack-name %APPLICATION_NAME%-%ENVIRONMENT_NAME%-stack --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue" --output text`) DO (SET DISTRIBUTION_ID=%F)
+
+    aws cloudfront create-invalidation --distribution-id %DISTRIBUTION_ID% --paths "/*"
+
+(Note: `%%F` should be used instead of `%F` within batch scripts.)
+
+Or on Linux/MacOS:
+
+    export DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name $APPLICATION_NAME-$ENVIRONMENT_NAME-stack --query "Stacks[0].Outputs[?OutputKey=='CloudFrontDistributionId'].OutputValue" --output text)
+
+    aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+
+Finally, to access the URL for the web SPA, navigate to the [AWS CloudFront console](https://console.aws.amazon.com/cloudfront/home), and copy and paste the associated *domain name* value into a browser tab or window.
+
+At this point, the application has been successfully deployed to a provisioned AWS resource stack.

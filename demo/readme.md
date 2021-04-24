@@ -76,3 +76,27 @@ Once this is done, verify that the installation was successful by executing the 
     aws-cli/1.19.57 ...
 
 At this point, the development environment has been appropriately configured to deploy the application.
+
+### Creating and Configuring an AWS Account
+
+[Create a free-tier AWS account](https://portal.aws.amazon.com/billing/signup) and complete the verification process. Once this is done, log in to the [AWS console](https://console.aws.amazon.com/) and navigate to the [IAM security credentials](https://console.aws.amazon.com/iam/home#/security_credentials) webpage.
+
+Expand the *access keys* section and select *create new access key*. Download the CSV (`*.csv`) key file and/or note the *access key ID* and *secret access key* values. Beyond this point, the *secret access key* value will be inaccessible, so if it's misplaced, the process will need to be repeated.
+
+AWS configuration and credential files need to be created. To do this, execute the following command within a CLI instance:
+
+    $ aws configure
+
+When prompted, enter the values for the *access key ID* (as generated above), *secret access key* (as generated above), *default region* (set to `ap-southeast-2`), and *default output format* (leave blank).
+
+An `.aws` directory and two associated files (`config` and `credentials`) will be created within the user's home directory (`%USERPROFILE%` for Windows or `~` for Linux/MacOS) for the `default` profile.
+
+The previously set configuration and credential properties can be temporarily overridden by exporting/setting environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_DEFAULT_REGION`, `AWS_DEFAULT_OUTPUT`, `AWS_CONFIG_FILE`, `AWS_SHARED_CREDENTIALS_FILE`, and `AWS_PROFILE`), which is convenient when provisioning and managing resources in different regions or for different profiles, but shouldn't be necessary for this project.
+
+To verify that the configuration and credential files are functioning correctly, execute the following command within a CLI instance:
+
+    $ aws sts get-caller-identity
+
+If successful, "stringified" JSON containing the user ID, account ID, and Amazon resource name (ARN) will be returned. If unsuccessful, an error message (such as `InvalidClientTokenId` or `SignatureDoesNotMatch`) will be returned, indicating an issue with the *access key ID* and *secret access key* values.
+
+At this point, the development environment has been appropriately configured to authenticate with AWS.

@@ -41,10 +41,23 @@ We have a good idea of how we are going to achieve our aims.
 The architecture will consist of a React Native client (i.e. front-end) application that will be deployed natively to major mobile platforms (i.e. Android and iOS) and as a web single page application (SPA) for non-mobile platforms. Additionally, a server (i.e. back-end) application will act as an intermediary API between the client and FarmDecisionTech REST API (and other third-party APIs, if required) to address security concerns. AWS resources (i.e. micro-services) will be heavily utilised throughout. The architecture is comprehensively covered within the architecture notebook document, and technical competency and feasibility has been demonstrated through a proof of concept.
 
 We have a good understanding of the project specific risks facing our project and how we are going to deal with them. The risks are:
-`<insert prioritised list of project specific risks here (max 7)>`
+
+1. The Team lacks the required skills to deliver the project
+2. The Application fails to work
+3. The project fails to use the FarmDecisionTech API
+4. The sensors on the Clyde River and surrounding areas go offline
+5. The project malforms data received from the FarmDecisionTech API
+6. The application displays no data from the FarmDecisionTech API
+7. The application displays inaccurate data from the FarmDecisionTech API
+
 Our evolving understanding of risks is shown in the ongoing risk list and discussed further below in Section 4.
 We have a good understanding of how we are going to check that our application delivers the intended functionality and system properties. Our key areas of concern and the test strategies we will use to address these concerns are as follows:
-`<insert list of areas of concern and test strategies addressing those concerns>`
+
+1. Usability - Test Strategies will involve Static Reviews, Unit, Integration, System & Acceptance Testing
+2. Maintainability - Test Strategies will involve Static Reviews, Unit, Integration System & Acceptance Testing
+3. Security - Test Strategies will involve Static Reviews, Unit, Integration & System Testing
+4. Accessibility - Test Strategies will involve Static Reviews, Unit & Acceptance Testing
+
 This is shown in the completed Master Test Plan
 We have a good understanding of the dependencies and likely completion times for different parts of the project. Target completion dates for key aspects of the project are as follows:
 
@@ -91,10 +104,16 @@ Obfuscating the OAuth 2.0 client credentials used to authenticate requests to th
 Overall, the chosen architecture is appropriate for the project and well within the technical capabilities of our team.
 
 ### 2.4 Risk List
-Delayed.
+No major issues were encountered with the risk list. That said it became clear as progress on the document was made that while many of the risks are easy enough to identify, they can really only be spoken about in broad generic terms, in part due to the lack of clarity around what's required explicitly.
+
+There was a minor issue with the formatting and layout of the document itself and the markdown used to create it but after a short while it was able to be resolved.
 
 ### 2.5 Master Test Plan
-Delayed.
+No major issues were encountered with the master test plan. That said it became clear as progress on the document was made that while many of the risks & associated test plans are easy enough to identify, they can really only be spoken about in broad generic terms, in part due to the lack of clarity around what's required explicitly.
+
+For example, it's easy enough to assume there will be a testing and likely mocking framework for the test environment but at this stage we can't be more specific about what is required.
+
+There was a minor issue with getting the table of contents to render appropriately on Bitbucket.
 
 ### 2.6 Initial Project Plan
 The project plan had to account for delays at the start of semester. As such the project is currently behind schedule. The plan has been updated and sprints during the Elaboration phases will be only 12 days, which is less convenient for scheduling sprint conclusion and assessments, however is necessary to ensure completion of the assessment by the end of semester.
@@ -123,11 +142,60 @@ Due to the rush to complete this overdue assessment there has potentially been i
 `<identify any key points you wish to make about this particular non-deliverable-associated issue>`
 `<say whether the issue is ongoing or resolved – if ongoing say what you are doing to monitor and manage it>`
 ## 4. Risks
-For each risk (max 7)
-### 4.x <insert risk name here>
+For each risk (max 7)8
+
 `<identify any key points you wish to make about this particular risk>`
 `<state the mitigation strategy you are using to address the risk>`
 `<say whether the risk is ongoing or resolved>`
+
+### 4.1  The Team lacks the required skills to deliver the project
+This would be by far the biggest risk. While some members have prior experience with mobile application development and AWS deployments, other team members have minimal to no experience and will therefore require time getting skilled up in order to help deliver the project.
+
+This risk is likely to remain an ongoing risk for the duration of the project. Mitigation of this risk is therefore highly advisable. This will include upskilling team members, ensuring the application technology stack is compatible and appropriate thus allowing the project to be successfully delivered.
+
+### 4.2  The Application fails to work
+
+This risk is the second biggest risk the project faces. If the application fails to work then all the effort is for naught. This is likely to remain an ongoing risk. Therefore mitigation of this risk is highly advisable.
+
+Mitigation of this risk will entail good definition of the scope of the project, regular testing, oversight and good communication between team members.
+
+### 4.3  The project fails to use the FarmDecisionTech API
+
+While this risk is highly unlikely to eventuate, the impact of it should it happen would be profound. This risk is likely to remain ongoing until development has been completed.
+
+Mitigation of this risk will primarily involve good design documents, regular oversight meeting, communication with stakeholders and strong communication among team members. On top of this, regular testing with reference to the FarmDecisionTech API documentation is also highly recommended.
+
+### 4.4  The sensors on the Clyde River and surrounding areas go offline
+
+While this risk is unlikely to eventuate, it is not improbable as the sensors have previously been taken offline due to bushfires that have passed through the area in the past. Loss of sensor data would impact on a number of areas including testing.
+
+This risk is likely to remain ongoing for the duration of the project also. In the event of this risk occurring, mitigation is not really an option, thus the response to this risk has been indicated as escalate risk as stated in the risk list. Primarily this is due to the fact the risk involves hardware external to the team and of which the team has no control over. Should the sensors remain offline over an extended period of time, the team should be prepared to generate data that can simulate data from the sensors for the purposes of testing.
+
+### 4.5  The project malforms data received from the FarmDecisionTech API
+
+This risk is of mild concern. By malform, it is to be inferred that the data returned by the FarmDecisionTech API is somehow modified such that it is no longer accurate. This could mean the data is altered and therefore inaccurate, the data is handled incorrectly and therefore the wrong data is displayed, the data is overridden by nothing and therefore nothing is displayed etc.
+
+This is of concern as inaccurate or missing data will impact other parts of the project such as graphs displaying rainfall totals. Missing or inaccurate rainfall data would result in an inaccurate graph and therefore impact on business decisions taken by the farmers.
+
+This is likely to remain an ongoing risk for the duration of development. Mitigation will involve clearly defined scope and requirements, ongoing regular testing, strong and clear communication between team and stakeholders & project supervisor oversight.
+
+### 4.6  The application displays no data from the FarmDecisionTech API
+
+This risk is closely tied up with "4.5  The project malforms data received from the FarmDecisionTech API" as well as "4.7  The application displays inaccurate data from the FarmDecisionTech API".
+
+This risk is likely to remain an ongoing risk. What denotes this risk as an individual risk as opposed to being included with "4.5  The project malforms data received from the FarmDecisionTech API" exclusively is that the data received from the FarmDecisionTech API is not malformed by the project and yet still suffers from not being displayed. An example of this may be that the method to display the data is simply not called.
+
+Mitigation of this risk is comparable to "4.5  The project malforms data received from the FarmDecisionTech API". Primarily entailing regular testing, consultation with stakeholders and strong and clear communication.
+
+### 4.7  The application displays inaccurate data from the FarmDecisionTech API
+
+This risk is closely tied up with "4.5  The project malforms data received from the FarmDecisionTech API" as well as "4.6  The application displays no data from the FarmDecisionTech API".
+
+This risk is likely to remain an ongoing risk. What denotes this risk as an individual risk as opposed to being included with "4.5  The project malforms data received from the FarmDecisionTech API" exclusively is that the data received from the FarmDecisionTech API is not malformed by the project and yet still suffers from becoming inaccurate.
+
+An example of this may be that the application caches multiple versions of updated data but the method that fetches the cached data for displaying fetches any of the cached data other than the latest instance. The displayed data would therefore be inaccurate. As mentioned above, this would impact on business decisions by the farmer.
+
+Mitigation of this risk is comparable to "4.5  The project malforms data received from the FarmDecisionTech API". Primarily entailing regular testing, consultation with stakeholders and strong and clear communication.
 
 
 ## 5 Summary – Overall Project Progress

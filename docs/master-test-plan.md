@@ -20,7 +20,7 @@
 | **Project objective:**  Create a mobile application that can display data from sensors on the Clyde River and surrounding area. |
 | **Test approach:**  Primarily Unit Testing on the code, some Integration and System testing will be necessary to be through and a decent number of User Acceptance Tests also. |
 | **Test objectives:**  Risks: Application Crashes, Application Fails To Work, Water Quality Data is (Not Up To Date/Inaccurate/Displayed Incorrectly/Not Displayed At All), Location Setting Doesn't Work, Notifications Don't Work, Sensors aren't visible, Sensors aren't on a map. |
-| Outcomes: The application does not crash, does not fail to work, Has Up to Date/Accurate/Displayed Data, Functions behave as intended, Sensors are visible and accessible & Notifications Are Handled Appropriately. |
+| **Outcomes:** The application does not crash, does not fail to work, Has Up to Date/Accurate/Displayed Data, Functions behave as intended, Sensors are visible and accessible & Notifications Are Handled Appropriately. |
 
  
 
@@ -63,7 +63,6 @@ The test basis contains the documentation that serves as basis for the tests tha
 | **Document  name**                                  | **Version** | **Date** | **Author**  |
 | --------------------------------------------------- | ----------- | -------- | ----------- |
 | Clyde River Mobile Application Requirement Model.md | 0.1         | 15-4-21  | Sam Johnson |
-|                                                     |             |          |             |
 
 There may be additional documentation yet to be defined and created that is relevant for this section. Likely further interviews with the stakeholder Department of Primary Industries will be needed to further clarify project requirements which will influence testing procedures going forward.
 
@@ -99,14 +98,6 @@ The product risks are determined in cooperation with the client and the other pa
 | 10               | Accessibility | The application cannot be used on phones and tablets | Low | Medium | D |
 | 11               | Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Medium      | Medium | C               |
 | 12               | Maintainability    | The application is not highly available, durable, scalable, and cost effective | Low         | High   | C               |
-| 13               |                    |                                                              |             |        |                 |
-| 14 |                    |                                                              |             |        |                 |
-| 15 |                    |                                                              |             |        |                 |
-| 16 |                         |                                                              |                 |                 |                 |
-| 17 |                         |                                                              |                 |                 |                 |
-| 18 |                         |                                                              |                 |                 |                 |
-| 19 |                    |                                                              |                 |                 |                 |
-| 20 |                    |                                                              |                 |                 |                 |
 
 The extent of the risk (the risk class) is dependent on the chance of failure (how big the chance is that it goes wrong?) and it depends on the damage for the organization if it actually occurs.
 
@@ -143,10 +134,6 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 | 13                 | Security                | The application does not obfuscate the credentials used for authorising requests to APIs | Low         | High   | C               |
 | 14                 | Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | Low         | High   | C               |
 | 15                 | Accessibility Usability | The application does not adjust the interface to suit the device size and orientation | Low         | Low    | E               |
-| 16                 |                         |                                                              |             |        |                 |
-| 17                 |                         |                                                              |             |        |                 |
-| 18                 |                         |                                                              |             |        |                 |
-| 19                 |                         |                                                              |             |        |                 |
 
   Key:
 
@@ -164,44 +151,44 @@ For each risk from the product and technical risk analysis the risk class determ
 
 NOTE: 
 
-- A = At least 1 OOOOO
-- B = At least 1 OOOO
-- C = At least 1 OOO
-- D = At least 1 OO
-- E = At least 1 O
+- A = At least 1 \*\*\*\*\*
+- B = At least 1 \*\*\*\*
+- C = At least 1 \*\*\*
+- D = At least 1 \*\*
+- E = At least 1 \*
 
  
 
 | Risk             | Description                                       | Risk Cat |      |      | Test Levels |      |      |      |
 | ---------------- | ------------------------------------------------- | -------- | ---- | ---- | :---------- | ---- | ---- | ---- |
 |                  |                                                   |          | SR   | Unit | Int         | FAT  | UAT  | ST   |
-| Usability               | The interface does not filter erroneous and outlier data points | D              |*|**||*|||
-| Usability               | The interface does not display graph information within 10 seconds | D              ||*|**|||**|
-| Usability               | The interface does not indicate when data is being retrieved | C              |*|***||**|||
-| Usability | Farmers unable to see if rainfall has exceeded the defined 24 hour limit | B ||****|**||||
-| Usability | Farmers have to authenticate to see public sensors. | E ||*|||*||
-| Usability | Farmers cannot access the application on Android devices | D |*|*|*||**|*|
-| Maintainability | The application does not comply with and utilise Android design conventions and styles on Android devices | E |**||||||
-| Accessibility | Farmers cannot access the application on iOS devices | D |*|*|*||**|*|
-| Maintainability | The application does not comply with and utilise iOS design conventions and styles on iOS devices | E |**||||||
-| Accessibility | The application cannot be used on phones and tablets | D |*|*|*||**|*|
-| Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | C               |***|||**||*|
-| Maintainability    | The application is not highly available, durable, scalable, and cost effective | C               |***|*|*||*|*|
-| Usability               | Farmers unable to select a location/estuary                  | C               | ** | *** |                    | * | * |      |
-| Usability               | Farmers unable to view the current salinity level recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
-| Usability               | Farmers unable to view the current temperature recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
-| Usability               | Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | B               | * | *** | ** |      |      | **** |
-| Usability               | Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | B               | * | *** | ** |      |      | **** |
-| Usability               | Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
-| Usability               | Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | B               | * | *** | * |      |      | **** |
-| Usability               | Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | E               |             | * | * |      |      | * |
-| Usability               | Farmers unable to view the precipitation for a specified time period as recorded for a location | D               | * | ** | * |      |      |      |
-| Usability               | Farmers unable to see sensor locations on a map              | E               | * | * | * | * | * | * |
-| Usability               | Farmers unable to see if salinity has fallen below or exceed defined limits | B               | * | **** | *** |      | * | * |
-| Usability               | Farmers unable to see if rainfall has exceeded the defined 7 day limit | B               | * | **** | *** |      | * | * |
-| Security                | The application does not obfuscate the credentials used for authorising requests to APIs | C               | * | *** | ** |      |      | * |
-| Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | C               | *** |        |                    | * | *** |      |
-| Accessibility Usability | The application does not adjust the interface to suit the device size and orientation | E               | * | * |                    | * | * |      |
+| Usability               | The interface does not filter erroneous and outlier data points | D              |\*|\*\*||\*|||
+| Usability               | The interface does not display graph information within 10 seconds | D              ||\*|\*\*|||\*\*|
+| Usability               | The interface does not indicate when data is being retrieved | C              |\*|\*\*\*||\*\*|||
+| Usability | Farmers unable to see if rainfall has exceeded the defined 24 hour limit | B ||\*\*\*\*|\*\*||||
+| Usability | Farmers have to authenticate to see public sensors. | E ||\*|||\*||
+| Usability | Farmers cannot access the application on Android devices | D |\*|\*|\*||\*\*|\*|
+| Maintainability | The application does not comply with and utilise Android design conventions and styles on Android devices | E |\*\*||||||
+| Accessibility | Farmers cannot access the application on iOS devices | D |\*|\*|\*||\*\*|\*|
+| Maintainability | The application does not comply with and utilise iOS design conventions and styles on iOS devices | E |\*\*||||||
+| Accessibility | The application cannot be used on phones and tablets | D |\*|\*|\*||\*\*|\*|
+| Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | C               |\*\*\*|||\*\*||\*|
+| Maintainability    | The application is not highly available, durable, scalable, and cost effective | C               |\*\*\*|\*|\*||\*|\*|
+| Usability               | Farmers unable to select a location/estuary                  | C               | \*\* | \*\*\* |                    | \* | \* |      |
+| Usability               | Farmers unable to view the current salinity level recorded by a water quality sensor | B               | \* | \*\*\* | \* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the current temperature recorded by a water quality sensor | B               | \* | \*\*\* | \* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the current salinity levels recorded by all water quality sensors in the estuary | B               | \* | \*\*\* | \*\* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the current temperature levels recorded by all water quality sensors in the estuary | B               | \* | \*\*\* | \*\* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the salinity levels for a specified time period as recorded by a water quality sensor | B               | \* | \*\*\* | \* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the temperatures for a specified time period as recorded by a water quality sensor | B               | \* | \*\*\* | \* |      |      | \*\*\*\* |
+| Usability               | Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | E               |             | \* | \* |      |      | \* |
+| Usability               | Farmers unable to view the precipitation for a specified time period as recorded for a location | D               | \* | \*\* | \* |      |      |      |
+| Usability               | Farmers unable to see sensor locations on a map              | E               | \* | \* | \* | \* | \* | \* |
+| Usability               | Farmers unable to see if salinity has fallen below or exceed defined limits | B               | \* | \*\*\*\* | \*\*\* |      | \* | \* |
+| Usability               | Farmers unable to see if rainfall has exceeded the defined 7 day limit | B               | \* | \*\*\*\* | \*\*\* |      | \* | \* |
+| Security                | The application does not obfuscate the credentials used for authorising requests to APIs | C               | \* | \*\*\* | \*\* |      |      | \* |
+| Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | C               | \*\*\* |        |                    | \* | \*\*\* |      |
+| Accessibility Usability | The application does not adjust the interface to suit the device size and orientation | E               | \* | \* |                    | \* | \* |      |
 
 
 Legend for the table above:
@@ -214,11 +201,11 @@ Legend for the table above:
 | FAT         | Functional acceptance test (alpha stage UAT)                 |
 | UAT         | User acceptance test (Beta stage UAT)                        |
 | ST          | System test (functional scenario testing (F), system quality scenario testing (S)) |
-| O           | Limited thoroughness of the test                             |
-| OO          | Low-Medium thoroughness of the test                          |
-| OOO         | Medium thoroughness of the test                              |
-| OOOO        | Medium-High thoroughness of the test                         |
-| OOOOO       | High thoroughness of the test                                |
+| \*          | Limited thoroughness of the test                             |
+| \*\*        | Low-Medium thoroughness of the test                          |
+| \*\*\*      | Medium thoroughness of the test                              |
+| \*\*\*\*    | Medium-High thoroughness of the test                         |
+| \*\*\*\*\*  | High thoroughness of the test                                |
 | <blank>     | If a cell is blank, it  means that the relevant test or evaluation level does not have to be concerned with the characteristic |
 
  
@@ -286,7 +273,6 @@ A testing framework likely coupled with a mocking framework so that system compo
 | Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | appropriate methods to calculate salinity totals and compare them to limits, that said methods are called. That methods to display all that are included and called. | During implementation of the data management class & interface |
 | The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | Check that appropriate methods for obfuscating credentials are implemented and called by the application | During implementation of the data access and request classes |
 | The application does not adjust the interface to suit the device size and orientation | Ensure that the application is broadly compatible with various devices for accessibility reasons | check that appropriate methods are implemented and called that determine device size and orientation and that then adjust the application interface appropriately | During implementation of the interface                       |
-|                                                              |                                                              |                                                              |                                                              |
 
 
 
@@ -335,7 +321,6 @@ A testing framework likely coupled with a mocking framework so that system compo
 | Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | Check that other components aren't interfering with methods to get and compare to defined limits, check that other components aren't interfering with the defined levels | During the implementation of the interface & Data Management Classes |
 | Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that other components aren't interfering with methods to get and compare to defined limit, check that other components aren't interfering with the defined limit | During the implementation of the interface & Data Management Classes |
 | The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | check that components aren't interfering with methods to obfuscate credentials | During the implementation of the login method                |
-|                                                              |                                                              |                                                              |                                                              |
 
 
 ## 4.3	The System Testing Level 
@@ -385,7 +370,6 @@ A testing framework likely coupled with a mocking framework so that system compo
 | Farmers unable to see if salinity has fallen below or exceed defined limits | Ensure farmers are able to access relevant salinity data to make informed decisions | Check that other parts of the system aren't breaking or interfering with methods to update & display salinity data as well as the defined limits | After Successful Unit & Integration Test, Post-Implementation |
 | Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that other parts of the system aren't breaking or interfering with methods to update & display rainfall data and defined limit | After Successful Unit & Integration Test, Post-Implementation |
 | The application does not obfuscate the credentials used for authorising requests to APIs | Ensure that API credentials are appropriately handled to look after the system for all vested parties | Check that other parts of the system aren't breaking or interfering with methods to obfuscate credentials | After Successful Unit & Integration Test, Post-Implementation |
-|                                                              |                                                              |                                                              |                                                              |
 
 
 ## 4.4	The Acceptance  Testing Level
@@ -432,4 +416,3 @@ Primarily conducted through User Acceptance Test & Functional Acceptance Test Do
 | Farmers unable to see if rainfall has exceeded the defined 7 day limit | Ensure farmers are able to access relevant rainfall data to make informed decisions | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
 | The application does not integrate and utilise the FarmDecisionTech REST API | Ensure that the application makes use of and integrates the existing FarmDecisionTech REST API | Check that required functionality has been implemented, is used and behaves as intended | Post-Implementation, Before Handover            |
 | The application does not adjust the interface to suit the device size and orientation | Ensure that the application is broadly compatible with various devices for accessibility reasons | Check that required functionality has been implemented and behaves as intended | Post-Implementation, Before Handover            |
-|                                                              |                                                              |                                                              |                                                 |

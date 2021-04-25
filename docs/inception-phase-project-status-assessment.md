@@ -7,7 +7,7 @@
 ## 1. Assessment against Objectives of the Inception Phase 
 
 ### 1.1 Do we know what we are trying to achieve?
-The aim of the project is to develop a mobile application to provide quick and easy access to graphically represented climate data from IoT sensors. This is embodied in the completed Vision Document.
+The aim of the project is to develop a mobile application to provide quick and easy access to graphically represented climate data from IoT sensors. This is embodied in the initial Vision document.
 We understand the main functional requirements of the project which are:
 
 - View Estuary Water Quality 
@@ -59,7 +59,7 @@ We have a good understanding of how we are going to check that our application d
 4. Accessibility - Test Strategies will involve Static Reviews, Unit & Acceptance Testing
 
 This is shown in the completed Master Test Plan
-We have a good understanding of the dependencies and likely completion times for different parts of the project. Target completion dates for key aspects of the project are as follows:
+We have a basic understanding of the dependencies and likely completion times for different parts of the project. Target completion dates for key aspects of the project are as follows:
 
   - **6th June** Life Cycle Architecture Milestone (LCAM) and completion of Elaboration Phase 
   - **3rd September**  Initial Operation Capability Milestone (IOCM) and completion of Construction Phase 
@@ -80,13 +80,9 @@ We have demonstrated that we have the skills to use these technologies through t
 
 
 ## 2. Deliverables
-For each deliverable:
-### 2.x <insert Document/Artefact name here>. 
-`<identify any key points you wish to make about this particular deliverable>`
-`<identify any issues encountered in producing the Document/Artefact, otherwise report as ‘No Issues’>`
 
 ### 2.1 Project Vision
-The project vision proved challenging due to a large level of variation between the Assessment Outline, the provided template, and the textbook resource. Following the template guide and attempting a combination of the requirements listed in the subject outline and method provided in the textbook, the Project Vision is a best attempt. The project vision requires further work in the Elaboration phase to ensure the business case is clear.
+The project vision contains a basic understanding of the business case, however more information and/or clarification is required. Writing the MOV proved challenging due to a large level of variation between the Assessment Outline, the provided template, and the textbook resource. I found it difficult to work within the provided template which seemed limited compared to the information from the textbook and requirements of the marking criteria.  Following the template guide and attempting a combination of the requirements listed in the subject outline and method provided in the textbook, the Project Vision is a best attempt. The project vision requires further work in the Elaboration phase to ensure the business case is clear. This will include seeking feedback from the stakeholders to ensure our understand of the business requirements is correct.
 
 ### 2.2 Initial Requirement Model
 
@@ -116,8 +112,8 @@ For example, it's easy enough to assume there will be a testing and likely mocki
 There was a minor issue with getting the table of contents to render appropriately on Bitbucket.
 
 ### 2.6 Initial Project Plan
-The project plan had to account for delays at the start of semester. As such the project is currently behind schedule. The plan has been updated and sprints during the Elaboration phases will be only 12 days, which is less convenient for scheduling sprint conclusion and assessments, however is necessary to ensure completion of the assessment by the end of semester.
-The plan only covers a high-level overview of project objectives, however
+The project plan had to account for delays at the start of semester. As such the project is currently behind schedule. The plan has been updated and sprints during the Elaboration phases will be only 12 days, which is less convenient for scheduling sprint conclusion and assessments, however is necessary to ensure completion of the assessment by the end of semester. It is likely this schedule will be adjusted further based on the evolving needs of the team.
+The plan only covers a high-level overview of project objectives, and is currently incomplete. The plan builds on other documents which we not available with sufficient time for review and inclusion into this deliverable. As such the requirements, risks, and testing sections will need to be reviewed in the Elaboration Phase.
 
 ### 2.7 Technical Competency Demonstrator
 
@@ -126,28 +122,18 @@ The technical competency demonstrator application successfully demonstrates the 
 At this stage, investigation and implementation is still required for the charting and graphing library, native mobile application deployment and distribution processes, intermediary API, and CI/CD pipeline, all of which will be addressed within the elaboration phase.
 
 ## 3. General Issues
-For each issue
 
 ### 3.1 Team Communication
-Whilst recognising the chaotic and delayed start to semester, and the external pressures (such as work, family, etc.) it remains important to keep the team updated on progress of work items. This is an ongoing issue to be monitored and discussed at team meetings.
+Whilst recognising the chaotic and delayed start to semester, and the external pressures (such as work, family, health and wellbeing concerns etc.) it remains important to keep the team updated on progress of work items. This is an ongoing issue to be monitored and discussed at team meetings.
 
 ### 3.2 Requirements
 The stakeholders have given the team a large amount of freedom in determining the best solution. Whilst it is exciting to creatively develop a new product, there is a lot of information gathering necessary to determine the requirements. Unfortunately, due to the relatively short time frame of the Inception phases, this research was not thorough. Our understanding of the requirements has been a best guess effort based on publicly accessible information on the DPI websites, and our meeting with the stakeholder. Further clarification is needed to confirm our understanding of the requirements is correct. This is an ongoing issue to be raised in the team meeting and communicated with the stakeholders.
 
 ### 3.3 Potential lack of cohesiveness
-Due to the rush to complete this overdue assessment there has potentially been inadequate discussion amongst the team to ensure tasks and documents are aligned. The documents all support each other and rely on the same information, and we have not taken due time to ensure we have a shared understanding of this information. This issue will be monitored as we develop improved versions of these documents during the Elaboration phase.
+Due to the rush to complete this overdue assessment there has potentially been inadequate discussion amongst the team to ensure tasks and documents are aligned. The documents all support each other and rely on the same information, and we have not taken due time to ensure we have a shared understanding of this information. The late submission of some documents, hindered the development of other documents. This issue will be monitored as we develop improved versions of these documents during the Elaboration phase.
 
 
-### 3.x `<insert Issue name here>`
-`<identify any key points you wish to make about this particular non-deliverable-associated issue>`
-`<say whether the issue is ongoing or resolved – if ongoing say what you are doing to monitor and manage it>`
 ## 4. Risks
-For each risk (max 7)8
-
-`<identify any key points you wish to make about this particular risk>`
-`<state the mitigation strategy you are using to address the risk>`
-`<say whether the risk is ongoing or resolved>`
-
 ### 4.1  The Team lacks the required skills to deliver the project
 This would be by far the biggest risk. While some members have prior experience with mobile application development and AWS deployments, other team members have minimal to no experience and will therefore require time getting skilled up in order to help deliver the project.
 
@@ -199,8 +185,8 @@ Mitigation of this risk is comparable to "4.5  The project malforms data receive
 
 
 ## 5 Summary – Overall Project Progress
-`<Summarise your progress against the aims of the Inception Phase>`
-The project is currently behind schedule. The project plan has been updated to reflect shorter iterations to ensure the project can still be completed by the end of the course, however diligence is required to maintain this schedule.
-`<Summarise the status of any ongoing issues>`  
-Issues are mainly regarding project management, and will be discussed at the team meeting.   
-`<Summarise the status of any ongoing risks>`
+The project is currently behind schedule. The project plan has been updated to reflect shorter iterations to ensure the project can still be completed by the end of the course, however diligence is required to maintain this schedule. We will need to engage further with the stakeholders to ensure the vision, requirements, and architecture are appropriate for this project. The risks and planning will need to be revised following confirmation and approval of the project from the stakeholders.
+
+Issues are mainly regarding project management, and will be discussed at the team meeting. There have been significant problems regarding time management and communication within the team. Many deliverables were completed late, which did not leave adequate time for review. The late submission of several deliverables caused delays in related documents, some of which remain incomplete.
+
+The main ongoing risks appear to be relating to communication, health concerns, and maintaining the project schedule.

@@ -13,7 +13,7 @@ Meeting opened at 18:00 AEDT.
 
 ### Strikes Policy
 
-The team was collectively disappointed with failing to meet the deadlines for the last assessment task. Discussions with the project supervisor resulted in the suggestion that the team enforce its strikes policy to encourage team members to contribute on time and communicate if work cannot be accomplished as expected. The team does seek to blame individuals and hopes that all members can continue to contribute to project success.
+The team was collectively disappointed with failing to meet the deadlines for the last assessment task. Discussions with the project supervisor resulted in the suggestion that the team enforce its strikes policy to encourage team members to contribute on time and communicate if work cannot be accomplished as expected. The team does not seek to blame individuals and hopes that all members can continue to contribute to project success.
 
 There is an outstanding question with regard to the number of strikes that could be assigned to a team member simultaneously. The team charter does not specify this clearly. The team has sought guidance from the project supervisor (Mostafa). 
 

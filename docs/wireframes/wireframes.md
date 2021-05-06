@@ -63,3 +63,26 @@ Display simple information taken from the Food Authority website (maybe).
 ### Map Screens
 
 I haven't drawn any of the Map screens (because they look like a map) but the Select Location and Sensor List screens might have tabs at the bottom to switch to a map view displaying the relevant items.
+
+
+
+## Tablet Layout
+
+Below is a potential layout for tablets. The cards on the Location Screen appear in multiple columns to present more information on a single screen.
+
+The Select Location Screen can present the location list beside the map of locations allowing the user to use either interface for selection.
+
+##### Tablet: Location Screen and Select Location Screen
+
+![Tablet Layout](images\2021-05-06_mockups_3.png)
+
+
+
+## PC Layout
+
+On a large screen device the Map may be visible on most screens providing additional context. 
+
+##### PC Browser
+
+![Tablet Layout](images\2021-05-06_mockups_4.png)
+

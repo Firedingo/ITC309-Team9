@@ -49,6 +49,7 @@ The application should provide a way to enable/disable alerts for individual sen
 
 ### Capabilities:
 The new system should be capable of:
+
 * Operating on a variety of different devices
 * Displaying public information from the FarmDecisionTECH(tm) API
 * Handling authentication for access to the API (user login not required)
@@ -60,6 +61,7 @@ The new system should be capable of:
 
 ### Business Benefits:
 It is anticipated the following benefits will be provided to DPI:
+
 * A more friendly experience for the end users will improve access to the data
 * Increased adoption and utilisation of the service
 * Modern web framework for ease of support and future development

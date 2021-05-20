@@ -105,6 +105,6 @@ Meeting closed at 20:27 AEST.
 
 | ID   | Description |
 | ---- | ----------- |
-| 8    |             |
+|      |             |
 |      |             |
 

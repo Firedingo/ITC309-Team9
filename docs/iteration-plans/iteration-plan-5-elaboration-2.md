@@ -9,7 +9,7 @@
 
 ## Table of Contents
 
-- [Clyde River Dashboard: Elaboration Phase Iteration Plan 2](#clyde-river-dashboard--elaboration-phase-iteration-plan-2)
+- [Elaboration Phase Iteration Plan 2](#clyde-river-dashboard--elaboration-phase-iteration-plan-2)
   * [Document Control](#document-control)
   * [Table of Contents](#table-of-contents)
   * [1. Key Milestones](#1-key-milestones)

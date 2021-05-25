@@ -1,4 +1,27 @@
-# Clyde River Dashboard: Elaboration Phase Iteration Plan 1
+# Elaboration Phase: Iteration Plan 1
+
+## Document Control
+
+| Version | Changes                           | Author         | Date       |
+| :------ | :-------------------------------- | :------------- | :--------- |
+| 0.1     | Document creation and conversion. | Naomi Thompson | 2021-05-05 |
+|         |                                   |                |            |
+
+## Table of Contents
+
+- [Elaboration Phase: Iteration Plan 2](#clyde-river-dashboard--elaboration-phase-iteration-plan-2)
+  * [Document Control](#document-control)
+  * [Table of Contents](#table-of-contents)
+  * [1. Key Milestones](#1-key-milestones)
+  * [2. High-Level Objectives](#2-high-level-objectives)
+  * [3. Evaluation Criteria](#3-evaluation-criteria)
+  * [4. Work Item Assignments](#4-work-item-assignments)
+  * [5. Issues](#5-issues)
+  * [6. Assessment](#6-assessment)
+    + [Objectives Assessment](#objectives-assessment)
+    + [Work Items Assessment](#work-items-assessment)
+    + [Evaluation Criteria Assessment](#evaluation-criteria-assessment)
+    + [Concerns and Deviations](#concerns-and-deviations)
 
 ## 1. Key Milestones
 
@@ -35,15 +58,15 @@ The following work items will be addressed within this iteration:
 
 | **Work Item ID**                                             | **Name, Keywords, or Description**                           | **Outcome**                                                  | **State**  | **Assigned To** | **Estimated Hours** | **Hours Worked** | **Estimated Hours Remaining** |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------- | --------------- | ------------------- | ---------------- | ----------------------------- |
-| [ITC303-15](https://chris-clark327.atlassian.net/browse/ITC303-15) | Create Iteration Plan 1 for Elaboration Phase                | Completed Iteration Plan for Elaboration 1                   | Incomplete | Naomi Thompson  | 5                   | 2                | 3                             |
+| [ITC303-15](https://chris-clark327.atlassian.net/browse/ITC303-15) | Create Iteration Plan 1 for Elaboration Phase                | Completed Iteration Plan for Elaboration 1                   | Complete   | Naomi Thompson  | 5                   | 3                | 0                             |
 | [ITC303-19](https://chris-clark327.atlassian.net/browse/ITC303-19) | Revise Project Vision                                        | Refined & Finalized Project Vision                           | Incomplete | Chris Clark     | 15                  | 25               | 1                             |
-| [ITC303-33](https://chris-clark327.atlassian.net/browse/ITC303-33) | Create digital versions of wireframes with discussed improvements | Draft wireframes are digitized and able to be shared with the sponsor. | Incomplete | Chris Clark     | 5                   | 1                | 0                             |
+| [ITC303-33](https://chris-clark327.atlassian.net/browse/ITC303-33) | Create digital versions of wireframes with discussed improvements | Draft wireframes are digitized and able to be shared with the sponsor. | Complete   | Chris Clark     | 5                   | 1                | 0                             |
 | [ITC303-21](https://chris-clark327.atlassian.net/browse/ITC303-21) | Revise Architecture Notebook                                 | Refined & Finalized Architecture Notebook                    | Incomplete | Ben Cummings    | 10                  | 0                | 10                            |
-| Prep For ITC303-24?                                          | Review & Plan an outline for the Executable Architecture     | Review & Plan Executable Architecture including verifying/testing the outline in the architecture notebook is ok | Incomplete | Ben Cummings    | 2                   | 0                | 2                             |
+| [ITC303-47](https://chris-clark327.atlassian.net/browse/ITC303-47) | Review & Plan an outline for the Executable Architecture     | Review & Plan Executable Architecture including verifying/testing the outline in the architecture notebook is ok | Incomplete | Ben Cummings    | 5                   | 2                | 3                             |
 | [ITC303-35](https://chris-clark327.atlassian.net/browse/ITC303-35) | Create Summary Document For Project Sponsor (DPI)            | A completed summary document that can be used to get Sponsor feedback on. | Complete   | Ben Cummings    | 5                   | 5                | 0                             |
 | [ITC303-31](https://chris-clark327.atlassian.net/browse/ITC303-31) | Contact Project Sponsor (DPI)                                | An email is sent to the project sponsor seeking confirmation on project direction and requirements. | Complete   | Ben Cummings    | 1                   | 1                | 0                             |
 | [ITC303-32](https://chris-clark327.atlassian.net/browse/ITC303-32) | Create rough wireframes for initial design discussions       | Draft Wireframes Which Outline & Illustrate Application Design | Complete   | Sam Johnson     | 4                   | 4                | 0                             |
-| [ITC303-34](https://chris-clark327.atlassian.net/browse/ITC303-34) | Create initial wireframes for tablet/PC layouts              | Draft Wireframes Which Outline & Illustrate layouts for tablets and PCs | Incomplete | Sam Johnson     | 4                   | 0.5              | 0.1                           |
+| [ITC303-34](https://chris-clark327.atlassian.net/browse/ITC303-34) | Create initial wireframes for tablet/PC layouts              | Draft Wireframes Which Outline & Illustrate layouts for tablets and PCs | Incomplete | Sam Johnson     | 4                   | 1                | 1                             |
 | [ITC303-20](https://chris-clark327.atlassian.net/browse/ITC303-20) | Revise Requirement Model                                     | Review & Update the Requirements Model & Associated Documents As Understood at this time | Incomplete | Sam Johnson     | 10                  | 0                | 10                            |
 
 ## 5. Issues
@@ -56,24 +79,25 @@ The following work items will be addressed within this iteration:
 
 ## 6. Assessment
 
-|                   |      |
-| ----------------- | ---- |
-| Assessment Target |      |
-| Assessment Date   |      |
-| Participants      |      |
-| Project Status    |      |
+|                   |                                          |
+| ----------------- | ---------------------------------------- |
+| Assessment Target | Life Cycle Architecture Milestone (LCAM) |
+| Assessment Date   | 2021-06-07                               |
+| Participants      | Sam, Ben, Chris, Naomi                   |
+| Project Status    | Yellow                                   |
 
 ### Objectives Assessment
 
-
+Of the 5 High level Objectives set, 2 were achieved and 3 were not achieved.
 
 ### Work Items Assessment
 
-
+Most work items were attempted and many that are incomplete are close to completion but due to underestimating time and effort required as well as other competing issues such as sponsor feedback on project direction has resulted in delays in completing all work items.
 
 ### Evaluation Criteria Assessment
 
-
+Of the 8 evaluation criteria listed, 5 were met. It is not entirely clear what regarding the wireframes may or is still outstanding and so this item and associated work items may be more or less complete than specified at this time. Due to incomplete work items, the architecture notebook, requirements model and project vision are still outstanding.
 
 ### Concerns and Deviations
 
+The project is definitely behind schedule and communication on work item status has not been fabulous. That said, it was recognized an initially assigned work item was significantly too huge and was therefore broken down into smaller child tasks to facilitate completion of said task.

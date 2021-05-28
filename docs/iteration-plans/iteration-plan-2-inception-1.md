@@ -1,4 +1,28 @@
-# Clyde River Dashboard: Inception Phase Iteration Plan 1
+# Inception Phase: Iteration Plan 1
+
+## Document Control
+
+| Version | Changes                                    | Author         | Date       |
+| ------- | ------------------------------------------ | -------------- | ---------- |
+| 0.1     | Document creation and conversion.          | Naomi Thompson | 2021-03-26 |
+| 1.0     | Added Document Control + Table Of Contents | Naomi Thompson | 2021-05-28 |
+|         |                                            |                |            |
+
+## Table Of Contents
+
+- [Inception Phase: Iteration Plan 1](#inception-phase-iteration-plan-1)
+  - [Document Control](#document-control)
+  - [Table Of Contents](#table-of-contents)
+  - [1. Key Milestones](#1-key-milestones)
+  - [2. High-Level Objectives](#2-high-level-objectives)
+  - [3. Evaluation Criteria](#3-evaluation-criteria)
+  - [4. Work Item Assignments](#4-work-item-assignments)
+  - [5. Issues](#5-issues)
+  - [6. Assessment](#6-assessment)
+    - [Objectives Assessment](#objectives-assessment)
+    - [Work Items Assessment](#work-items-assessment)
+    - [Evaluation Criteria Assessment](#evaluation-criteria-assessment)
+    - [Concerns and Deviations](#concerns-and-deviations)
 
 ## 1. Key Milestones
 

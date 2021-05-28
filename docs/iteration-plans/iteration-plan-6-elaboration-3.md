@@ -34,26 +34,36 @@
 
 ## 2. High-Level Objectives
 
-1. 
+1. Complete Development on Server-side Resources
+2. Complete Development on Client-Side Resources
+3. Finalize Some Planning and Design Documents as known at this stage
+4. Set the agenda and direction for the iteration
 
 ## 3. Evaluation Criteria
 
-1. 
+1. The chosen server-side resources are implemented
+2. The chosen client-side components are created
+3. The Requirements Model, Wireframes, Testing Report, Project Vision,  Architecture Notebook & Risk List are completed or finalized as understood at this time.
+4. The Iteration Plan is completed
 
 ## 4. Work Item Assignments
 
 The following work items will be addressed within this iteration:
 
-| **Work Item ID** | **Name, Keywords, or Description** | **Outcome** | **State** | **Assigned To** | **Estimated Hours** | **Hours Worked** | **Estimated Hours Remaining** |
-| ---------------- | ---------------------------------- | ----------- | --------- | --------------- | ------------------- | ---------------- | ----------------------------- |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
-|                  |                                    |             |           |                 |                     |                  |                               |
+| **Work Item ID**                                             | **Name, Keywords, or Description**                           | **Outcome**                                                  | **State**  | **Assigned To** | **Estimated Hours** | **Hours Worked** | **Estimated Hours Remaining** |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---------- | --------------- | ------------------- | ---------------- | ----------------------------- |
+| [ITC303-21](https://chris-clark327.atlassian.net/browse/ITC303-21) | Revise Architecture Notebook                                 | Refined & Finalized Architecture Notebook                    | Incomplete | Ben Cummings    | 10                  | 0                | 10                            |
+| [ITC303-39](https://chris-clark327.atlassian.net/browse/ITC303-39) | Server-Side: Create API Gateway Resources via Infrastructure as Code (CloudFormation Template) | Create and Implement some server-side resources that will be  integrated into the executable architecture and support completion of [ITC303-24](https://chris-clark327.atlassian.net/browse/ITC303-24) | Incomplete | Ben Cummings    | 25                  | 0                | 15                            |
+| [ITC303-40](https://chris-clark327.atlassian.net/browse/ITC303-40) | Server-Side: Create Lambda Resources via Infrastructure as Code (CloudFormation Template) | Create and implement some lambda resources that will be integrated into the executable architecture and support completion of [ITC303-24](https://chris-clark327.atlassian.net/browse/ITC303-24) | Incomplete | Ben Cummings    | 25                  | 0                | 15                            |
+| [ITC303-41](https://chris-clark327.atlassian.net/browse/ITC303-41) | Server-Side: Create Lambda Function to Manage Access Tokens for FarmDecisionTech API | Create and implement some lambda resources that will be integrated into the executable architecture and support completion of [ITC303-24](https://chris-clark327.atlassian.net/browse/ITC303-24) | Incomplete | Ben Cummings    | 25                  | 0                | 15                            |
+| [ITC303-47](https://chris-clark327.atlassian.net/browse/ITC303-47) | Review & Plan an outline for the Executable Architecture     | Review & Plan Executable Architecture including verifying/testing the outline in the architecture notebook is ok | Incomplete | Ben Cummings    | 5                   | 2                | 3                             |
+| [ITC303-20](https://chris-clark327.atlassian.net/browse/ITC303-20) | Revise Requirement Model                                     | Review & Update the Requirements Model & Associated Documents As Understood at this time | Incomplete | Sam Johnson     | 10                  | 4                | 6                             |
+| [ITC303-25](https://chris-clark327.atlassian.net/browse/ITC303-25) | Create Testing Report                                        | Completed Testing Report As Understood at this time          | Incomplete | Sam Johnson     | 35                  | 0                | 35                            |
+| [ITC303-45](https://chris-clark327.atlassian.net/browse/ITC303-45) | Client-Side: Create Summary Cards for Environmental Conditions using React Native | Create and Implement Summary Card Component for Environmental  Conditions that will be integrated into the development architecture and aid with completion of [ITC303-24](https://chris-clark327.atlassian.net/browse/ITC303-24) | Incomplete | Sam Johnson     | 35                  | 25               | 10                            |
+| [ITC303-19](https://chris-clark327.atlassian.net/browse/ITC303-19) | Revise Project Vision                                        | Finalized Project Vision As Understood at this time          | Incomplete | Chris Clark     | 15                  | 26               | 1                             |
+| [ITC303-22](https://chris-clark327.atlassian.net/browse/ITC303-22) | Revise Risk List                                             | Finalized Risk List As Understood at this time               | Incomplete | Naomi Thompson  | 10                  | 0                | 10                            |
+| [ITC303-50](https://chris-clark327.atlassian.net/browse/ITC303-50) | Create Iteration Plan 3 for Elaboration Phase                | Completed Iteration Plan for Elaboration 3                   | Incomplete | Naomi Thompson  | 5                   | 1                | 4                             |
+|                                                              |                                                              |                                                              |            |                 |                     |                  |                               |
 
 ## 5. Issues
 
@@ -65,12 +75,12 @@ The following work items will be addressed within this iteration:
 
 ## 6. Assessment
 
-|                   |                                       |
-| ----------------- | ------------------------------------- |
-| Assessment Target | Life Cycle Objective Milestone (LCOM) |
-| Assessment Date   | 2021-04-25                            |
-| Participants      | Sam, Naomi, Chris, Ben                |
-| Project Status    |                                       |
+|                   |                                          |
+| ----------------- | ---------------------------------------- |
+| Assessment Target | Life Cycle Architecture Milestone (LCAM) |
+| Assessment Date   | 2021-06-07                               |
+| Participants      | Sam, Naomi, Chris, Ben                   |
+| Project Status    |                                          |
 
 ### Objectives Assessment
 

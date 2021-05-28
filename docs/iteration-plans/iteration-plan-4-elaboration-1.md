@@ -5,6 +5,7 @@
 | Version | Changes                           | Author         | Date       |
 | :------ | :-------------------------------- | :------------- | :--------- |
 | 0.1     | Document creation and conversion. | Naomi Thompson | 2021-05-05 |
+| 1.0     | Document Completed                | Naomi Thompson | 2021-05-28 |
 |         |                                   |                |            |
 
 ## Table of Contents

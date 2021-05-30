@@ -9,7 +9,7 @@
 | **Minutes by**      | Sam Johnson                                                  |
 | **Apologies**       |                                                              |
 
-Meeting opened at 18:00 AEDT.
+Meeting opened at 18:00 AEST.
 
 ### Status Updates
 

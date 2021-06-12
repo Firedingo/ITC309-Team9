@@ -1,5 +1,7 @@
 # Risk List
 
+
+
 ## Document Control
 
 | Version | Changes                                                      | Author         | Date       |
@@ -9,7 +11,8 @@
 | 0.3     | Minor formatting and additional risks added.                 | Naomi Thompson | 2021-04-21 |
 | 0.4     | Corrected formatting, grammar, and wording.                  | Ben Cummings   | 2021-04-21 |
 | 1.0     | Added a Table Of Contents, Revised Existing Risks And Added 9 Additional Risks | Naomi Thompson | 2021-05-28 |
-|         |                                                              |                |            |
+
+
 
 ## Table Of Contents
 
@@ -20,6 +23,8 @@
   - [Risk Management Log](#risk-management-log)
   - [Key](#key)
 
+
+
 ## Project Information
 
 **Application:** Clyde River Dashboard
@@ -29,6 +34,8 @@
 **Manager:** Mostafa Dahshan
 
 **Description:** To create a dashboard application that makes device and sensor telemetry data from the Clyde River accessible to farmers and other vested stakeholders.
+
+
 
 ## Risk Management Log
 
@@ -57,7 +64,7 @@
 | 21 | Open | Medium | Low | Green | Leakage of OAuth 2.0 tokens or credentials from the API Gateway & OAuth 2.0 credentials blocked by the FarmDecisionTech API | The impact of such tokens would be highly problematic if they fell into the hands of someone untoward. The FarmDecisionTech API could then be spammed thus getting the credentials blocked and preventing data from being retrieved. | Project, Schedule, Resources,  Delivery | Errors returned from the FarmDecisionTech API, Data Not Updating, Other functions not performing as expected | OAuth 2.0 Credentials still being inappropriately used and still getting blocked temporarily by the FarmDecisionTech API | Both Mitigate & Escalate | Remove or Quarantine the leaked OAuth 2.0 credentials, allow the FarmDecisionTech API to remove the restriction on them if applicable and test after some time if the credentials are still being inappropriately used | Remove the leaked OAuth 2.0 credentials and contact DPI to get new OAuth 2.0 credentials for the FarmDecisionTech API |
 | 22 | Open | High | Medium | Red | Conflicts Between Team Members Prevent Progress & Delivery of the Project | Big Issue, the impact is quite severe and could potentially cause the failure of the project. | Schedule, Delivery, Resources, Budget, Technology, Project | Poor Communication, Lack Of Respect, Favouritism, Prioritization of certain member's works, Deliberate Actions to Hinder the work of another team member | Little to No Progress happening on the project. Unable to Resolve conflicts and issues between members. | Mitigate | Have a well defined team code of conduct or charter, ensure all members understand and know what is in the charter, ensure accurate records are kept, ensure that dispute resolution mechanisms are included in the team charter and deployed early when issues become apparent. Ensure issues are raised respectfully and promptly. | Source external mediation, Address all members concerns fairly and responsibly and try to find an equitable resolution. Implement a discipline system if and when it is necessary. Remove uncooperative members when and if all other options have been exhausted. |
 | 23 | Open | Medium | Low | Green | React Native Charts Wrapper Library is no longer fit for purpose | Impact is problematic but not a project breaker. It has a decent impact on the client side of the application but very little on the server side of the application. | Schedule, Delivery, Resources, Technology, Project | Data is unable to be displayed, Data is slow to display, data is inaccurate when displayed due to the handling by the graph | The React native Charts Wrapper Library is not performing as required and no other solution or fix has addressed the issue | Mitigate | Identify alternative charting and graphing libraries that are compatible, fall back on tables if and as needed. | Replace React Native Charts Wrapper Library with alternative |
-| 24 |      |    |     |       |   |      |     |     |    |  | |   |
+
 
 
 ## Key

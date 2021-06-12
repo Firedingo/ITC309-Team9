@@ -49,11 +49,11 @@ The following documents are used as basis for this master test plan.
 
 | **Document  name**                                  | **Version** | **Date** | **Author**     |
 | --------------------------------------------------- | ----------- | -------- | -------------- |
-| risk-list.md                                        | 0.2         | 19-4-21  | Naomi Thompson |
-| architecture-notebook.md                            | 1.0         | 19-4-21  | Ben Cummings   |
-| project-plan.md                                     | 1.0         | 20-4-21  | Chris Clark    |
-| project-vision.md                                   | 1.0         | 19-4-21  | Chris Clark    |
-| Clyde River Mobile Application Requirement Model.md | 0.1         | 15-4-21  | Sam Johnson    |
+| risk-list.md                                        | 1.0         | 21-05-28 | Naomi Thompson |
+| architecture-notebook.md                            | 1.0         | 21-04-19 | Ben Cummings   |
+| project-plan.md                                     | 1.0         | 21-04-20 | Chris Clark    |
+| project-vision.md                                   | 1.0         | 21-04-19 | Chris Clark    |
+| Clyde River Mobile Application Requirement Model.md | 1.0         | 21-04-22 | Sam Johnson    |
 
 ## 2.2	Test basis
 
@@ -92,13 +92,13 @@ The product risks are determined in cooperation with the client and the other pa
 | 5             | Usability | Farmers have to authenticate to see public sensors. | Low | Low | E |
 | 6             | Accessibility | Farmers cannot access the application on Android and/or iOS devices | Low | Medium | D |
 | 7              | Accessibility | The application cannot be used on phones and tablets | Low | Medium | D |
-| 8              | Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Medium      | Medium | C               |
-| 9 | Maintainability | The Application isn't maintainable | Medium | High | B |
+| 8 | Maintainability | The Application isn't maintainable | Medium | High | B |
+| 9             | Maintainability    | The application technology stack is not maintainable for staff employed at the Department of Primary Industries | Medium      | Medium | C               |
 | 10              | Maintainability    | The application is not highly available, durable, scalable, and cost effective | Low         | High   | C               |
 | 11            | Maintainability | The application does not comply with and utilise Android/iOS design conventions and styles on Android/iOS devices respectively. | Low | Low | E |
-| 12 | Security | Leakage of OAuth 2.0 tokens or credentials from the API Gateway & OAuth 2.0 credentials blocked by the FarmDecisionTech API | Low | Medium | D |
-| 13 | Security | Inappropriately Configured IAM roles that allow unauthorized access to server-side resources | Medium | High | B |
-| 14 | Security | The Simple Storage Service (S3) is misconfigured to allow unauthorized access | Low | High | C |
+| 12 | Security | Inappropriately Configured IAM roles that allow unauthorized access to server-side resources | Medium | High | B |
+| 13 | Security | The Simple Storage Service (S3) is misconfigured to allow unauthorized access | Low | High | C |
+| 14 | Security | Leakage of OAuth 2.0 tokens or credentials from the API Gateway & OAuth 2.0 credentials blocked by the FarmDecisionTech API | Low | Medium | D |
 | 15 | Availability | AWS is Down or Otherwise Inaccessible | Low | High | C |
 | 16 | Usability | Other types of data beyond water quality are not available (e.g. wind speed, rainfall etc) | Medium | Medium | C |
 
@@ -134,13 +134,13 @@ Technical risks are determined in cooperation with the analyst/designers and pro
 | 10                 | Usability               | Farmers unable to view the current conditions (temperature, ‘feels like’ temperature, humidity, wind speed, wind gust, rain, light,  lightning strikes) for a location | Low         | Low    | E               |
 | 11                 | Usability               | Farmers unable to see sensor locations on a map              | Low         | Low    | E               |
 | 12                 | Usability Accessibility | The application does not adjust the interface to suit the device size and orientation | Low         | Low    | E               |
-| 13                 | Security                | The application does not obfuscate the credentials used for authorising requests to APIs | Low         | High   | C               |
-| 14                 | Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | Low         | High   | C               |
-| 15                 | Reliability             | Lambda functions fail to perform as expected due to an issue of some kind with them | Medium      | High   | B               |
-| 16                 | Reliability             | React Native Charts Wrapper Library is no longer fit for purpose | Low         | Medium | D               |
-| 17                 | Security                | Leakage of OAuth 2.0 tokens or credentials from the API Gateway & OAuth 2.0 credentials blocked by the FarmDecisionTech API | Low         | Medium | D               |
-| 18                 | Security                | Inappropriately Configured IAM roles that allow unauthorized access to server-side resources | Medium      | High   | B               |
-| 19                 | Security                | The Simple Storage Service (S3) is misconfigured to allow unauthorized access | Low         | High   | C               |
+| 13                 | Maintainability         | The application does not integrate and utilise the FarmDecisionTech REST API | Low         | High   | C               |
+| 14                 | Reliability             | Lambda functions fail to perform as expected due to an issue of some kind with them | Medium      | High   | B               |
+| 15                 | Reliability             | React Native Charts Wrapper Library is no longer fit for purpose | Low         | Medium | D               |
+| 16                 | Security                | Inappropriately Configured IAM roles that allow unauthorized access to server-side resources | Medium      | High   | B               |
+| 17                 | Security                | The application does not obfuscate the credentials used for authorising requests to APIs | Low         | High   | C               |
+| 18                 | Security                | The Simple Storage Service (S3) is misconfigured to allow unauthorized access | Low         | High   | C               |
+| 19                 | Security                | Leakage of OAuth 2.0 tokens or credentials from the API Gateway & OAuth 2.0 credentials blocked by the FarmDecisionTech API | Low         | Medium | D               |
 | 20                 | Availability            | Bitbucket goes down or otherwise becomes inaccessible        | Low         | High   | C               |
 | 21                 | Availability            | The CodePipeline fails at the build/test servers and the application can't come through | Low         | High   | C               |
 | 22                 | Availability            | AWS is Down or Otherwise Inaccessible                        | Low         | High   | C               |

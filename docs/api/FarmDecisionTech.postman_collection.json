@@ -1,0 +1,648 @@
+{
+	"info": {
+		"_postman_id": "ec928efa-cb9a-4636-ac42-af98450ec251",
+		"name": "FarmDecisionTech",
+		"description": "Collection for the FarmDecisionTech API.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metadata",
+			"item": [
+				{
+					"name": "/tenant/assets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/tenant/assets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"tenant",
+								"assets"
+							],
+							"query": [
+								{
+									"key": "idOffset",
+									"value": "{{idOffset}}",
+									"description": "ID offset used in combination with the 'limit' parameter for pagination.",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}",
+									"description": "The maximum quantity of records to retrieve per request. (Required)",
+									"disabled": true
+								},
+								{
+									"key": "textOffset",
+									"value": "{{textOffset}}",
+									"description": "Text offset used in combination with the 'limit' parameter for pagination.",
+									"disabled": true
+								},
+								{
+									"key": "textSearch",
+									"value": "{{textSearch}}",
+									"description": "Filter by free text.",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "{{type}}",
+									"description": "Filter by 'Device Category', 'Site', 'Device Type', or 'Zone'.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the list of assets."
+					},
+					"response": []
+				},
+				{
+					"name": "/asset/{assetId}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/asset/{{assetId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"asset",
+								"{{assetId}}"
+							]
+						},
+						"description": "Returns a single asset by ID."
+					},
+					"response": []
+				},
+				{
+					"name": "/asset/types",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/asset/types",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"asset",
+								"types"
+							]
+						},
+						"description": "Returns the list of asset types."
+					},
+					"response": []
+				},
+				{
+					"name": "/assets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/assets",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"assets"
+							],
+							"query": [
+								{
+									"key": "assetIds",
+									"value": "{{assetIds}}",
+									"description": "Comma separated list of asset IDs. (Required)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns multiple assets by ID."
+					},
+					"response": []
+				}
+			],
+			"description": "Metadata relating to the sensors and their associated deployments."
+		},
+		{
+			"name": "Relationships",
+			"item": [
+				{
+					"name": "/relations/info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/relations/info",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"relations",
+								"info"
+							],
+							"query": [
+								{
+									"key": "fromId",
+									"value": "{{fromId}}",
+									"description": "The child entity ID.",
+									"disabled": true
+								},
+								{
+									"key": "fromType",
+									"value": "{{fromType}}",
+									"description": "The child entity type, which will be 'Asset' or 'Device'.",
+									"disabled": true
+								},
+								{
+									"key": "relationTypeGroup",
+									"value": "{{relationTypeGroup}}",
+									"description": "The relation type group, which will be 'Common'.",
+									"disabled": true
+								},
+								{
+									"key": "toId",
+									"value": "{{toId}}",
+									"description": "The parent entity ID.",
+									"disabled": true
+								},
+								{
+									"key": "toType",
+									"value": "{{toType}}",
+									"description": "The parent entity type, which will be 'Asset' or 'Device'.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the parent entities (when utilising the 'from' parameters) and child entities (when utilising the 'to' parameters)."
+					},
+					"response": []
+				},
+				{
+					"name": "/relations",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/relations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"relations"
+							],
+							"query": [
+								{
+									"key": "fromId",
+									"value": "{{fromId}}",
+									"description": "The child entity ID.",
+									"disabled": true
+								},
+								{
+									"key": "fromType",
+									"value": "{{fromType}}",
+									"description": "The child entity type, which will be 'Asset' or 'Device'.",
+									"disabled": true
+								},
+								{
+									"key": "relationType",
+									"value": "{{relationType}}",
+									"description": "The relation type, which will be 'Contains'.",
+									"disabled": true
+								},
+								{
+									"key": "relationTypeGroup",
+									"value": "{{relationTypeGroup}}",
+									"description": "The relation type group, which will be 'Common'.",
+									"disabled": true
+								},
+								{
+									"key": "toId",
+									"value": "{{toId}}",
+									"description": "The parent entity ID.",
+									"disabled": true
+								},
+								{
+									"key": "toType",
+									"value": "{{toType}}",
+									"description": "The parent entity type, which will be 'Asset' or 'Device'.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the parent entities (when utilising the 'from' parameters) and child entities (when utilising the 'to' parameters)."
+					},
+					"response": []
+				}
+			],
+			"description": "Relationships between entities."
+		},
+		{
+			"name": "Telemetry",
+			"item": [
+				{
+					"name": "/plugins/telemetry/{entityType}/{entityId}/keys/attributes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/plugins/telemetry/{{entityType}}/{{entityId}}/keys/attributes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"plugins",
+								"telemetry",
+								"{{entityType}}",
+								"{{entityId}}",
+								"keys",
+								"attributes"
+							]
+						},
+						"description": "Returns the list of attribute keys for the specified entity."
+					},
+					"response": []
+				},
+				{
+					"name": "/plugins/telemetry/{entityType}/{entityId}/keys/timeseries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/plugins/telemetry/{{entityType}}/{{entityId}}/keys/timeseries",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"plugins",
+								"telemetry",
+								"{{entityType}}",
+								"{{entityId}}",
+								"keys",
+								"timeseries"
+							]
+						},
+						"description": "Returns the list of telemetry keys for the specified entity."
+					},
+					"response": []
+				},
+				{
+					"name": "/plugins/telemetry/{entityType}/{entityId}/values/attributes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/plugins/telemetry/{{entityType}}/{{entityId}}/values/attributes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"plugins",
+								"telemetry",
+								"{{entityType}}",
+								"{{entityId}}",
+								"values",
+								"attributes"
+							],
+							"query": [
+								{
+									"key": "keys",
+									"value": "{{keys}}",
+									"description": "Comma separated list of keys to filter by.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the list of attribute keys and associated values for the specified entity."
+					},
+					"response": []
+				},
+				{
+					"name": "/plugins/telemetry/{entityType}/{entityId}/values/timeseries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/plugins/telemetry/{{entityType}}/{{entityId}}/values/timeseries",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"plugins",
+								"telemetry",
+								"{{entityType}}",
+								"{{entityId}}",
+								"values",
+								"timeseries"
+							],
+							"query": [
+								{
+									"key": "endTs",
+									"value": "{{endTs}}",
+									"description": "Filter by end date and time (unix timestamp).",
+									"disabled": true
+								},
+								{
+									"key": "keys",
+									"value": "{{keys}}",
+									"description": "Comma separated list of keys to filter by.",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "{{limit}}",
+									"description": "The maximum quantity of records to retrieve per request.",
+									"disabled": true
+								},
+								{
+									"key": "startTs",
+									"value": "{{startTs}}",
+									"description": "Filter by start date and time (unix timestamp).",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the list of telemetry keys and associated values for the specified entity."
+					},
+					"response": []
+				}
+			],
+			"description": "Telemetry data for entities."
+		},
+		{
+			"name": "Devices",
+			"item": [
+				{
+					"name": "/device/{deviceId}",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/device/{{deviceId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"device",
+								"{{deviceId}}"
+							]
+						},
+						"description": "Returns the information for the specified device."
+					},
+					"response": []
+				},
+				{
+					"name": "/devices",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/devices",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"devices"
+							],
+							"query": [
+								{
+									"key": "deviceIds",
+									"value": "{{deviceIds}}",
+									"description": "Comma separated list of device IDs. (Required)",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Returns the information for the specified devices."
+					},
+					"response": []
+				}
+			],
+			"description": "Device information."
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "tokenName",
+				"value": "Bearer Token",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "{{clientSecret}}",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "{{clientId}}",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{baseUrl}}/token.php",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.farmdecisiontech.net.au"
+		},
+		{
+			"key": "clientId",
+			"value": ""
+		},
+		{
+			"key": "clientSecret",
+			"value": ""
+		},
+		{
+			"key": "idOffset",
+			"value": ""
+		},
+		{
+			"key": "limit",
+			"value": ""
+		},
+		{
+			"key": "textOffset",
+			"value": ""
+		},
+		{
+			"key": "textSearch",
+			"value": ""
+		},
+		{
+			"key": "type",
+			"value": ""
+		},
+		{
+			"key": "assetId",
+			"value": ""
+		},
+		{
+			"key": "assetIds",
+			"value": ""
+		},
+		{
+			"key": "fromId",
+			"value": ""
+		},
+		{
+			"key": "fromType",
+			"value": ""
+		},
+		{
+			"key": "relationType",
+			"value": ""
+		},
+		{
+			"key": "relationTypeGroup",
+			"value": ""
+		},
+		{
+			"key": "toId",
+			"value": ""
+		},
+		{
+			"key": "toType",
+			"value": ""
+		},
+		{
+			"key": "entityId",
+			"value": ""
+		},
+		{
+			"key": "entityType",
+			"value": ""
+		},
+		{
+			"key": "keys",
+			"value": ""
+		},
+		{
+			"key": "startTs",
+			"value": ""
+		},
+		{
+			"key": "endTs",
+			"value": ""
+		},
+		{
+			"key": "deviceId",
+			"value": ""
+		},
+		{
+			"key": "deviceIds",
+			"value": ""
+		}
+	]
+}

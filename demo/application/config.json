@@ -1,8 +1,0 @@
-{
-    "farmDecisionTech": {
-        "baseUrl": "https://api.farmdecisiontech.net.au",
-        "clientId": "",
-        "clientSecret": "",
-        "recordLimit": 50
-    }
-}

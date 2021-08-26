@@ -18,7 +18,7 @@ public class App
         
         FileReader FR = new FileReader();
         try {
-			FR.readCSV();
+	//		FR.readCSV();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

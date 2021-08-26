@@ -16,6 +16,8 @@ import org.knowm.xchart.XChartPanel;
 
 public class ChartCreator {
 	
+	private int fetchData = 0;
+	private int fetchTime = 1;
 	private FileReader reader = new FileReader();
 
 	public void QuickChartExample() {
@@ -101,12 +103,15 @@ public class ChartCreator {
 		double[] yData;
 		//Call Data Method
 			try {
-				xData = reader.readCSV();
+				xData = reader.readCSV(fetchData);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				System.err.println(e);
 			}
-			yData = yCount(xData);
+			System.err.println("TEST");
+			yData = reader.readCSV(fetchTime);
+			System.err.println("TEST2");
+			
 		//build chart from data
 		XYChart chart = QuickChart.getChart("Example Chart", "Salinity", "Count", "Salinity Levels", xData, yData);
 		
@@ -137,19 +142,29 @@ public class ChartCreator {
 	private double[] yCount(double[] xData) {
 		double[] yData = new double[xData.length];
 		double temp;
-		int count = 0;
 		int total = 0;
 		
-		while (count < xData.length) {
-		temp = xData[count];
+		System.err.println("TEST3");
+		
 		for (int i=0; i < xData.length;i++) {
-			if (temp == xData[i]) {
-				total++;
+			temp = xData[i];
+			for (int j=0; j < xData.length;j++) {
+				if (temp == xData[j]) {
+					total++;
+					System.err.println("Round: " + j);
+				}
 			}
-		}
-		yData[count] = total;
+			yData[i] = total;
 		}
 		
+		
+		System.err.println("TEST4");
+		System.out.println("yData Contains: ");
+		for (int i=0; i < yData.length;i++) {
+			System.out.println(yData[i]);
+		}
+		
+		System.err.println("TEST5");
 		return yData;
 	}
 	

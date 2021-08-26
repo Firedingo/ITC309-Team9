@@ -25,16 +25,20 @@ public class InterfaceBuilder {
 		//Add Chart
 		ChartCreator creator = new ChartCreator();
 		try {
-			chart = creator.BasicChart(); //  <-----
+			chart = creator.createXYChart(); //  <-----
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.err.println(e.getMessage());
-			
+			System.err.println(e);
+			System.err.println(e.getCause());
+			System.err.println(e.getLocalizedMessage());
+			System.err.println(e.getStackTrace());
+			System.err.println("ERROR: Chart Creation Failed. Falling Back To Basic Chart!");
+			chart = creator.BasicChart();
 		}
 		
 		if (chart == null) {
-			System.err.println("ERROR: Chart Creation Failed. Falling Back To Basic Chart!");
-			chart = creator.BasicChart();
+			System.err.println("ERROR: Chart is NULL");
+			
 		}
 		
 		addMenu(window);

@@ -31,7 +31,7 @@
 | **Milestone**   | **Date**   |
 | --------------- | ---------- |
 | Iteration Start | 2021-08-16 |
-| Iteration Stop  | 2021-08-30 |
+| Iteration Stop  | 2021-08-29 |
 
 ## 2. High-Level Objectives
 

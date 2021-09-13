@@ -147,4 +147,41 @@ public class FileReader {
 		//Return To Parent
 		return time;		
 	}
+	
+	
+	
+	
+	
+	
+	public String[] readSensorsTextFile( ) {
+		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
+		Scanner scanner;
+		String[] sensors = new String[8];
+		count = 0;
+		try {
+			scanner = new Scanner(path);
+			
+			while(scanner.hasNext()) {
+				
+				temp = scanner.next();
+				
+				if (!temp.contains("Moonlight") || temp.contains("Rocky") || temp.contains("Waterfall")) {
+					sensors[count] = temp;
+					count++;
+				}
+			}
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			util.printError("The File Could Not Be Opened or Found");
+		}
+		
+		return sensors;
+		
+	}
+	
+	
 }

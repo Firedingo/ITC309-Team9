@@ -16,7 +16,7 @@ import org.knowm.xchart.XYChart;
 
 public class InterfaceBuilder {
 	XYChart chart = null;
-	//private EventHandler handler = new EventHandler();
+	private EventHandler handler = new EventHandler();
 
 	public void createWindow() {
 		//Create the window
@@ -64,7 +64,6 @@ public class InterfaceBuilder {
 	}
 	
 	public void addMenu(JFrame window) {
-		EventHandler handler = new EventHandler();
 		Dimension d;
 		
 		

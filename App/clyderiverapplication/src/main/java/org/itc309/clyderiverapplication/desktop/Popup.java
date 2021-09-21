@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Popup extends JFrame {
+	//Creates a Window as part of the application. - May be replaced.
 	public Popup() {
 		setTitle("Alert");
 		

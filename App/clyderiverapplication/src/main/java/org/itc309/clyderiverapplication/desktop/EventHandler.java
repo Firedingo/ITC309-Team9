@@ -7,6 +7,7 @@ public class EventHandler implements ActionListener {
 	
 	Utility util = new Utility();
 
+	//Handles all the input to the menu. Is the backbone of the appllication and drives movement and flow.
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if (e.getActionCommand().equals("Home")) {

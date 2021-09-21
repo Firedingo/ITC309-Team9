@@ -8,10 +8,12 @@ public class App {
 		test();
 	}
 	
+	//Starts the application
 	public static void start() {
 		Home home = new Home();
 	}
 	
+	//Code for testing can be placed here. Is therefore isolated from application start
 	private static void test() {
 		CoreFileReader FR = new CoreFileReader();
 		FR.readSensorsTextFile();

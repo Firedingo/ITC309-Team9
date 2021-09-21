@@ -31,6 +31,8 @@ public class Home extends JFrame {
 	private XChartPanel<CategoryChart> chart;
 	private XChartPanel<CategoryChart> chart1;
 	private XChartPanel<CategoryChart> chart2;
+	
+	//Creates a Window as part of the application.
 	public Home() {
 		HELLOWORLD();
 		setTitle("Clyde River Application");

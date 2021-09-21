@@ -8,6 +8,7 @@ public class CoreFileWriter {
 	private File path;
 	private Utility util = new Utility();
 	
+	//Writes data to a preferences file. At this stage it simply saves the user's favourite location
 	public void writeToFile(String favourite) {
 		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\preferences.txt");
 

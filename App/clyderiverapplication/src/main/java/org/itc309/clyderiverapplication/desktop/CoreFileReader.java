@@ -11,7 +11,8 @@ public class CoreFileReader {
 	private Utility util = new Utility();
 	private int capacity = 11;
 
-public Number[] readData() {
+	//Reads Salinity, Temperature or Rainfall Levels in
+	public Number[] readData() {
 		//Setup
 		Number[] data = new Number[capacity];
 		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\salinity_levels.csv");
@@ -54,6 +55,7 @@ public Number[] readData() {
 		return data;
 	}
 
+	//Reads The Time a measurement was taken in for all measurements
 	public String[] readTime() {
 		//Setup
 		String[] time = new String[capacity];
@@ -108,6 +110,7 @@ public Number[] readData() {
 		return time;		
 	}
 	
+	//Reads in a list of all sensors from a file
 	public String[] readAllSensorsFile() {
 			path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
 			Scanner scanner;
@@ -137,6 +140,7 @@ public Number[] readData() {
 			
 	}
 	
+	//Reads in a list of sensors from a file and filters out the harvest zones
 	public String[] readSensorsTextFile( ) {
 		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
 		Scanner scanner;
@@ -173,6 +177,7 @@ public Number[] readData() {
 		
 	}
 	
+	//Reads in a list of sensors from a file and filters out all sensors that aren't harvest areas
 	public String[] readHarvestTextFile( ) {
 		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
 		Scanner scanner;
@@ -207,6 +212,7 @@ public Number[] readData() {
 		
 	}
 	
+	//Reads in a favourite location from a file
 	public String readFavouriteLocation() {
 		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\preferences.txt");
 		String fav = "";

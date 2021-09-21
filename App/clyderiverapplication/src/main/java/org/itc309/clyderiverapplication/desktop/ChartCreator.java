@@ -17,9 +17,11 @@ import org.knowm.xchart.style.Styler.LegendLayout;
 import org.knowm.xchart.style.Styler.LegendPosition;
 import org.knowm.xchart.style.XYStyler;
 
+//Creates a number of charts using the XChart library, primarily an XYChart and a CategoryChart.
 public class ChartCreator {
 	private CoreFileReader reader = new CoreFileReader();
 
+	//Method is never used - Creates an XYChart from XChart
 	public XChartPanel<CategoryChart> createChart() {
 	//	return createXYChart(350, 350, "Test Chart", "Test X Data", "Test Y Data");
 		
@@ -50,6 +52,7 @@ public class ChartCreator {
 		return new XChartPanel<XYChart>(chart);
 	}
 	
+	//Creates a CategoryChart to display data
 	private XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel) {
 		CategoryChart chart = new CategoryChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
 		

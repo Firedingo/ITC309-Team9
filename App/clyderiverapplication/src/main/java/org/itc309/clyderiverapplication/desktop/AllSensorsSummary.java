@@ -18,6 +18,8 @@ public class AllSensorsSummary extends JFrame {
 	private EventHandler handler = new EventHandler();
 	private Dimension d;
 	private String Ltype;
+	
+	//Creates a Window as part of the application.
 	public AllSensorsSummary(String type) {
 		Ltype = type;
 		setTitle("Clyde River Application");

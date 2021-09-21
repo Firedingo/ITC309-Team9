@@ -21,6 +21,8 @@ public class Sensors extends JFrame {
 	private Dimension d;
 	private CoreFileReader reader = new CoreFileReader();
 	private JList nonHarvestList;
+	
+	//Creates a Window as part of the application.
 	public Sensors() {
 		setTitle("Clyde River Application");
 		

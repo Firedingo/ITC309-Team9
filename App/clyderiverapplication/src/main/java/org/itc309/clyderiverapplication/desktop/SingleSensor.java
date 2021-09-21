@@ -37,6 +37,8 @@ public class SingleSensor extends JFrame {
 	private String CurrentSensor;
 	private ChartCreator creator = new ChartCreator();
 	private XChartPanel<CategoryChart> chart;
+	
+	//Creates a Window as part of the application.
 	public SingleSensor(String name) {
 		CurrentSensor = name;
 		

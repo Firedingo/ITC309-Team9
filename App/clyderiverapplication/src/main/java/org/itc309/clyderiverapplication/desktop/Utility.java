@@ -2,7 +2,13 @@ package org.itc309.clyderiverapplication.desktop;
 
 public class Utility {
 	
-	public void printData(double data[]) {
+	public void printDoubleData(double data[]) {
+		for (int i=0; i < data.length; i++) {
+			System.out.println("Index " + i + ": " + data[i]);
+		}
+	}
+	
+	public void printData(String data[]) {
 		for (int i=0; i < data.length; i++) {
 			System.out.println("Index " + i + ": " + data[i]);
 		}

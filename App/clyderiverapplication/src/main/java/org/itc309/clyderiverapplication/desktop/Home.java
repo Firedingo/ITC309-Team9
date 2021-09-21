@@ -1,4 +1,4 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
@@ -22,16 +22,16 @@ import java.awt.FlowLayout;
 import java.awt.Component;
 import javax.swing.Box;
 
-public class TestHome extends JFrame {
-	private TestEventHandler handler = new TestEventHandler();
+public class Home extends JFrame {
+	private EventHandler handler = new EventHandler();
 	private Dimension d;
 	private String fav = "";
-	private TestFileReader reader = new TestFileReader();
-	private TestChartCreator creator = new TestChartCreator();
+	private CoreFileReader reader = new CoreFileReader();
+	private ChartCreator creator = new ChartCreator();
 	private XChartPanel<CategoryChart> chart;
 	private XChartPanel<CategoryChart> chart1;
 	private XChartPanel<CategoryChart> chart2;
-	public TestHome() {
+	public Home() {
 		HELLOWORLD();
 		setTitle("Clyde River Application");
 		

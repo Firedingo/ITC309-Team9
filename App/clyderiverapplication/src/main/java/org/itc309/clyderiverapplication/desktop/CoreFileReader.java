@@ -1,12 +1,10 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-import org.itc309.clyderiverapplication.desktop.Utility;
-
-public class TestFileReader {
+public class CoreFileReader {
 	private File path;
 	private int count = 0;
 	private String temp;

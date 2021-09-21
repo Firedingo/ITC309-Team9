@@ -1,4 +1,4 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -29,15 +29,15 @@ import java.awt.Component;
 import javax.swing.Box;
 import javax.swing.ListSelectionModel;
 
-public class TestSingleSensor extends JFrame {
-	private TestEventHandler handler = new TestEventHandler();
+public class SingleSensor extends JFrame {
+	private EventHandler handler = new EventHandler();
 	private Dimension d;
-	private TestFileReader reader = new TestFileReader();
-	private TestFileWriter writer = new TestFileWriter();
+	private CoreFileReader reader = new CoreFileReader();
+	private CoreFileWriter writer = new CoreFileWriter();
 	private String CurrentSensor;
-	private TestChartCreator creator = new TestChartCreator();
+	private ChartCreator creator = new ChartCreator();
 	private XChartPanel<CategoryChart> chart;
-	public TestSingleSensor(String name) {
+	public SingleSensor(String name) {
 		CurrentSensor = name;
 		
 		setTitle("Clyde River Application");
@@ -118,7 +118,7 @@ public class TestSingleSensor extends JFrame {
 				String fav = reader.readFavouriteLocation();
 				if (fav != null) {
 					if (!fav.equals(CurrentSensor)) {
-						TestPopup popup = new TestPopup();
+						Popup popup = new Popup();
 						
 					}
 					

@@ -1,4 +1,4 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -14,11 +14,11 @@ import javax.swing.JScrollBar;
 import javax.swing.SwingConstants;
 import java.awt.Component;
 
-public class TestAllSensors extends JFrame {
-	private TestEventHandler handler = new TestEventHandler();
+public class AllSensorsSummary extends JFrame {
+	private EventHandler handler = new EventHandler();
 	private Dimension d;
 	private String Ltype;
-	public TestAllSensors(String type) {
+	public AllSensorsSummary(String type) {
 		Ltype = type;
 		setTitle("Clyde River Application");
 		

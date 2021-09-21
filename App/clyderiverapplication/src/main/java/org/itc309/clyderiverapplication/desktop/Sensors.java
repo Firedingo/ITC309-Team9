@@ -1,4 +1,4 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
@@ -16,12 +16,12 @@ import javax.swing.event.ListSelectionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class TestSensors extends JFrame {
-	private TestEventHandler handler = new TestEventHandler();
+public class Sensors extends JFrame {
+	private EventHandler handler = new EventHandler();
 	private Dimension d;
-	private TestFileReader reader = new TestFileReader();
+	private CoreFileReader reader = new CoreFileReader();
 	private JList nonHarvestList;
-	public TestSensors() {
+	public Sensors() {
 		setTitle("Clyde River Application");
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -84,7 +84,7 @@ public class TestSensors extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				System.out.println("List Option: " + getNonHarvestListValue());
-				TestSingleSensor sinSensor = new TestSingleSensor(getNonHarvestListValue());
+				SingleSensor sinSensor = new SingleSensor(getNonHarvestListValue());
 			}
 		});
 

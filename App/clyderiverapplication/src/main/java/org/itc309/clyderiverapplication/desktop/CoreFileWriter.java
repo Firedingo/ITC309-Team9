@@ -1,12 +1,10 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import org.itc309.clyderiverapplication.desktop.Utility;
-
-public class TestFileWriter {
+public class CoreFileWriter {
 	private File path;
 	private Utility util = new Utility();
 	

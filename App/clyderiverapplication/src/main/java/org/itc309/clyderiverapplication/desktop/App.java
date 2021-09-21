@@ -1,28 +1,27 @@
 package org.itc309.clyderiverapplication.desktop;
 
-/**
- * Hello world! Main.java In Case you weren't sure
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-        //This calls for the chart to be created and displayed. Data IS hardcoded in the example!
-      //  ChartCreator chart = new ChartCreator();
-      //  chart.QuickChartExample();
-        
-        InterfaceBuilder Ibuilder = new InterfaceBuilder();
-        Ibuilder.createWindow();
-        
-        FileReader FR = new FileReader();
-        try {
-	//		FR.readCSV();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    }
-    
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		start();
+		test();
+	}
+	
+	public static void start() {
+		Home home = new Home();
+	}
+	
+	private static void test() {
+		CoreFileReader FR = new CoreFileReader();
+		FR.readSensorsTextFile();
+		FR.readHarvestTextFile();
+		FR.readAllSensorsFile();
+		FR.readData();
+		FR.readTime();
+		
+		CoreFileWriter FW = new CoreFileWriter();
+		FW.writeToFile("Buoy 03 - Moonlight");
+	}
+
 }

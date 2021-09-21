@@ -1,4 +1,4 @@
-package org.itc309.clyderiverapplication.test;
+package org.itc309.clyderiverapplication.desktop;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,8 +12,8 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TestPopup extends JFrame {
-	public TestPopup() {
+public class Popup extends JFrame {
+	public Popup() {
 		setTitle("Alert");
 		
 		JPanel panel = new JPanel();

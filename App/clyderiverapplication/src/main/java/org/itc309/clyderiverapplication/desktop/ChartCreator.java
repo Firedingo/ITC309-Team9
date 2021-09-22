@@ -21,13 +21,14 @@ import org.knowm.xchart.style.XYStyler;
 public class ChartCreator {
 	private CoreFileReader reader = new CoreFileReader();
 
-	//Method is never used - Creates an XYChart from XChart
+	//Pointless Method
 	public XChartPanel<CategoryChart> createChart() {
 	//	return createXYChart(350, 350, "Test Chart", "Test X Data", "Test Y Data");
 		
 		return createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
 	}
 	
+	//Method is never used - Creates an XYChart from XChart
 	private XChartPanel<XYChart> createXYChart(int width, int height, String title, String XLabel, String YLabel) {
 		//Create Chart
 		XYChart chart = new XYChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
@@ -53,7 +54,7 @@ public class ChartCreator {
 	}
 	
 	//Creates a CategoryChart to display data
-	private XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel) {
+	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel) {
 		CategoryChart chart = new CategoryChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
 		
 		//style
@@ -64,6 +65,7 @@ public class ChartCreator {
 				chart.getStyler().setToolTipsEnabled(true);
 				chart.getStyler().setLegendLayout(LegendLayout.Vertical);
 				chart.getStyler().setLegendPosition(LegendPosition.OutsideS);
+				chart.getStyler().setXAxisLabelRotation(45);
 		
 		//add data
 		 List<String> xDataList = Arrays.asList("One", "Two", "Three", "Four", "Five");
@@ -73,7 +75,9 @@ public class ChartCreator {
 			 xData.add(data[i]);
 		 }*/
 		 CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime())), new ArrayList<Number>(Arrays.asList(reader.readData())));
-	//	chart.addSeries(seriesName, xData, yData)
+		 
+		 
+		 //	chart.addSeries(seriesName, xData, yData)
 		 
 	//	 CategorySeries series1 = chart.addSeries
 		 

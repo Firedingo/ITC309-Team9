@@ -80,7 +80,7 @@ public class SingleSensor extends JFrame {
 		d = new Dimension(35,50);	
 		mnExit.setMaximumSize(d);
 		
-		chart = creator.createChart();
+		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data");
 		chart.setSize(700, 700);
 		
 		JPanel panel = new JPanel();

@@ -2,10 +2,14 @@ package org.itc309.clyderiverapplication.desktop;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.Scanner;
 
 public class CoreFileReader {
-	private File path;
+	//private File path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\");
+	private File file = new File("../data/salinity_levels.csv");
+	private File path = file;
+	private File directory = new File("../data/");
 	private int count = 0;
 	private String temp;
 	private Utility util = new Utility();
@@ -15,7 +19,8 @@ public class CoreFileReader {
 	public Number[] readData() {
 		//Setup
 		Number[] data = new Number[capacity];
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\salinity_levels.csv");
+		//setPath(3);
+		path = new File(directory + "\\salinity_levels.csv");
 		count = 0;
 		
 		//read file
@@ -32,7 +37,7 @@ public class CoreFileReader {
 			temp = scanner.next();
 			if (temp.contains(".")) {
 				for (int i=0; i<data.length;i++) {
-				data[i] = Double.parseDouble(temp);
+				data[i] = Float.parseFloat(temp);
 				}
 			}
 			System.out.println(temp);
@@ -41,7 +46,7 @@ public class CoreFileReader {
 		//Clean Up
 		scanner.close();
 		
-		/*
+		
 		//Test
 		System.out.println("Begin Output Test Of Salinity Data");
 		for (int i=0; i<data.length; i++) {
@@ -49,7 +54,7 @@ public class CoreFileReader {
 			System.out.println("Salinity " + i + ": " + temp);
 		}
 		System.out.println("End Output Test Of Salinity Data");
-		*/
+		
 		
 		//Return To Parent
 		return data;
@@ -60,7 +65,7 @@ public class CoreFileReader {
 		//Setup
 		String[] time = new String[capacity];
 		count = 0;
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\salinity_levels.csv");
+		setPath(3);
 		
 		//read file
 		Scanner scanner = null;
@@ -179,7 +184,7 @@ public class CoreFileReader {
 	
 	//Reads in a list of sensors from a file and filters out all sensors that aren't harvest areas
 	public String[] readHarvestTextFile( ) {
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
+		setPath(2);
 		Scanner scanner;
 		String[] sensors = new String[capacity];
 		count = 0;
@@ -214,7 +219,7 @@ public class CoreFileReader {
 	
 	//Reads in a favourite location from a file
 	public String readFavouriteLocation() {
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\preferences.txt");
+		setPath(1);
 		String fav = "";
 		try {
 			Scanner scanner = new Scanner(path);
@@ -237,6 +242,27 @@ public class CoreFileReader {
 		
 		
 		return fav;
+	}
+	
+	public void setPath(int Selector) {
+		switch(Selector) {
+		case 0:
+			path = new File("Z:\\Fail.txt");
+			break;
+		case 1:
+			path = new File(directory + "\\preferences.txt");
+			break;
+		case 2:
+			path = new File(directory + "\\sensor_list.txt");
+			break;
+		case 3:
+			path = new File(directory + "\\salinity_levels.csv");
+			break;
+		}
+	}
+	
+	public File getPath() {
+		return path;
 	}
 	
 }

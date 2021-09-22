@@ -10,7 +10,7 @@ public class CoreFileWriter {
 	
 	//Writes data to a preferences file. At this stage it simply saves the user's favourite location
 	public void writeToFile(String favourite) {
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\preferences.txt");
+		setPath();
 
 		try {
 			FileWriter writer = new FileWriter(path);
@@ -34,6 +34,14 @@ public class CoreFileWriter {
 			util.printError("The File Could Not Be Found And/Or Accessed");
 			util.printError("" + e.getLocalizedMessage());
 		}
+	}
+	
+	public File getPath() {
+		return path;
+	}
+	
+	public void setPath() {
+		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\preferences.txt");
 	}
 
 }

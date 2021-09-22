@@ -84,9 +84,9 @@ public class Home extends JFrame {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.SOUTH);
 		
-		chart = creator.createChart();
-		chart1 = creator.createChart();
-		chart2 = creator.createChart();
+		chart = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
+		chart1 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
+		chart2 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
 //		JPanel chartPanel = new XChartPanel<>(chart);
 		panel.add(chart, BorderLayout.SOUTH);
 		panel.add(chart1, BorderLayout.SOUTH);

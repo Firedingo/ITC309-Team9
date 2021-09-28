@@ -22,6 +22,7 @@ public class CoreFileReader {
 		//setPath(3);
 		path = new File(directory + "\\salinity_levels.csv");
 		count = 0;
+		int j =0;
 		
 		//read file
 		Scanner scanner = null;
@@ -36,8 +37,9 @@ public class CoreFileReader {
 		while (scanner.hasNext()) {
 			temp = scanner.next();
 			if (temp.contains(".")) {
-				for (int i=0; i<data.length;i++) {
-				data[i] = Float.parseFloat(temp);
+				if (j < data.length) {
+				data[j] = Float.parseFloat(temp);
+				j++;
 				}
 			}
 			System.out.println(temp);
@@ -65,7 +67,16 @@ public class CoreFileReader {
 		//Setup
 		String[] time = new String[capacity];
 		count = 0;
+		int j = 0;
+		int file = 3;
+		
+		switch (file) {
+		
+		case 3:
 		setPath(3);
+		break;
+		
+		}
 		
 		//read file
 		Scanner scanner = null;
@@ -90,15 +101,15 @@ public class CoreFileReader {
 			temp = scanner.next();
 			if (temp.contains(":") && temp.length() == 8) {
 				System.out.println("Time: " + temp);
-				for (int i=0; i<time.length; i++) {
-					time[i] = temp;
-					util.printFeedback("Time_Test: " + time[i]);
+				if (j < time.length) {	
+					time[j] = temp;
+					j++;
 				}
 			}
 			
 		}
 		
-		/*
+		
 		//Test
 		System.out.println("Begin Output Test Of Time Data");
 		for (int i=0; i<time.length; i++) {
@@ -106,7 +117,7 @@ public class CoreFileReader {
 			System.out.println("Salinity " + i + ": " + temp);
 		}
 		System.out.println("End Output Test Of Time Data");
-		*/
+		
 				
 		//Clean Up
 		scanner.close();
@@ -244,6 +255,172 @@ public class CoreFileReader {
 		return fav;
 	}
 	
+	
+	public void readTemperatureData() {
+		setPath(4);
+		count = 0;
+		
+		Number[] temperature = new Number[100];
+		
+		try {
+			Scanner scanner = new Scanner(getPath());
+			scanner.useDelimiter(",");
+			while (scanner.hasNext()) {
+				temp = scanner.next();
+			//	System.out.println("Match Found: " + temp);
+				if (temp.contains(".") && temp.length() < 5) {
+					System.out.println("Match Found: " + temp);
+					if (count == 7) {
+						for (int i = 0; i < temperature.length; i++) {
+							System.out.println("Current Value of Temp: " + temp);
+							temperature[i] = Float.parseFloat(temp);
+						}
+						count = 0;
+					}
+					count++;
+				}
+			
+			} //END WHILE
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//Test
+		System.out.println("BEGIN TEMPERATURE PRINTOUT");
+		for (int i = 0; i < temperature.length; i++) {
+			System.out.println("Index " + i + ": " + temperature[i]);
+		}
+		System.out.println("END TEMPERATURE PRINTOUT");
+		
+	}
+
+	public Number[] readTemperatureData2() {
+		setPath(4);
+		count = 0;
+		int j = 0;
+		
+		Number[] temperature = new Number[100];
+		
+		try {
+			Scanner scanner = new Scanner(getPath());
+			scanner.useDelimiter(",|\\n");
+			
+			//Title Skip
+			for (int i = 0; i < 9; i++) {
+				scanner.next();
+			}
+			
+			while (scanner.hasNext()) {
+			
+				temp = scanner.next();
+				
+				util.printFeedback("Temp Value: " + temp);
+				
+				if (count == 6) {
+					util.printFeedback("Count: " + count);
+					util.printFeedback("Temp: " + temp);
+					
+					
+						temperature[j] = Float.parseFloat(temp);
+						util.printFeedback("Temperature["+j+"] = " + temperature[j]);
+						j++;
+					
+				}
+					count++;
+				
+				if (count == 9) {
+					count = 0;
+				}
+				
+				
+				
+			}
+			
+					
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//Test
+		util.printFeedback("BEGIN TEMPERATURE PRINTOUT");
+		for (int i = 0; i<temperature.length; i++) {
+			util.printFeedback("Index " + i + ": " + temperature[i]);
+		}
+		util.printFeedback("END TEMPERATURE PRINTOUT");
+		
+		return temperature;
+	}
+	
+	public Number[] readRainfallData() {
+		setPath(4);
+		count = 0;
+		int j = 0;
+		
+		Number[] rainfall = new Number[100];
+		
+		try {
+			Scanner scanner = new Scanner(getPath());
+			scanner.useDelimiter(",|\\n");
+			
+			//Title Skip
+			for (int i = 0; i < 9; i++) {
+				scanner.next();
+			}
+			
+			while (scanner.hasNext()) {
+			
+				temp = scanner.next();
+				
+				util.printFeedback("Temp Value: " + temp);
+				
+				if (count == 2) {
+					util.printFeedback("Count: " + count);
+					util.printFeedback("Temp: " + temp);
+					
+					
+						rainfall[j] = Float.parseFloat(temp);
+						util.printFeedback("Rainfall["+j+"] = " + rainfall[j]);
+						j++;
+					
+				}
+					count++;
+				
+				if (count == 9) {
+					count = 0;
+				}
+				
+				
+				
+			}
+			
+					
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		//Test
+		util.printFeedback("BEGIN RAINFALL PRINTOUT");
+		for (int i = 0; i<rainfall.length; i++) {
+			util.printFeedback("Index " + i + ": " + rainfall[i]);
+		}
+		util.printFeedback("END RAINFALL PRINTOUT");
+		
+		return rainfall;
+	}
+	
+	
+	
 	public void setPath(int Selector) {
 		switch(Selector) {
 		case 0:
@@ -257,6 +434,9 @@ public class CoreFileReader {
 			break;
 		case 3:
 			path = new File(directory + "\\salinity_levels.csv");
+			break;
+		case 4:
+			path = new File(directory + "\\sensor data\\weather station\\budd island.csv");
 			break;
 		}
 	}

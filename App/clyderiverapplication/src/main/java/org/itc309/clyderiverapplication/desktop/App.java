@@ -16,11 +16,13 @@ public class App {
 	//Code for testing can be placed here. Is therefore isolated from application start
 	private static void test() {
 		CoreFileReader FR = new CoreFileReader();
-		FR.readSensorsTextFile();
-		FR.readHarvestTextFile();
-		FR.readAllSensorsFile();
+	//	FR.readSensorsTextFile();
+	//	FR.readHarvestTextFile();
+	//	FR.readAllSensorsFile();
 		FR.readData();
 		FR.readTime();
+	//	FR.readTemperatureData2();
+	//	FR.readRainfallData();
 		
 		CoreFileWriter FW = new CoreFileWriter();
 		FW.writeToFile("Buoy 03 - Moonlight");

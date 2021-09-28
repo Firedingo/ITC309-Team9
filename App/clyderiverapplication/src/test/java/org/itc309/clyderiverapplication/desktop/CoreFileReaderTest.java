@@ -111,6 +111,18 @@ public class CoreFileReaderTest {
 	}
 	
 	@Test
+	public void testReadTimeGetsUniqueDataFromFile() {
+		//Arrange
+		String[] time = new String[25];
+		
+		//Act
+		time = reader.readTime();
+		//Assert
+		assertTrue(time[1] != null);
+		assertNotEquals(time[1],time[2]);
+	}
+	
+	@Test
 	public void testReadDataGetsDataFromFile() {
 		//Arrange
 		Number[] data = new Number[25];
@@ -120,6 +132,19 @@ public class CoreFileReaderTest {
 		
 		//Assert
 		assertTrue(data[1] != null);
+	}
+	
+	@Test
+	public void testReadDataGetsUniqueDataFromFile() {
+		//Arrange
+		Number[] data = new Number[25];
+		
+		//Act
+		data = reader.readData();
+		
+		//Assert
+		assertTrue(data[1] != null);
+		assertNotEquals(data[1],data[2]);
 	}
 	
 	@Test
@@ -162,6 +187,30 @@ public class CoreFileReaderTest {
 		
 		//Assert
 		assertEquals(expectedPath, actualPath);
+	}
+	
+	@Test
+	public void testReadTemperatureDataGetsDataFromFile() {
+		//Arrange
+		Number[] data = new Number[100];
+		
+		//Act
+		data = reader.readTemperatureData2();
+		
+		//Assert
+		assertTrue(data[1] != null);
+	}
+	
+	@Test
+	public void testReadRainfallDataGetsDataFromFile() {
+		//Arrange
+		Number[] data = new Number[100];
+		
+		//Act
+		data = reader.readRainfallData();
+		
+		//Assert
+		assertTrue(data[1] != null);
 	}
 	
 	@Disabled //Unsure if Test Is Needed. Fails Because Of Try/Catch Statement @Test

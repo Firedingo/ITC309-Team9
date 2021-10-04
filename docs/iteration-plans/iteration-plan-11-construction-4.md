@@ -70,9 +70,9 @@ The following work items will be addressed within this iteration:
 | 18 | Select A Favourite Location | Allow the user to select a favourite location | Incomplete | Naomi Thompson  | 5 | 3 | 2      |
 | 19 | Display Favourite location Info on dashboard home | Allow a user to view a summary of their favourite location on the dashboard | Incomplete | Naomi Thompson  | 10 | 3 | 7      |
 | 20 | Design & Run Relevant Code Testing | A selection of written tests that all pass | Incomplete | Naomi Thompson  | 20 | 10 | 5      |
-| 21 | Produce A User Manual To Aide Further Testing | A Detailed, Complete & Accessible User Manual | Incomplete | Naomi Thompson  | 10 | 15 | 5      |
-| 22 | Complete A Project Status Assessment | A Completed document | Incomplete | Naomi Thompson  | 3 | 0 | 0       |
-| 23 | Update Wiki to reflect completion of iteration & phase | An up to date wiki with relevant links to deliverables | Incomplete | Naomi Thompson  | 2 | 1               | 1      |
+| 21 | Produce A User Manual To Aide Further Testing | A Detailed, Complete & Accessible User Manual | Complete | Naomi Thompson  | 10 | 20 | 0     |
+| 22 | Complete A Project Status Assessment | A Completed document | Complete | Naomi Thompson  | 3 | 3 | 0       |
+| 23 | Update Wiki to reflect completion of iteration & phase | An up to date wiki with relevant links to deliverables | Complete | Naomi Thompson  | 2 | 2              | 0     |
 
 ## 5. Issues
 
@@ -92,7 +92,7 @@ The following work items will be addressed within this iteration:
 
 ### Objectives Assessment
 
-Most high level objectives were not met. Objectives 2 and 5 were met. Most objectives were not met because their evaluation criteria were not met and those criteria were not met due to their corresponding work items not being completed.
+Most high level objectives were not met. Objective 5 *"Completion Of Supplementary Documentation"* was met. Most objectives were not met because their evaluation criteria were not met and those criteria were not met due to their corresponding work items not being completed.
 
 - Objective 1 is dependent on criteria 1.
 - Objective 2 is dependent on criteria 2 & 4.
@@ -113,11 +113,17 @@ Work items 14 & 15 are heavily dependent on work items 10 & 11 and therefore pro
 
 Work Item 16 is low priority but intrinsically connected to criteria 1 & 4.
 
-Work Item 17
+Work Item 17 is a low priority item but a simple enough one to implement.
+
+Work Items 18 & 19 are also one of the lowest priority items to implemented. They're also not extremely hard to implement.
+
+Work Item 20 is important and partially helps support the application. There are tests implemented but it is likely to be lacking. Focus has been on high risk and core/critical areas of the application.
+
+Work Items 21, 22 & 23 are documentation items with no issues completing them.
 
 ### Evaluation Criteria Assessment
 
-Most evaluation criteria was not met. Evaluation criteria 2 and 7 were met. Evaluation criteria is dependent on work items being completed in order to be met. While many items are close to being met and progress has been made, it is ultimately however that the work items were not completed and therefore the criteria was not met. This as mentioned above has also resulted in several high level objectives not being met either.
+Most evaluation criteria was not met. Evaluation criteria 2 *"A Functioning Navigation System"* and 7 *"Complete User Manual, Iteration Plan, Blog, Wiki, Project Status Assessment"* were met. Evaluation criteria is dependent on work items being completed in order to be met. While many items are close to being met and progress has been made, it is ultimately however that the work items were not completed and therefore the criteria was not met. This as mentioned above has also resulted in several high level objectives not being met either.
 
 - Criteria 1 is dependent on work items 10 & 11.
 - Criteria 2 is dependent on work item 12.
@@ -130,3 +136,12 @@ Most evaluation criteria was not met. Evaluation criteria 2 and 7 were met. Eval
 
 ### Concerns and Deviations
 
+There still remains serious concern over team skill levels and whether the team is able to successfully deliver this project.
+
+The team has also experienced health challenges and continues to do so.
+
+The team also wonders if the scope is more than the team can handle?
+
+The major hold up has primarily been with getting file reading and connections to the chart to handle the data read in. Both of these features also consist of the core of the functionality of the project and application. Many of the outstanding work items have relied heavily on this.
+
+A major issue has also been switching chart types within the XChart library which has resulting in some additional delays also.

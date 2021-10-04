@@ -68,7 +68,7 @@ Initial requirement analysis identified the following critical and significant s
 
 ### System Qualities
 
-\1.    <identify high priority system qualities (NFRs) >
+The Non-functional requirements include the following:
 
 - The application shall allow farmers to access the application on desktop
 - The application should comply with and utilise Java design conventions, styles and best practices.
@@ -76,20 +76,18 @@ Initial requirement analysis identified the following critical and significant s
 - The application should reliably display graph information
 - The application should reliably read data from a file
 
-<briefly summarise status of NFRs>
-
 More or less the high priority NFRs have been met. Some polish is still required to ensure that the reliability of some functionality is consistent but it is mostly there.
 
 ### Functional Requirements
 
-\1.    <identify high priority functional requirements (Use cases)>
+The Functional Requirements include:
 
 - The system shall allow farmers to view the current salinity level recorded by a water quality sensor.
 - The system shall allow farmers to view the current temperature recorded by a water quality sensor.
 - The system shall allow farmers to view the precipitation for a specified time period as recorded for a location.
 - The system shall read/write data from a file
 
-< briefly summarise status of use cases>
+
 
 Most of the use cases consist of the user being able to view data which is in turn read from files. In a very limited capacity the use case may consist of writing to a file instead of reading from the file. All other remaining cases are navigational based.
 
@@ -97,7 +95,7 @@ File reading/writing is functioning and data graphing is also working, some poli
 
 There is however no time range function but it is also a lower priority item to be implemented.
 
-<Very briefly summarise the status of the key deliverables for the Construction Phase>
+
 
 The Key deliverables for the Construction Phase consist of:
 
@@ -114,7 +112,9 @@ To the best of the team's ability, the application is deemed to be bug free at t
 
 #### Testing
 
+The testing consists of a number of UATs supported by a number of unit tests. The testing is highly likely to be undercooked. As some functionality is not yet implemented, not all testing could be sufficiently carried out. Major use cases were tested and passed without issue. 
 
+Testing is somewhat limited due in part to the highly simple nature of the application as well as the fact much of the application requires nothing more than a click or two from the mouse and there is no user input at this stage. That said, all attempt to provide comprehensive testing has been covered, including supplying screenshots as part of testing to demonstrate outcomes achieved.
 
 #### User Manual
 
@@ -128,7 +128,7 @@ The project status assessment has been successfully completed. It provides a rea
 
 It addresses identified and known functional and non-functional requirements, ongoing project risks, current deliverables and a reflection on the iterations that have passed including any issues that have arisen.
 
-<Very briefly summarise any remaining risks faced by the project and their current status>
+
 
 #### Ongoing Risks
 
@@ -145,7 +145,7 @@ Ongoing risks that impact the project consist of the following:
 
 NOTE: Status consists of whether the risk is open or closed ie ongoing or not and what impact the risk is likely to have on the project such as high, medium, low.
 
- <Very briefly summarise the key issues faced by the team and their current status>
+
 
 #### Team Issues
 
@@ -177,19 +177,41 @@ The lack of time and outstanding work that needs to be done coupled with the pot
 
 ### 1.2.1 Functional Acceptance Tests
 
-<Identify the FATs carried out to test successful completion of beta ready system. Include links to evidence>
+The FATs carried out consist of:
+
+- Testing Of The Menu Which Was Covered By:
+  - [Return To Home Dashboard Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/Return%20To%20Home%20Dashboard%20Test.docx)
+  - [View A Single Water Quality Metric On A Single Sensor Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/View%20A%20Single%20Water%20Quality%20Metric%20On%20A%20Single%20Sensor%20Test.docx)
+  - [View A Water Quality Metric Across All Sensors Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/View%20A%20Water%20Quality%20Metric%20Across%20All%20Sensors%20Test.docx)
+- File Input/Output Which Was Covered By:
+  - [View All Sensors File IO Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/View%20All%20Sensors%20File%20IO%20Test.docx)
 
 ### 1.2.2 System Quality Scenarios
 
-<Identify any system quality scenario testing carried out to test successful support of key NFRs in the beta ready system. Include links to evidence>
+Some system quality testing was performed. Primarily focusing on the reliability of the system.
+
+System quality tests that were performed include:
+
+- [View A Single Water Quality Metric On A Single Sensor Consistency Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/View%20A%20Single%20Water%20Quality%20Metric%20On%20A%20Single%20Sensor%20Consistency%20Test.docx)
+- [View All Sensors File IO Consistency Test](https://github.com/Firedingo/ITC309-Team9/blob/master/docs/test/UATs/alpha/View%20All%20Sensors%20File%20IO%20Consistency%20Test.docx)
 
 ### 1.3 Beta Test Materials
 
-<Identify the ‘business scenarios’ beta testers are asked to complete. Reference the beta test materials and the feedback form used to gather and analyse the results.>
+Beta testing will aim to cover the following situations:
+
+- View Current Salinity Levels on A Sensor That Will Inform a Business Decision
+- View Current Temperature Levels on A Sensor That Will Inform a Business Decision
+- View Current Rainfall Levels on A Sensor That Will Inform a Business Decision
+- View Historical Rainfall Levels on A Sensor That Will Inform a Business Decision
+- Navigate Between And View Several Business Relevant Sensors To inform With Regards To A Business Decision
+- View All Sensors At Once To Broadly Gain Information On The River Which In Turn Informs a Relevant Business Decision
+- Update Favourite Sensor To Match A New Important Sensor Relevant To The Business
+
+Beta testers will have access to the following material:
+
+- A user manual
 
 ### 1.4 User Manual
-
-<Comment on the completion status, method of delivery and quality of the user manual to be supplied to beta testers. Reference the completed user manual.>
 
 The user manual in question can be found at: https://github.com/Firedingo/ITC309-Team9/blob/master/docs/user%20manual.docx
 
@@ -201,8 +223,6 @@ It is fully expected that page numbers will also need rejigging once screenshots
 
 ### 2.1 Construction Iteration 1
 
-<Briefly identify the key objectives for this iteration. Summarise how the team went against those objectives. Identify and discuss any issues the team encountered achieving the objectives for this iteration>
-
 This iteration primarily consisted of rejigging and rescoping of the project due to a massive shift in the team size.
 
 As a result this iteration required covering the functional and non-functional requirements to fit the new scope, a complete redesign of the technical requirements as well as new wireframes to suit the new form of the project.
@@ -213,8 +233,6 @@ No issues were encountered in this iteration.
 
 ### 2.2 Construction Iteration 2
 
-<Briefly identify the key objectives for this iteration. Summarise how the team went against those objectives. Identify and discuss any issues the team encountered achieving the objectives for this iteration>
-
 This iteration was for the most part reasonably successful.
 
 This iteration consisted mostly of getting setup and getting a basic chart running in a working application. This was mostly successful. File reading was not completed and therefore the chart could not be updated to use the data read from the file, however the chart was successfully displaying data from hardcoded data.
@@ -222,8 +240,6 @@ This iteration consisted mostly of getting setup and getting a basic chart runni
 A major issue encountered at this point in this iteration has been a mismatch between data being read in from the file and the types of data the chart type accepted. The original chart type did not accept string data and due to the time data being in the format of HH:MM:SS, it was deemed that string was probably the most accurate type of data to store the time format in. However the chart type did not support strings meaning a decision had to be made. Do we change the string type to something else or do we change the chart type to one that supports string?
 
 ### 2.3 Construction Iteration 3
-
-<Briefly identify the key objectives for this iteration. Summarise how the team went against those objectives. Identify and discuss any issues the team encountered achieving the objectives for this iteration>
 
 The aims of this iteration were to finish the remaining items that carried over from the last iteration as well as achieve the 2nd highest priority for implementation. As such this consisted of finishing file reading, connecting that to the chart as well as navigation through a menu and creating multiple windows.
 
@@ -234,8 +250,6 @@ All objectives in this iteration were interconnected and dependent on one anothe
 The issue with the file reading and chart type mismatch continued through this iteration.
 
 ### 2.4 Construction Iteration 4
-
-<Briefly identify the key objectives for this iteration. Summarise how the team went against those objectives. Identify and discuss any issues the team encountered achieving the objectives for this iteration>
 
 The objectives for this iteration could be summarized as finish everything. This included finalizing the file reading and charting, finishing the menu navigation, multiple windows, allowing multiple types of data to be displayed as well as a functioning location system. Along with supplementary testing and documentation.
 
@@ -252,3 +266,4 @@ Objectives were met in varying degrees with the high priority ones being met and
 ### 3.1  <General Issue 1 – identify prioritised general issues if any>
 
 <Identify and summarise any general issues the team encountered during the inception phase. If possible, describe any actions taken to remedy the issue>
+

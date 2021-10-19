@@ -32,20 +32,23 @@ public class AllSensorsSummary extends JFrame {
 	public AllSensorsSummary(String type) {
 		Ltype = type;
 		setTitle("Clyde River Application");
+		String location = "Buoy 01 - Wray Street";
 		
+		
+		//First 0 - Don't care, Second 0 = Temperature, 1 = Rainfall - See the add series method in ChartCreator CLass.
 		//BEGIN INSANE CHART CREATION
-		XChartPanel<CategoryChart> chart = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart1 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart2 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart3 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart4 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart5 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart6 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart7 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart8 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart9 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart10 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
-		XChartPanel<CategoryChart> chart11 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data");
+		XChartPanel<CategoryChart> chart = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart1 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart2 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,1);
+		XChartPanel<CategoryChart> chart3 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart4 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart5 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,1);
+		XChartPanel<CategoryChart> chart6 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart7 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart8 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,1);
+		XChartPanel<CategoryChart> chart9 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart10 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);
+		XChartPanel<CategoryChart> chart11 = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,1);
 		
 		//END INSANE CHART CREATION
 		

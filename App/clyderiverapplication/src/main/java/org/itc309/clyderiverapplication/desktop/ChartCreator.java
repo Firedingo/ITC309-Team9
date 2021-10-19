@@ -25,7 +25,7 @@ public class ChartCreator {
 	public XChartPanel<CategoryChart> createChart() {
 	//	return createXYChart(350, 350, "Test Chart", "Test X Data", "Test Y Data");
 		
-		return createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
+		return createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", "Test Location", 0);
 	}
 	
 	//Method is never used - Creates an XYChart from XChart
@@ -54,10 +54,10 @@ public class ChartCreator {
 	}
 	
 	//Creates a CategoryChart to display data
-	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel) {
+	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel, String Location, int Weather) {
 		CategoryChart chart = new CategoryChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
 		
-		//style
+		//Set Chart Render Style
 		chart.getStyler().setDefaultSeriesRenderStyle(CategorySeriesRenderStyle.Line);
 		
 		//Style Chart
@@ -68,14 +68,18 @@ public class ChartCreator {
 				chart.getStyler().setXAxisLabelRotation(45);
 		
 		//add data
-		 List<String> xDataList = Arrays.asList("One", "Two", "Three", "Four", "Five");
-		 /*List<Date> xData = new ArrayList<Date>();
-		 Date[] data = testXDataString();
-		 for (int i=0; i<5; i++) {
-			 xData.add(data[i]);
-		 }*/
-		 CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime())), new ArrayList<Number>(Arrays.asList(reader.readData())));
 		 
+		if (Location.equals("Budd Island")) {
+			if (Weather == 0) {
+			CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readTemperatureData())));
+			}
+			if (Weather == 1) {
+				CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readRainfallData())));
+				}
+		}
+		else {
+			CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
+		}
 		 
 		 //	chart.addSeries(seriesName, xData, yData)
 		 

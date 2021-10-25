@@ -316,7 +316,7 @@ public class CoreFileReader {
 	
 	//Reads in a favourite location from a file
 	public String readFavouriteLocation() {
-		setPath(1);
+		setPath(16);
 		String fav = "";
 		try {
 			Scanner scanner = new Scanner(path);

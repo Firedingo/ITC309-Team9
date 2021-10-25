@@ -68,18 +68,17 @@ public class ChartCreator {
 				chart.getStyler().setXAxisLabelRotation(45);
 		
 		//add data
-		 
-		if (Location.equals("Budd Island")) {
-			if (Weather == 0) {
-			CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readTemperatureData())));
-			}
-			if (Weather == 1) {
-				CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readRainfallData())));
+				if (Location.equals("Budd Island")) {
+					if (Weather == 0) {
+					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readTemperatureData())));
+					}
+					if (Weather == 1) {
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readRainfallData())));
+						}
 				}
-		}
-		else {
-			CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
-		}
+				else {
+					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
+				}
 		 
 		 //	chart.addSeries(seriesName, xData, yData)
 		 

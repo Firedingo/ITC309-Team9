@@ -17,14 +17,14 @@ import junit.framework.Assert;
 public class CoreFileReaderTest {
 	
 	CoreFileReader reader = new CoreFileReader();
-	String Location;
+	String location;
 	
 	@Rule
 	public ExpectedException exceptionRule = ExpectedException.none();
 
 	@Before                                         
 	public void init() {
-	        Location = "Buoy 01 - Wray Street";
+		location = "Buoy 01 - Wray Street";
 	}
 	
 	@Disabled //No Need To Run This @Test
@@ -106,7 +106,7 @@ public class CoreFileReaderTest {
 		String[] time = new String[25];
 		
 		//Act
-		time = reader.readTime(Location);
+		time = reader.readTime(location);
 		//Assert
 		assertTrue(time[1] != null);
 	}
@@ -117,7 +117,7 @@ public class CoreFileReaderTest {
 		String[] time = new String[25];
 		
 		//Act
-		time = reader.readTime(Location);
+		time = reader.readTime(location);
 		//Assert
 		assertTrue(time[1] != null);
 		assertNotEquals(time[1],time[2]);
@@ -129,7 +129,7 @@ public class CoreFileReaderTest {
 		Number[] data = new Number[25];
 		
 		//Act
-		data = reader.readData(Location);
+		data = reader.readData(location);
 		
 		//Assert
 		assertTrue(data[1] != null);
@@ -141,7 +141,7 @@ public class CoreFileReaderTest {
 		Number[] data = new Number[25];
 		
 		//Act
-		data = reader.readData(Location);
+		data = reader.readData(location);
 		
 		//Assert
 		assertTrue(data[1] != null);

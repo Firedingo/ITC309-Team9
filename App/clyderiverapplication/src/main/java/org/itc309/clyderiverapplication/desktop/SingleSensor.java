@@ -24,6 +24,8 @@ import javax.swing.JList;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import java.awt.Panel;
 import java.awt.Component;
@@ -84,7 +86,7 @@ public class SingleSensor extends JFrame {
 		mnExit.setMaximumSize(d);
 		//END MENU
 		
-		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data",getCurrentSensor(),0);
+		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data", getCurrentSensor(),0);
 		chart.setSize(700, 700);
 		
 		JPanel panel = new JPanel();
@@ -135,7 +137,8 @@ public class SingleSensor extends JFrame {
 			chckbxFavourite.setSelected(false);
 		}
 		chckbxFavourite.addActionListener(new ActionListener() {
-			
+
+
 			public void actionPerformed(ActionEvent event) {
 				if (!chckbxFavourite.isSelected()) {
 					String message = "Do you want to make " + getCurrentSensor() + " your favourite location?";
@@ -177,8 +180,8 @@ public class SingleSensor extends JFrame {
 	public void dispose(JFrame frame) {
 		frame.dispose();
 	}
-	
+
 	public JFrame getFrame() {
 		return this;
 	}
-}	
+}

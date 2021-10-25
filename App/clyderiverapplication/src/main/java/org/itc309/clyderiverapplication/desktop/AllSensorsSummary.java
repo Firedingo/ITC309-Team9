@@ -34,7 +34,7 @@ public class AllSensorsSummary extends JFrame {
 		setTitle("Clyde River Application");
 		String location = "Buoy 01 - Wray Street";
 		
-		
+
 		//First 0 - Don't care, Second 0 = Temperature, 1 = Rainfall - See the add series method in ChartCreator CLass.
 		//BEGIN INSANE CHART CREATION
 		XChartPanel<CategoryChart> chart = creator.createCategoryChart(200, 200, "Test Chart", "Test X Data", "Test Y Data",location,0);

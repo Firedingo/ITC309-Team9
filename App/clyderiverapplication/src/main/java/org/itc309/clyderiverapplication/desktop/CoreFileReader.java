@@ -18,7 +18,7 @@ public class CoreFileReader {
 	private int capacity2 = 100;
 	
 
-	//Reads Salinity Levels in - in theory
+	//Reads Salinity Levels in - in theory.
 	public Number[] readData(String location) {
 		//Setup
 		Number[] data = new Number[capacity];

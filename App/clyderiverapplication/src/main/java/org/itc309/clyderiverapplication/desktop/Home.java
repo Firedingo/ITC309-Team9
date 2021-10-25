@@ -37,6 +37,7 @@ public class Home extends JFrame {
 		HELLOWORLD();
 		setTitle("Clyde River Application");
 		
+		//MENU CREATION
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
@@ -89,13 +90,15 @@ public class Home extends JFrame {
 		chart2 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),1);
 //		JPanel chartPanel = new XChartPanel<>(chart);
 		panel.add(chart, BorderLayout.SOUTH);
-		panel.add(chart1, BorderLayout.SOUTH);
-		panel.add(chart2, BorderLayout.SOUTH);
+	//	panel.add(chart1, BorderLayout.SOUTH);
+	//	panel.add(chart2, BorderLayout.SOUTH);
 		
 		
 		fav = reader.readFavouriteLocation();
 		if (fav.isEmpty()) {
 			fav = "No Favourite Selected";
+			panel.setVisible(false);
+			System.err.print("ERROR: No Favourite Location Set");
 		}
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		

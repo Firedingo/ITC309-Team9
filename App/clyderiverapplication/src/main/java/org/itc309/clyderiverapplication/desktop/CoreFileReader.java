@@ -20,10 +20,9 @@ public class CoreFileReader {
 
 	//Reads Salinity Levels in - in theory.
 	public Number[] readData(String location) {
+
 		//Setup
-		Number[] data = new Number[capacity];
-		//setPath(3);
-		path = new File(directory + "\\salinity_levels.csv");
+		Number[] data = new Number[capacity1];
 		count = 0;
 		int j =0;
 		
@@ -34,6 +33,7 @@ public class CoreFileReader {
 		//This could be cleaned up and made more efficient.
 		util.printFeedback("INFO: Location = " + location);
 		switch (location) {
+
 			case "Test":
 				setPath(18);
 				util.printError("No Location Set. Falling Back To Default.");
@@ -72,7 +72,7 @@ public class CoreFileReader {
 				setPath(13);
 				break;
 		}
-		
+
 		//read file
 		Scanner scanner = null;
 		try {
@@ -91,20 +91,10 @@ public class CoreFileReader {
 				j++;
 				}
 			}
-			System.out.println(temp);
 		}
 		
 		//Clean Up
 		scanner.close();
-		
-		
-		//Test
-		System.out.println("Begin Output Test Of Salinity Data");
-		for (int i=0; i<data.length; i++) {
-			Number temp = data[i];
-			System.out.println("Salinity " + i + ": " + temp);
-		}
-		System.out.println("End Output Test Of Salinity Data");
 		
 		
 		//Return To Parent
@@ -114,7 +104,7 @@ public class CoreFileReader {
 	//Reads The Time a measurement was taken in for all measurements
 	public String[] readTime(String location) {
 		//Setup
-		String[] time = new String[capacity];
+		String[] time = new String[capacity1];
 		count = 0;
 		int j = 0;
 		
@@ -188,7 +178,6 @@ public class CoreFileReader {
 		while (scanner.hasNext()) {
 			temp = scanner.next();
 			if (temp.contains(":") && temp.length() == 8) {
-				System.out.println("Time: " + temp);
 				if (j < time.length) {	
 					time[j] = temp;
 					j++;
@@ -196,15 +185,6 @@ public class CoreFileReader {
 			}
 			
 		}
-		
-		
-		//Test
-		System.out.println("Begin Output Test Of Time Data");
-		for (int i=0; i<time.length; i++) {
-			String temp = time[i];
-			System.out.println("Salinity " + i + ": " + temp);
-		}
-		System.out.println("End Output Test Of Time Data");
 		
 				
 		//Clean Up
@@ -239,7 +219,6 @@ public class CoreFileReader {
 				util.printError("The File Could Not Be Opened or Found");
 			}
 			
-			util.printData(sensors);
 			return sensors;
 			
 	}
@@ -276,7 +255,6 @@ public class CoreFileReader {
 			util.printError("The File Could Not Be Opened or Found");
 		}
 		
-		util.printData(sensors);
 		return sensors;
 		
 	}
@@ -311,7 +289,6 @@ public class CoreFileReader {
 			util.printError("The File Could Not Be Opened or Found");
 		}
 		
-		util.printData(sensors);
 		return sensors;
 		
 	}
@@ -340,12 +317,12 @@ public class CoreFileReader {
 			util.printError("" + e.getLocalizedMessage());
 		}
 		
+
 	//		fav = tempFav.substring(20);
 			fav = tempFav;
 		
 		return fav;
 	}
-	
 
 	public Number[] readTemperatureData() {
 		setPath(15);
@@ -373,7 +350,6 @@ public class CoreFileReader {
 				
 				
 				if (count == 6) {
-										
 					
 						temperature[j] = Float.parseFloat(temp);
 				//		util.printFeedback("Temperature["+j+"] = " + temperature[j]);
@@ -424,11 +400,8 @@ public class CoreFileReader {
 			
 				temp = scanner.next();
 				
-				util.printFeedback("Temp Value: " + temp);
 				
 				if (count == 2) {
-					util.printFeedback("Count: " + count);
-					util.printFeedback("Temp: " + temp);
 					
 					
 						rainfall[j] = Float.parseFloat(temp);
@@ -478,7 +451,6 @@ public class CoreFileReader {
 		util.printFeedback("INFO TEST: " + data);
 
 		for (int a = 0; a < allData.length; a++) {
-
 			if (count < summaryData.length) {
 				if (count == 0) {
 					data = allData[a];
@@ -502,6 +474,7 @@ public class CoreFileReader {
 		}
 		System.out.println("END SUMMARY DATA OUTPUT");
 	}
+
 	
 	public void setPath(int Selector) {
 		switch(Selector) {

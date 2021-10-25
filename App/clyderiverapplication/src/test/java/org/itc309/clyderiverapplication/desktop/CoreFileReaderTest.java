@@ -24,7 +24,7 @@ public class CoreFileReaderTest {
 
 	@Before                                         
 	public void init() {
-		location = "Buoy 01 - Wray Street";    
+		location = "Buoy 01 - Wray Street";
 	}
 	
 	@Disabled //No Need To Run This @Test

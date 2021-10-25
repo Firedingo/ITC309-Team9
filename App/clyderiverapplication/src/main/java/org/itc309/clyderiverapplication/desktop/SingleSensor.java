@@ -31,6 +31,8 @@ import java.awt.Panel;
 import java.awt.Component;
 import javax.swing.Box;
 import javax.swing.ListSelectionModel;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SingleSensor extends JFrame {
 	private EventHandler handler = new EventHandler();
@@ -82,6 +84,7 @@ public class SingleSensor extends JFrame {
 		mnExit.addActionListener(handler);
 		d = new Dimension(35,50);	
 		mnExit.setMaximumSize(d);
+		//END MENU
 		
 		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data", getCurrentSensor(),0);
 		chart.setSize(700, 700);
@@ -134,6 +137,8 @@ public class SingleSensor extends JFrame {
 			chckbxFavourite.setSelected(false);
 		}
 		chckbxFavourite.addActionListener(new ActionListener() {
+
+
 			public void actionPerformed(ActionEvent event) {
 				if (!chckbxFavourite.isSelected()) {
 					String message = "Do you want to make " + getCurrentSensor() + " your favourite location?";

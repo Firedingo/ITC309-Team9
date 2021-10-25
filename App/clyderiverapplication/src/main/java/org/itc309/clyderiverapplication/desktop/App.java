@@ -21,10 +21,12 @@ public class App {
 	//	FR.readSensorsTextFile();
 	//	FR.readHarvestTextFile();
 	//	FR.readAllSensorsFile();
+
 		FR.readData(location);
 		FR.readTime(location);
 	//	FR.readTemperatureData2();
 	//	FR.readRainfallData();
+		FR.summariseData(location);
 		
 		CoreFileWriter FW = new CoreFileWriter();
 		//FW.writeToFile(location);

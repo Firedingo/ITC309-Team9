@@ -21,6 +21,7 @@ public class Sensors extends JFrame {
 	private Dimension d;
 	private CoreFileReader reader = new CoreFileReader();
 	private JList nonHarvestList;
+	private JList harvestList;
 	
 	//Creates a Window as part of the application.
 	public Sensors() {
@@ -93,7 +94,14 @@ public class Sensors extends JFrame {
 		nonHarvestList.setBounds(182, 75, 227, 570);
 		panel.add(nonHarvestList);
 		
-		JList harvestList = new JList(reader.readHarvestTextFile());
+		harvestList = new JList(reader.readHarvestTextFile());
+		harvestList.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				System.out.println("List Option: " + getHarvestListValue());
+				SingleSensor sinSensor = new SingleSensor(getHarvestListValue());
+			}
+		});
 		harvestList.setBounds(711, 74, 227, 570);
 		panel.add(harvestList);
 
@@ -106,6 +114,10 @@ public class Sensors extends JFrame {
 	
 	public String getNonHarvestListValue() {
 		return (String) nonHarvestList.getSelectedValue();
+	}
+	
+	public String getHarvestListValue() {
+		return (String) harvestList.getSelectedValue();
 	}
 	
 }

@@ -6,6 +6,7 @@ public class App {
 		// TODO Auto-generated method stub
 		start();
 		test();
+		System.out.println("INFO: The Clyde River Application For Desktop Has Successfully Launched");
 	}
 	
 	//Starts the application
@@ -16,16 +17,17 @@ public class App {
 	//Code for testing can be placed here. Is therefore isolated from application start
 	private static void test() {
 		CoreFileReader FR = new CoreFileReader();
+		String location = FR.readFavouriteLocation();
 	//	FR.readSensorsTextFile();
 	//	FR.readHarvestTextFile();
 	//	FR.readAllSensorsFile();
-		FR.readData();
-		FR.readTime();
+		FR.readData(location);
+		FR.readTime(location);
 	//	FR.readTemperatureData2();
 	//	FR.readRainfallData();
 		
 		CoreFileWriter FW = new CoreFileWriter();
-		FW.writeToFile("Buoy 03 - Moonlight");
+		//FW.writeToFile(location);
 	}
 
 }

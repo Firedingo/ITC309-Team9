@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
@@ -23,6 +24,8 @@ import javax.swing.JList;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import java.awt.Panel;
 import java.awt.Component;
@@ -80,7 +83,7 @@ public class SingleSensor extends JFrame {
 		d = new Dimension(35,50);	
 		mnExit.setMaximumSize(d);
 		
-		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data");
+		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data", getCurrentSensor(),0);
 		chart.setSize(700, 700);
 		
 		JPanel panel = new JPanel();
@@ -93,6 +96,14 @@ public class SingleSensor extends JFrame {
 		panel.add(panel_1, BorderLayout.WEST);
 		
 		JList list = new JList(reader.readAllSensorsFile());
+		list.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				String selLocation = (String) list.getSelectedValue();
+				SingleSensor sinSensor = new SingleSensor(selLocation);
+				getFrame().dispose();
+			}
+		});
 		list.setOpaque(false);
 		list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		panel_1.add(list);
@@ -115,20 +126,27 @@ public class SingleSensor extends JFrame {
 		JCheckBox chckbxFavourite = new JCheckBox("Favourite?");
 		panel_4.add(chckbxFavourite);
 		chckbxFavourite.setHorizontalAlignment(SwingConstants.LEFT);
+		String checkFav = reader.readFavouriteLocation();
+		if (getCurrentSensor().equals(checkFav)) {
+			chckbxFavourite.setSelected(true);
+		}
+		else {
+			chckbxFavourite.setSelected(false);
+		}
 		chckbxFavourite.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				String fav = reader.readFavouriteLocation();
-				if (fav != null) {
-					if (!fav.equals(CurrentSensor)) {
-						Popup popup = new Popup();
-						
+			public void actionPerformed(ActionEvent event) {
+				if (!chckbxFavourite.isSelected()) {
+					String message = "Do you want to make " + getCurrentSensor() + " your favourite location?";
+					int choice = JOptionPane.showConfirmDialog(getFrame(),message,"Change Favourite Location?",JOptionPane.YES_NO_OPTION);
+					//NOTE: 0 == Yes
+					if (choice == 0) {
+						writer.writeToFile(getCurrentSensor());
+						chckbxFavourite.setSelected(true);
 					}
-					
+					chckbxFavourite.setSelected(false);
 				}
 				else {
-					fav = CurrentSensor;
-					writer.writeToFile(fav);
-					//Check the box
+					//Remove Current Favourite
 				}
 			}
 		});
@@ -148,5 +166,17 @@ public class SingleSensor extends JFrame {
 		this.setVisible(true);
 		this.setDefaultCloseOperation(this.DISPOSE_ON_CLOSE);
 		this.setSize(1328, 720);
+	}
+	
+	public String getCurrentSensor() {
+		return CurrentSensor;
+	}
+
+	public void dispose(JFrame frame) {
+		frame.dispose();
+	}
+
+	public JFrame getFrame() {
+		return this;
 	}
 }

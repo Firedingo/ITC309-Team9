@@ -90,20 +90,11 @@ public class CoreFileReader {
 				j++;
 				}
 			}
-			System.out.println(temp);
+			
 		}
 		
 		//Clean Up
 		scanner.close();
-		
-		
-		//Test
-		System.out.println("Begin Output Test Of Salinity Data");
-		for (int i=0; i<data.length; i++) {
-			Number temp = data[i];
-			System.out.println("Salinity " + i + ": " + temp);
-		}
-		System.out.println("End Output Test Of Salinity Data");
 		
 		
 		//Return To Parent
@@ -186,7 +177,6 @@ public class CoreFileReader {
 		while (scanner.hasNext()) {
 			temp = scanner.next();
 			if (temp.contains(":") && temp.length() == 8) {
-				System.out.println("Time: " + temp);
 				if (j < time.length) {	
 					time[j] = temp;
 					j++;
@@ -194,15 +184,6 @@ public class CoreFileReader {
 			}
 			
 		}
-		
-		
-		//Test
-		System.out.println("Begin Output Test Of Time Data");
-		for (int i=0; i<time.length; i++) {
-			String temp = time[i];
-			System.out.println("Salinity " + i + ": " + temp);
-		}
-		System.out.println("End Output Test Of Time Data");
 		
 				
 		//Clean Up

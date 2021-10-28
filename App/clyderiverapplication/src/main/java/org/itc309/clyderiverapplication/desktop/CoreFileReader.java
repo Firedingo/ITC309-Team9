@@ -13,7 +13,7 @@ public class CoreFileReader {
 	private int count = 0;
 	private String temp;
 	private Utility util = new Utility();
-	private int capacity = 11;
+	private int capacity = 12;
 	private int capacity1 = 100;
 	private int capacity2 = 100;
 
@@ -25,6 +25,7 @@ public class CoreFileReader {
 		path = new File(directory + "\\salinity_levels.csv");
 		count = 0;
 		int j =0;
+		boolean ok = false;
 		
 		if (location == null) {
 			location = "Test";
@@ -76,25 +77,29 @@ public class CoreFileReader {
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(path);
+			
+			// put data into data structure
+			scanner.useDelimiter(",|\\n");
+			while (scanner.hasNext()) {
+				temp = scanner.next();
+				if (temp.contains(".")) {
+					if (j < data.length) {
+					data[j] = Float.parseFloat(temp);
+					j++;
+					}
+				}
+				
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.err.println(e);
 		}
-		// put data into data structure
-		scanner.useDelimiter(",|\\n");
-		while (scanner.hasNext()) {
-			temp = scanner.next();
-			if (temp.contains(".")) {
-				if (j < data.length) {
-				data[j] = Float.parseFloat(temp);
-				j++;
-				}
-			}
-			
-		}
+		
 		
 		//Clean Up
+		if (ok == true) {
 		scanner.close();
+		}
 		
 		
 		//Return To Parent
@@ -107,6 +112,7 @@ public class CoreFileReader {
 		String[] time = new String[capacity];
 		count = 0;
 		int j = 0;
+		boolean ok = false;
 		if (location == null) {
 			location = "Test";
 		}
@@ -159,35 +165,41 @@ public class CoreFileReader {
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(path);
+			ok = true;
+			
+			// put data into data structure
+			//Skipping titles
+			for (int i=0; i<4; i++) {
+			scanner.next();
+			}
+			
+			
+			scanner.useDelimiter(",|\\n|T|\\+");
+			
+			while (scanner.hasNext()) {
+				temp = scanner.next();
+				if (temp.contains(":") && temp.length() == 8) {
+					if (j < time.length) {	
+						time[j] = temp;
+						j++;
+					}
+				}
+				
+			}
+			
 		} catch (FileNotFoundException e) {
 		// TODO Auto-generated catch block
 			System.err.println(e);
 			util.printError("The File Could Not Be Found Or Could Not Be Opened");
 		}
 		
-		// put data into data structure
-		//Skipping titles
-		for (int i=0; i<4; i++) {
-		scanner.next();
-		}
-		
-		
-		scanner.useDelimiter(",|\\n|T|\\+");
-		
-		while (scanner.hasNext()) {
-			temp = scanner.next();
-			if (temp.contains(":") && temp.length() == 8) {
-				if (j < time.length) {	
-					time[j] = temp;
-					j++;
-				}
-			}
-			
-		}
+
 		
 				
 		//Clean Up
+		if (ok == true) {
 		scanner.close();
+		}
 		
 		//Return To Parent
 		return time;		
@@ -195,7 +207,7 @@ public class CoreFileReader {
 	
 	//Reads in a list of all sensors from a file
 	public String[] readAllSensorsFile() {
-			path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
+		setPath(17);
 			Scanner scanner;
 			String[] sensors = new String[capacity];
 			count = 0;
@@ -225,7 +237,7 @@ public class CoreFileReader {
 	
 	//Reads in a list of sensors from a file and filters out the harvest zones
 	public String[] readSensorsTextFile( ) {
-		path = new File("D:\\\\Uni\\\\ITC309\\\\ITC309-Team9\\\\App\\\\data\\\\sensor_list.txt");
+		setPath(17);
 		Scanner scanner;
 		String[] sensors = new String[capacity];
 		count = 0;
@@ -262,7 +274,7 @@ public class CoreFileReader {
 	
 	//Reads in a list of sensors from a file and filters out all sensors that aren't harvest areas
 	public String[] readHarvestTextFile( ) {
-		setPath(2);
+		setPath(17);
 		Scanner scanner;
 		String[] sensors = new String[capacity];
 		count = 0;
@@ -298,7 +310,7 @@ public class CoreFileReader {
 	//Reads in a favourite location from a file
 	public String readFavouriteLocation() {
 		setPath(16);
-		String fav = "";
+		String fav = " ";
 		try {
 			Scanner scanner = new Scanner(path);
 			while (scanner.hasNext()) {

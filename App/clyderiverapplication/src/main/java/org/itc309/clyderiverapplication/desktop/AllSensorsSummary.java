@@ -24,10 +24,7 @@ import javax.swing.Box;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import java.awt.GridLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
+
 
 public class AllSensorsSummary extends JFrame {
 	private EventHandler handler = new EventHandler();
@@ -534,5 +531,9 @@ public class AllSensorsSummary extends JFrame {
 	
 	public JFrame getFrame() {
 		return this;
+	}
+	
+	public void dispose(JFrame frame) {
+		frame.dispose();
 	}
 }

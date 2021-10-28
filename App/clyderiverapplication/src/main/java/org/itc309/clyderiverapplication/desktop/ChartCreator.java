@@ -54,8 +54,13 @@ public class ChartCreator {
 	}
 	
 	//Creates a CategoryChart to display data
-	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel, String Location, int Weather) {
+	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel, String Location, int Weather) throws IllegalArgumentException {
 		CategoryChart chart = new CategoryChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
+		
+		if (Location == null) {
+			Location = "";
+		}
+		
 		
 		//Set Chart Render Style
 		chart.getStyler().setDefaultSeriesRenderStyle(CategorySeriesRenderStyle.Line);
@@ -77,7 +82,15 @@ public class ChartCreator {
 						}
 				}
 				else {
-					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
+					
+					if (Location == " " || Location == null) {
+						String[] xData = new String[] {"01:42:38", "03:17:21", "07:14:57", "13:59:06", "18:12:56" };
+						Number[] yData = new Number[] {15.0, 12.4, 27.82, 35.67, 89.18};
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(xData)), new ArrayList<Number>(Arrays.asList(yData)));
+					}
+					else {
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
+					}
 				}
 		 
 		 //	chart.addSeries(seriesName, xData, yData)

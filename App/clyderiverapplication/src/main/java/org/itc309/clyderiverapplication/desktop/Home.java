@@ -24,6 +24,7 @@ import javax.swing.Box;
 
 public class Home extends JFrame {
 	private EventHandler handler = new EventHandler();
+	private Utility util = new Utility();
 	private Dimension d;
 	private String fav = "";
 	private CoreFileReader reader = new CoreFileReader();
@@ -85,13 +86,20 @@ public class Home extends JFrame {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.SOUTH);
 		
+		
+		try {
 		chart = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),0);
 		chart1 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),0);
 		chart2 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),1);
-//		JPanel chartPanel = new XChartPanel<>(chart);
+		
 		panel.add(chart, BorderLayout.SOUTH);
 		panel.add(chart1, BorderLayout.SOUTH);
 		panel.add(chart2, BorderLayout.SOUTH);
+		}
+		catch (IllegalArgumentException e) {
+			util.printError("Chart or Charts Could Not Be Created!");
+		}
+		
 		
 		
 		fav = reader.readFavouriteLocation();

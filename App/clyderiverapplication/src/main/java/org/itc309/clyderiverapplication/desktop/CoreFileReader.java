@@ -230,7 +230,7 @@ public class CoreFileReader {
 				util.printError("The File Could Not Be Opened or Found");
 			}
 			
-			util.printData(sensors);
+
 			return sensors;
 			
 	}
@@ -267,7 +267,7 @@ public class CoreFileReader {
 			util.printError("The File Could Not Be Opened or Found");
 		}
 		
-		util.printData(sensors);
+		
 		return sensors;
 		
 	}
@@ -302,7 +302,7 @@ public class CoreFileReader {
 			util.printError("The File Could Not Be Opened or Found");
 		}
 		
-		util.printData(sensors);
+	
 		return sensors;
 		
 	}
@@ -493,6 +493,10 @@ public class CoreFileReader {
 			System.out.println("Index " + i + ": " + summaryData[i]);
 		}
 		System.out.println("END SUMMARY DATA OUTPUT");
+	}
+	
+	public void summariseTime(String location) {
+		//I don't know where this method went. It's just gone. It should do the same as summariseData but for time
 	}
 	
 	public void setPath(int Selector) {

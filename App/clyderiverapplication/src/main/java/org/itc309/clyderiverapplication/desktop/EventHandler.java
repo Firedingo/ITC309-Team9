@@ -14,8 +14,8 @@ import javax.swing.JPopupMenu;
 
 public class EventHandler implements ActionListener {
 	
-	Utility util = new Utility();
-	CoreFileReader reader = new CoreFileReader();
+	private Utility util = new Utility();
+	private CoreFileReader reader = new CoreFileReader();
 
 	//Handles all the input to the menu. Is the backbone of the appllication and drives movement and flow.
 	public void actionPerformed(ActionEvent e) {

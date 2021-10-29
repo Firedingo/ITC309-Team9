@@ -20,13 +20,6 @@ import org.knowm.xchart.style.XYStyler;
 //Creates a number of charts using the XChart library, primarily an XYChart and a CategoryChart.
 public class ChartCreator {
 	private CoreFileReader reader = new CoreFileReader();
-
-	//Pointless Method
-	public XChartPanel<CategoryChart> createChart() {
-	//	return createXYChart(350, 350, "Test Chart", "Test X Data", "Test Y Data");
-		
-		return createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", "Test Location", 0);
-	}
 	
 	//Method is never used - Creates an XYChart from XChart
 	private XChartPanel<XYChart> createXYChart(int width, int height, String title, String XLabel, String YLabel) {
@@ -106,27 +99,5 @@ public class ChartCreator {
 		
 		return new XChartPanel<CategoryChart>(chart);
 	}
-	
-	
-
-	
-	
-	//Can be used to test your chart works - For Testing Purposes only
-	private double[] testXDataDouble() {
-		double[] xData = new double[] {10, 15, 21, 42, 57};
-		return xData;
-	}
-	
-	private Number[] testYData() {
-		Number[] yData = new Number[] {1, 3, 7, 5, 3};
-		return yData;
-	}
-	
-	private String[] testXDataString() {
-		String[] xData = new String[] {"00.01.02", "Two", "Three", "Four", "Five" };
-		return xData;
-	//return null;
-	}
-	
 
 }

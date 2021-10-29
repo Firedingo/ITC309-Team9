@@ -22,8 +22,8 @@ public class App {
 	//	FR.readHarvestTextFile();
 	//	FR.readAllSensorsFile();
 
-		FR.readData(location);
-		FR.readTime(location);
+		FR.readData(location, false);
+		FR.readTime(location, false);
 	//	FR.readTemperatureData2();
 	//	FR.readRainfallData();
 		FR.summariseData(location);

@@ -3,6 +3,7 @@ package org.itc309.clyderiverapplication.desktop;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CoreFileReader {
@@ -18,11 +19,13 @@ public class CoreFileReader {
 	private int capacity2 = 100;
 
 	//Reads Salinity, Temperature or Rainfall Levels in
-	public Number[] readData(String location) {
+	public ArrayList readData(String location, boolean small) {
 		//Setup
-		Number[] data = new Number[capacity];
+		ArrayList data = new ArrayList();
+		
+		
 		//setPath(3);
-		path = new File(directory + "\\salinity_levels.csv");
+	//	path = new File(directory + "\\salinity_levels.csv");
 		count = 0;
 		int j =0;
 		boolean ok = false;
@@ -82,11 +85,8 @@ public class CoreFileReader {
 			scanner.useDelimiter(",|\\n");
 			while (scanner.hasNext()) {
 				temp = scanner.next();
-				if (temp.contains(".")) {
-					if (j < data.length) {
-					data[j] = Float.parseFloat(temp);
-					j++;
-					}
+				if (temp.contains(".") && temp.length() > 4) {
+					data.add(Float.parseFloat(temp));
 				}
 				
 			}
@@ -107,9 +107,9 @@ public class CoreFileReader {
 	}
 
 	//Reads The Time a measurement was taken in for all measurements
-	public String[] readTime(String location) {
+	public ArrayList readTime(String location, boolean small) {
 		//Setup
-		String[] time = new String[capacity];
+		ArrayList time = new ArrayList();
 		count = 0;
 		int j = 0;
 		boolean ok = false;
@@ -135,7 +135,7 @@ public class CoreFileReader {
 			case "Buoy 05 - Snapper Point North-West":
 				setPath(5);
 				break;
-			case "Fixed Depth - Rockey Point":
+			case "Fixed Depth - Rocky Point":
 				setPath(14);
 				break;
 			case "Buoy 08 - Angry Man Point":
@@ -159,6 +159,9 @@ public class CoreFileReader {
 			case "Budd Island":
 				setPath(15);
 				break;
+			case "Weather Station - Budd Island":
+				setPath(15);
+				break;
 		}
 		
 		//read file
@@ -179,10 +182,7 @@ public class CoreFileReader {
 			while (scanner.hasNext()) {
 				temp = scanner.next();
 				if (temp.contains(":") && temp.length() == 8) {
-					if (j < time.length) {	
-						time[j] = temp;
-						j++;
-					}
+					time.add(temp);
 				}
 				
 			}
@@ -335,12 +335,12 @@ public class CoreFileReader {
 	}
 	
 	
-	public Number[] readTemperatureData() {
-		setPath(4);
+	public ArrayList readTemperatureData() {
+		setPath(15);
 		count = 0;
 		int j = 0;
 		
-		Number[] temperature = new Number[capacity1];
+		ArrayList temperature = new ArrayList();
 		
 		try {
 			Scanner scanner = new Scanner(getPath());
@@ -362,8 +362,8 @@ public class CoreFileReader {
 					util.printFeedback("Temp: " + temp);
 					
 					
-						temperature[j] = Float.parseFloat(temp);
-						util.printFeedback("Temperature["+j+"] = " + temperature[j]);
+						temperature.add(Float.parseFloat(temp));
+						
 						j++;
 					
 				}
@@ -388,20 +388,20 @@ public class CoreFileReader {
 		
 		//Test
 		util.printFeedback("BEGIN TEMPERATURE PRINTOUT");
-		for (int i = 0; i<temperature.length; i++) {
-			util.printFeedback("Index " + i + ": " + temperature[i]);
+		for (int i = 0; i<temperature.size(); i++) {
+			
 		}
 		util.printFeedback("END TEMPERATURE PRINTOUT");
 		
 		return temperature;
 	}
 	
-	public Number[] readRainfallData() {
-		setPath(4);
+	public ArrayList readRainfallData() {
+		setPath(15);
 		count = 0;
 		int j = 0;
 		
-		Number[] rainfall = new Number[capacity1];
+		ArrayList rainfall = new ArrayList();
 		
 		try {
 			Scanner scanner = new Scanner(getPath());
@@ -423,8 +423,8 @@ public class CoreFileReader {
 					util.printFeedback("Temp: " + temp);
 					
 					
-						rainfall[j] = Float.parseFloat(temp);
-						util.printFeedback("Rainfall["+j+"] = " + rainfall[j]);
+						rainfall.add(Float.parseFloat(temp));
+					
 						j++;
 					
 				}
@@ -449,8 +449,8 @@ public class CoreFileReader {
 		
 		//Test
 		util.printFeedback("BEGIN RAINFALL PRINTOUT");
-		for (int i = 0; i<rainfall.length; i++) {
-			util.printFeedback("Index " + i + ": " + rainfall[i]);
+		for (int i = 0; i<rainfall.size(); i++) {
+		
 		}
 		util.printFeedback("END RAINFALL PRINTOUT");
 		
@@ -458,24 +458,24 @@ public class CoreFileReader {
 	}
 	
 	public void summariseData(String Location) {
-		Number[] allData = new Number[capacity1];
+		ArrayList allData = new ArrayList();
 		Number[] summaryData = new Number[capacity2];
 		int count = 0;
 		int count2 = 0;
 		int control = 0;
 		Number data;
 
-		allData = readData(Location);
-		data = allData[1];
-		util.printFeedback("INFO TEST: " + data);
+		allData = readData(Location, false);
+	//	data = allData[1];
+//		util.printFeedback("INFO TEST: " + data);
 
-		for (int a = 0; a < allData.length; a++) {
+		for (int a = 0; a < allData.size(); a++) {
 
 			if (count < summaryData.length) {
 				if (count == 0) {
-					data = allData[a];
-					util.printFeedback("INFO: " + data);
-					summaryData[count] = data;
+		//			data = allData[a];
+//					util.printFeedback("INFO: " + data);
+//					summaryData[count] = data;
 					count++;
 				}
 
@@ -499,15 +499,6 @@ public class CoreFileReader {
 		switch(Selector) {
 		case 0:
 			path = new File("Z:\\Fail.txt");
-			break;
-		case 16:
-			path = new File(directory + "\\preferences.txt");
-			break;
-		case 17:
-			path = new File(directory + "\\sensor_list.txt");
-			break;
-		case 18:
-			path = new File(directory + "\\salinity_levels.csv");
 			break;
 		case 1:
 			path = new File(directory + "\\sensor data\\buoy 01 - wray street\\salinity_levels.csv");
@@ -545,7 +536,20 @@ public class CoreFileReader {
 		case 15:
 			path = new File(directory + "\\sensor data\\weather station\\budd island.csv");
 			break;
+		case 16:
+			path = new File(directory + "\\preferences.txt");
+			break;
+		case 17:
+			path = new File(directory + "\\sensor_list.txt");
+			break;
+		case 18:
+			path = new File(directory + "\\salinity_levels.csv");
+			break;
 		}
+	}
+	
+	public void setLoadedFile(File selectedFile) {
+		path = selectedFile;
 	}
 	
 	public File getPath() {

@@ -30,6 +30,12 @@ public class Sensors extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		JMenuItem mntmLoadFile = new JMenuItem("Load File");
+		mnFile.add(mntmLoadFile);
+		mntmLoadFile.addActionListener(handler);
+		
 		JMenuItem mnHome = new JMenuItem("Home");
 		menuBar.add(mnHome);
 		mnHome.addActionListener(handler);

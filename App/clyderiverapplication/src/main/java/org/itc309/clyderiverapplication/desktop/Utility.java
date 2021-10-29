@@ -34,5 +34,11 @@ public class Utility {
 	public void printFeedback(String message) {
 		System.out.println(message);
 	}
+	
+	//Prints The Currently Set File Path
+	public void printPath() {
+		CoreFileReader reader = new CoreFileReader();
+		System.out.print("The Currently Selected Path is: " + reader.getPath());
+	}
 
 }

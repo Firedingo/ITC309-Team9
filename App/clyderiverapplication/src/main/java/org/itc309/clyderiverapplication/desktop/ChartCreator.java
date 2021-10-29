@@ -72,24 +72,26 @@ public class ChartCreator {
 				chart.getStyler().setLegendPosition(LegendPosition.OutsideS);
 				chart.getStyler().setXAxisLabelRotation(45);
 		
-		//add data
-				if (Location.equals("Budd Island")) {
+		//add data 0 = Temp | 1 = Rainfall | Don't care for Salinity
+				System.out.println("INFO: Location: " + Location);
+				if (Location.equals("Budd Island") || Location.equals("Weather Station - Budd Island")) {
 					if (Weather == 0) {
-					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readTemperatureData())));
+					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readTemperatureData()));
 					}
 					if (Weather == 1) {
-						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readRainfallData())));
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readRainfallData()));
 						}
 				}
 				else {
-					
-					if (Location == " " || Location == null) {
+					//Random Edge Case
+					if (Location.equals(" ") || Location.equals(null)) {
 						String[] xData = new String[] {"01:42:38", "03:17:21", "07:14:57", "13:59:06", "18:12:56" };
 						Number[] yData = new Number[] {15.0, 12.4, 27.82, 35.67, 89.18};
 						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(xData)), new ArrayList<Number>(Arrays.asList(yData)));
 					}
 					else {
-						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime(Location))), new ArrayList<Number>(Arrays.asList(reader.readData(Location))));
+						//Regular Salinity
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readData(Location, false)));
 					}
 				}
 		 

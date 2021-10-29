@@ -42,6 +42,12 @@ public class Home extends JFrame {
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		JMenuItem mntmLoadFile = new JMenuItem("Load File");
+		mnFile.add(mntmLoadFile);
+		mntmLoadFile.addActionListener(handler);
+		
 		JMenuItem mnHome = new JMenuItem("Home");
 		mnHome.setBorderPainted(true);
 		mnHome.setOpaque(true);
@@ -88,9 +94,9 @@ public class Home extends JFrame {
 		
 		
 		try {
-		chart = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),0);
-		chart1 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),0);
-		chart2 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data", reader.readFavouriteLocation(),1);
+		chart = creator.createCategoryChart(420,350,"Test Chart", "Time", "Salinity", reader.readFavouriteLocation(),0);
+		chart1 = creator.createCategoryChart(420,350,"Budd Island", "Time", "Temperature", "Budd Island",0);
+		chart2 = creator.createCategoryChart(420,350,"Budd Island", "Time", "Rainfall", "Budd Island",1);
 		
 		panel.add(chart, BorderLayout.SOUTH);
 		panel.add(chart1, BorderLayout.SOUTH);

@@ -14,6 +14,9 @@ import java.awt.TextArea;
 import java.awt.Scrollbar;
 import javax.swing.border.TitledBorder;
 
+import org.jdatepicker.impl.JDatePanelImpl;
+import org.jdatepicker.impl.JDatePickerImpl;
+import org.jdatepicker.impl.UtilDateModel;
 import org.knowm.xchart.CategoryChart;
 import org.knowm.xchart.XChartPanel;
 
@@ -27,6 +30,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Properties;
 import java.awt.event.ActionEvent;
 import java.awt.Panel;
 import java.awt.Component;
@@ -54,6 +59,11 @@ public class SingleSensor extends JFrame {
 	private float lower = 14;
 	private float latest;
 	private boolean temperature = false;
+	private JDatePickerImpl datePickerFrom;
+	private JDatePickerImpl datePickerTo;
+	private JLabel lblFrom;
+	private JLabel lblTo;
+	private JPanel panel_7;
 	
 	//Creates a Window as part of the application.
 	public SingleSensor(String name) {
@@ -72,6 +82,12 @@ public class SingleSensor extends JFrame {
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
+		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		JMenuItem mntmLoadFile = new JMenuItem("Load File");
+		mnFile.add(mntmLoadFile);
+		mntmLoadFile.addActionListener(handler);
 		
 		JMenuItem mnHome = new JMenuItem("Home");
 		menuBar.add(mnHome);
@@ -107,9 +123,9 @@ public class SingleSensor extends JFrame {
 		mnExit.setMaximumSize(d);
 		//END MENU
 		
-		chart = creator.createCategoryChart(500,500,"Test Chart", "Test X Data", "Test Y Data", getCurrentSensor(),0);
-		chart1 = creator.createCategoryChart(500,500,"Budd Island", "Time", "Temperature", getCurrentSensor(),0);
-		chart2 = creator.createCategoryChart(500,500,"Budd Island", "Time", "Rainfall", getCurrentSensor(),0);
+		chart = creator.createCategoryChart(500,500,getCurrentSensor(), "Time", "Salinity", getCurrentSensor(),0);
+		chart1 = creator.createCategoryChart(500,500,"Budd Island", "Time", "Temperature", "Budd Island",0);
+		chart2 = creator.createCategoryChart(500,500,"Budd Island", "Time", "Rainfall", "Budd Island",1);
 		
 
 		chart.setSize(700, 700);
@@ -234,7 +250,7 @@ public class SingleSensor extends JFrame {
 		lblHarvestArea.setText("Harvest Area: " + getHarvestArea(getCurrentSensor()));
 		
 		JPanel panel_6 = new JPanel();
-		panel.add(panel_6, BorderLayout.SOUTH);
+		
 		
 		Component horizontalStrut_4 = Box.createHorizontalStrut(20);
 		panel_6.add(horizontalStrut_4);
@@ -254,6 +270,7 @@ public class SingleSensor extends JFrame {
 				if (temperature == false) {
 					chart2.setVisible(false);
 					chart1.setVisible(true);
+					panel_7.setVisible(false);
 					temperature = true;
 					chart1.repaint();
 					System.out.println("INFO: Showing Temperature Chart....");
@@ -272,12 +289,53 @@ public class SingleSensor extends JFrame {
 					chart2.setVisible(true);
 					chart1.setVisible(false);
 					chart2.repaint();
+					panel_7.setVisible(true);
 					temperature = false;
 					System.out.println("INFO: Showing Rainfall Chart....");
 				}
 			}
 		});
 		panel_6.add(btnRainfall);
+		
+		panel_7 = new JPanel();
+		UtilDateModel model = new UtilDateModel();
+		Properties propierties = new Properties();
+		propierties.put("text.today", "Today");
+		propierties.put("text.month", "Month");
+		propierties.put("text.year", "Year");
+		JDatePanelImpl datePanel = new JDatePanelImpl(model, propierties);
+		
+		Component horizontalStrut_8 = Box.createHorizontalStrut(20);
+		panel_7.add(horizontalStrut_8);
+		
+		Component horizontalStrut_7 = Box.createHorizontalStrut(20);
+		panel_7.add(horizontalStrut_7);
+		
+		Component horizontalStrut_6 = Box.createHorizontalStrut(20);
+		panel_7.add(horizontalStrut_6);
+		
+		lblFrom = new JLabel("From:");
+		panel_7.add(lblFrom);
+		datePickerFrom = new JDatePickerImpl(datePanel, null);
+		panel_7.add(datePickerFrom);
+		datePickerTo = new JDatePickerImpl(datePanel, null);
+		
+		
+		Component horizontalStrut_5 = Box.createHorizontalStrut(20);
+		panel_7.add(horizontalStrut_5);
+		
+		lblTo = new JLabel("To:");
+		panel_7.add(lblTo);
+		panel_7.add(datePickerTo);
+		panel_7.setVisible(false);
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setLayout(new BorderLayout(0, 0));
+		panel_8.add(panel_7, BorderLayout.NORTH);
+		panel_8.add(panel_6, BorderLayout.SOUTH);
+		
+		
+		panel.add(panel_8, BorderLayout.SOUTH);
 		if (latest < lower || latest > upper) {
 			lblStatus.setText("Status: Closed");
 		}
@@ -288,10 +346,14 @@ public class SingleSensor extends JFrame {
 		if (getCurrentSensor().equals("Weather Station - Budd Island")) {
 			btnTemperature.setVisible(true);
 			btnRainfall.setVisible(true);
+			datePickerFrom.setVisible(true);
+			datePickerTo.setVisible(true);
 		}
 		else {
 			btnTemperature.setVisible(false);
 			btnRainfall.setVisible(false);
+			datePickerFrom.setVisible(false);
+			datePickerTo.setVisible(false);
 		}
 		
 		this.setSize(640, 360);
@@ -358,16 +420,12 @@ public class SingleSensor extends JFrame {
 		return harvestArea;
 	}
 	
-	private Number getLatestDataPoint() throws NullPointerException {
-		Number dataPoint = null;
-		Number[] tempData = new Number[100];
-		tempData = reader.readData(getCurrentSensor());
+	private Float getLatestDataPoint() throws NullPointerException {
+		Float dataPoint = null;
+		ArrayList tempData = new ArrayList();
+		tempData = reader.readData(getCurrentSensor(), false);
 		
-		for (int i = 0; i < tempData.length; i++) {
-			if (tempData[i] != null) {
-				dataPoint = tempData[i];
-			}
-		}
+		dataPoint = (Float) tempData.get(tempData.size() - 1);
 		
 		return dataPoint;
 	}

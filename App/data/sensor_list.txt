@@ -9,3 +9,4 @@ Buoy 10 - Waterfall Creek
 Buoy 11 - Opposite Buckenbowra
 Buoy 12 - Big Island West
 Buoy 13 - Double Bay
+Weather Station - Budd Island

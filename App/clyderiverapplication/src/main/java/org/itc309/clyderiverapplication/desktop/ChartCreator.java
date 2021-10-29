@@ -20,13 +20,6 @@ import org.knowm.xchart.style.XYStyler;
 //Creates a number of charts using the XChart library, primarily an XYChart and a CategoryChart.
 public class ChartCreator {
 	private CoreFileReader reader = new CoreFileReader();
-
-	//Pointless Method
-	public XChartPanel<CategoryChart> createChart() {
-	//	return createXYChart(350, 350, "Test Chart", "Test X Data", "Test Y Data");
-		
-		return createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
-	}
 	
 	//Method is never used - Creates an XYChart from XChart
 	private XChartPanel<XYChart> createXYChart(int width, int height, String title, String XLabel, String YLabel) {
@@ -54,10 +47,15 @@ public class ChartCreator {
 	}
 	
 	//Creates a CategoryChart to display data
-	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel) {
+	public XChartPanel<CategoryChart> createCategoryChart(int width, int height, String title, String XLabel, String YLabel, String Location, int Weather) throws IllegalArgumentException {
 		CategoryChart chart = new CategoryChartBuilder().width(width).height(height).title(title).xAxisTitle(XLabel).yAxisTitle(YLabel).build();
 		
-		//style
+		if (Location == null) {
+			Location = "";
+		}
+		
+		
+		//Set Chart Render Style
 		chart.getStyler().setDefaultSeriesRenderStyle(CategorySeriesRenderStyle.Line);
 		
 		//Style Chart
@@ -67,15 +65,28 @@ public class ChartCreator {
 				chart.getStyler().setLegendPosition(LegendPosition.OutsideS);
 				chart.getStyler().setXAxisLabelRotation(45);
 		
-		//add data
-		 List<String> xDataList = Arrays.asList("One", "Two", "Three", "Four", "Five");
-		 /*List<Date> xData = new ArrayList<Date>();
-		 Date[] data = testXDataString();
-		 for (int i=0; i<5; i++) {
-			 xData.add(data[i]);
-		 }*/
-		 CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(reader.readTime())), new ArrayList<Number>(Arrays.asList(reader.readData())));
-		 
+		//add data 0 = Temp | 1 = Rainfall | Don't care for Salinity
+				System.out.println("INFO: Location: " + Location);
+				if (Location.equals("Budd Island") || Location.equals("Weather Station - Budd Island")) {
+					if (Weather == 0) {
+					CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readTemperatureData()));
+					}
+					if (Weather == 1) {
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readRainfallData()));
+						}
+				}
+				else {
+					//Random Edge Case
+					if (Location.equals(" ") || Location.equals(null)) {
+						String[] xData = new String[] {"01:42:38", "03:17:21", "07:14:57", "13:59:06", "18:12:56" };
+						Number[] yData = new Number[] {15.0, 12.4, 27.82, 35.67, 89.18};
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(Arrays.asList(xData)), new ArrayList<Number>(Arrays.asList(yData)));
+					}
+					else {
+						//Regular Salinity
+						CategorySeries series = chart.addSeries("String Test Series", new ArrayList<String>(reader.readTime(Location, false)), new ArrayList<Number>(reader.readData(Location, false)));
+					}
+				}
 		 
 		 //	chart.addSeries(seriesName, xData, yData)
 		 
@@ -88,27 +99,5 @@ public class ChartCreator {
 		
 		return new XChartPanel<CategoryChart>(chart);
 	}
-	
-	
-
-	
-	
-	//Can be used to test your chart works - For Testing Purposes only
-	private double[] testXDataDouble() {
-		double[] xData = new double[] {10, 15, 21, 42, 57};
-		return xData;
-	}
-	
-	private Number[] testYData() {
-		Number[] yData = new Number[] {1, 3, 7, 5, 3};
-		return yData;
-	}
-	
-	private String[] testXDataString() {
-		String[] xData = new String[] {"00.01.02", "Two", "Three", "Four", "Five" };
-		return xData;
-	//return null;
-	}
-	
 
 }

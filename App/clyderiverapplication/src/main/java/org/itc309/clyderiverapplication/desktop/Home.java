@@ -24,6 +24,7 @@ import javax.swing.Box;
 
 public class Home extends JFrame {
 	private EventHandler handler = new EventHandler();
+	private Utility util = new Utility();
 	private Dimension d;
 	private String fav = "";
 	private CoreFileReader reader = new CoreFileReader();
@@ -37,8 +38,15 @@ public class Home extends JFrame {
 		HELLOWORLD();
 		setTitle("Clyde River Application");
 		
+		//MENU CREATION
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
+		
+		JMenu mnFile = new JMenu("File");
+		menuBar.add(mnFile);
+		JMenuItem mntmLoadFile = new JMenuItem("Load File");
+		mnFile.add(mntmLoadFile);
+		mntmLoadFile.addActionListener(handler);
 		
 		JMenuItem mnHome = new JMenuItem("Home");
 		mnHome.setBorderPainted(true);
@@ -84,18 +92,27 @@ public class Home extends JFrame {
 		JPanel panel = new JPanel();
 		getContentPane().add(panel, BorderLayout.SOUTH);
 		
-		chart = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
-		chart1 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
-		chart2 = creator.createCategoryChart(420,350,"Test Chart", "Test X Data", "Test Y Data");
-//		JPanel chartPanel = new XChartPanel<>(chart);
+		
+		try {
+		chart = creator.createCategoryChart(420,350,"Test Chart", "Time", "Salinity", reader.readFavouriteLocation(),0);
+		chart1 = creator.createCategoryChart(420,350,"Budd Island", "Time", "Temperature", "Budd Island",0);
+		chart2 = creator.createCategoryChart(420,350,"Budd Island", "Time", "Rainfall", "Budd Island",1);
+		
 		panel.add(chart, BorderLayout.SOUTH);
 		panel.add(chart1, BorderLayout.SOUTH);
 		panel.add(chart2, BorderLayout.SOUTH);
+		}
+		catch (IllegalArgumentException e) {
+			util.printError("Chart or Charts Could Not Be Created!");
+		}
+		
 		
 		
 		fav = reader.readFavouriteLocation();
 		if (fav.isEmpty()) {
 			fav = "No Favourite Selected";
+			panel.setVisible(false);
+			System.err.print("ERROR: No Favourite Location Set");
 		}
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
